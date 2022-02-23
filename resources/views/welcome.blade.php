@@ -25,7 +25,7 @@
         </div>
     </x-section>
 
-    <div class="bg-purple-300">
+    <div class="bg-spa-100">
         <x-section>
             <div class="grid grid-cols-3">
                 <div class="col-span-3 sm:col-span-2 flex flex-wrap content-center">
