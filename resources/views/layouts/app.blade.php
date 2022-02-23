@@ -18,10 +18,8 @@
         <!-- Scripts -->
         <script src="{{ mix('js/app.js') }}" defer></script>
     </head>
-    <body class="font-sans antialiased">
-        <x-jet-banner />
-
-        <div class="min-h-screen bg-gray-100">
+    <body>
+        <div class="min-h-screen flex flex-col bg-white">
             @livewire('navigation-menu')
 
             <!-- Page Heading -->
@@ -33,10 +31,20 @@
                 </header>
             @endif
 
+            <x-jet-banner />
+
             <!-- Page Content -->
-            <main>
-                {{ $slot }}
+            <main class="flex-1">
+                <div class="">
+                    {{ $slot }}
+                </div>
             </main>
+
+            <footer class="bg-gray-500">
+                <div class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
+                    &copy; 2022 Sandy Martin | NT4C
+                </div>
+            </footer>
         </div>
 
         @stack('modals')
