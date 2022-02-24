@@ -46,7 +46,7 @@ class EmployeeResource extends Resource
     {
         return $table
             ->columns([
-                ImageColumn::make('image_url')->label('Image')->disk('s3'),
+                ImageColumn::make('image_url')->label('Image')->disk('s3')->rounded(),
                 TextColumn::make('name'),
                 TextColumn::make('title'),
                 TextColumn::make('bio'),
