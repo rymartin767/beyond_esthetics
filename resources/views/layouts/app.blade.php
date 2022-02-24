@@ -19,7 +19,7 @@
         <script src="{{ mix('js/app.js') }}" defer></script>
     </head>
     <body>
-        <div class="min-h-screen flex flex-col bg-white">
+        <div class="min-h-screen flex flex-col">
             @livewire('navigation-menu')
 
             <!-- Page Heading -->
@@ -35,14 +35,16 @@
 
             <!-- Page Content -->
             <main class="flex-1">
-                <div class="">
+                <div>
                     {{ $slot }}
                 </div>
             </main>
 
-            <footer class="bg-gray-500">
+            <footer class="bg-gray-200">
                 <div class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
-                    &copy; 2022 Sandy Martin | NT4C
+                    <div class="text-sm text-gray-500">
+                        &copy; 2022 Beyond Esthetics Med Spa | NT4C
+                    </div>
                 </div>
             </footer>
         </div>
