@@ -6,7 +6,7 @@
                     <img src="images/tonya.png" alt="Tonya Goulding, Owner">
                 </div>
                 <div class="col-span-3 sm:col-span-1 flex flex-col bg-black p-24">
-                    <div class="flex flex-col border-l-4 border-purple-300 text-white text-4xl">
+                    <div class="flex flex-col border-l-4 border-spa-200 text-white text-4xl">
                         <div class="pl-4">Helping People Feel</div class="pl-4">
                         <div class="pl-4">Beautiful And Confident</div>
                     </div>
