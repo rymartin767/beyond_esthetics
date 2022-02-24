@@ -4,9 +4,17 @@
         <div class="flex justify-between h-16">
             <div class="flex">
                 <!-- Navigation Links -->
-                <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
+                <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex sm:items-center">
                     <x-jet-nav-link href="{{ route('dashboard') }}" :active="request()->routeIs('dashboard')">
                         {{ __('HOME') }}
+                    </x-jet-nav-link>
+
+                    <x-jet-nav-link href="{{ route('dashboard') }}" :active="request()->routeIs('dashboard')">
+                        {{ __('SPECIALS') }}
+                    </x-jet-nav-link>
+
+                    <x-jet-nav-link href="{{ route('dashboard') }}" :active="request()->routeIs('dashboard')">
+                        {{ __('SERVICES') }}
                     </x-jet-nav-link>
 
                     <x-jet-nav-link href="{{ route('dashboard') }}" :active="request()->routeIs('dashboard')">
@@ -14,8 +22,12 @@
                     </x-jet-nav-link>
 
                     <x-jet-nav-link href="{{ route('dashboard') }}" :active="request()->routeIs('dashboard')">
-                        {{ __('SERVICES') }}
+                        {{ __('CONTACT US') }}
                     </x-jet-nav-link>
+                    
+                    <div class="">
+                        <img src="images/logo.svg" alt="Beyond Esthetics Logo" class="h-10 w-10">
+                    </div>
                 </div>
             </div>
 
@@ -51,6 +63,12 @@
                                 <x-jet-dropdown-link href="{{ route('profile.show') }}">
                                     {{ __('Profile') }}
                                 </x-jet-dropdown-link>
+
+                                @admin
+                                    <x-jet-dropdown-link href="{{ route('filament.pages.dashboard') }}">
+                                        {{ __('Admin') }}
+                                    </x-jet-dropdown-link>
+                                @endadmin
 
                                 <div class="border-t border-gray-100"></div>
 
