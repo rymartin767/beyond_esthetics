@@ -78,11 +78,11 @@
                                 <img src="images/tonya.png" alt="{{ $employee->name }}">
                             @endproduction
                         </div>
-                        <div>
-                            <div class="p-4 font-mont bg-white">
+                        <div class="bg-pink-400 h-36">
+                            <div class="p-4 font-mont bg-white min-h-full">
                                 <div class="text-xl">{{ $employee->name }}</div>
                                 @foreach (explode('-', $employee->title) as $title)
-                                    <div>{{ $title }}</div>
+                                    <div class="text-sm tracking-wider">{{ $title }}</div>
                                 @endforeach
                             </div>
                         </div>
