@@ -1554,6 +1554,8 @@ Ensure the default browser behavior of the `hidden` attribute.
   opacity: 0.7;
 }.opacity-25{
   opacity: 0.25;
+}.opacity-10{
+  opacity: 0.1;
 }.shadow-sm{
   --tw-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
   --tw-shadow-colored: 0 1px 2px 0 var(--tw-shadow-color);
@@ -1631,6 +1633,8 @@ Ensure the default browser behavior of the `hidden` attribute.
   transition-duration: 75ms;
 }.duration-300{
   transition-duration: 300ms;
+}.duration-700{
+  transition-duration: 700ms;
 }.ease-in-out{
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }.ease-out{
@@ -1641,6 +1645,10 @@ Ensure the default browser behavior of the `hidden` attribute.
     font-family: 'Anton', sans-serif;
 }.font-mont {
     font-family: 'Montserrat', sans-serif;
+}.hover\:scale-125:hover{
+  --tw-scale-x: 1.25;
+  --tw-scale-y: 1.25;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }.hover\:border-gray-300:hover{
   --tw-border-opacity: 1;
   border-color: rgb(209 213 219 / var(--tw-border-opacity));
@@ -1690,6 +1698,8 @@ Ensure the default browser behavior of the `hidden` attribute.
 }.hover\:underline:hover{
   -webkit-text-decoration-line: underline;
           text-decoration-line: underline;
+}.hover\:opacity-100:hover{
+  opacity: 1;
 }.focus\:z-10:focus{
   z-index: 10;
 }.focus\:border-blue-300:focus{

@@ -1,4 +1,5 @@
 <div class="bg-pink-300">
+    <!-- JumboTron Intro -->
     <div class="bg-white">
         <x-section>
             <div class="grid grid-cols-2">
@@ -23,14 +24,23 @@
     <div class="bg-white">
         <x-section title="Services We Provide">
             <div class="grid grid-cols-3 gap-3">
-                <div class="col-span-3 sm:col-span-1 h-96 bg-gray-400">
-                    <img src="images/med.png" alt="Service We Provide">
+                <div class="col-span-3 sm:col-span-1">
+                    <div class="overflow-hidden">
+                        <img src="images/med.png" alt="Service We Provide" class="transition opacity-70 duration-700 ease-in-out hover:scale-125 hover:opacity-100">
+                    </div>
+                    <div class="mt-2 tracking-widest">MEDICAL</div>
                 </div>
-                <div class="col-span-3 sm:col-span-1 h-96 bg-gray-400">
-                    <img src="images/inject.png" alt="Service We Provide">
+                <div class="col-span-3 sm:col-span-1">
+                <div class="overflow-hidden">
+                        <img src="images/spa.png" alt="Service We Provide" class="transition opacity-70 duration-700 ease-in-out hover:scale-125 hover:opacity-100">
+                    </div>
+                    <div class="mt-2 tracking-widest">SPA</div>
                 </div>
-                <div class="col-span-3 sm:col-span-1 h-96 bg-gray-400">
-                    <img src="images/spa.png" alt="Service We Provide">
+                <div class="col-span-3 sm:col-span-1">
+                <div class="overflow-hidden">
+                        <img src="images/inject.png" alt="Service We Provide" class="transition opacity-70 duration-700 ease-in-out hover:scale-125 hover:opacity-100">
+                    </div>
+                    <div class="mt-2 tracking-widest">INJECTABLES</div>
                 </div>
             </div>
         </x-section>

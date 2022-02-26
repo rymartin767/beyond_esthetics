@@ -43,7 +43,7 @@
             </div>
             <!-- Hours -->
             <div class="col-span-7 sm:col-span-2 p-6">
-                <div class="text-center text-2xl mb-3">HOURS</div>
+                <div class="text-center text-2xl mb-3">OFFICE HOURS</div>
                 @foreach (config('general.hours') as $k => $v)
                 <div class="text-center mb-3">
                     <div class="text-lg underline uppercase mb-1">{{ $k }}</div>
