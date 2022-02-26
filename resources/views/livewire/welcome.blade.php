@@ -19,16 +19,24 @@
         </x-section>
     </div>
 
+    <!-- Service We Provide -->
     <div class="bg-white">
         <x-section title="Services We Provide">
             <div class="grid grid-cols-3 gap-3">
-                <div class="col-span-3 sm:col-span-1 h-96 bg-gray-400">column</div>
-                <div class="col-span-3 sm:col-span-1 h-96 bg-gray-400">column</div>
-                <div class="col-span-3 sm:col-span-1 h-96 bg-gray-400">column</div>
+                <div class="col-span-3 sm:col-span-1 h-96 bg-gray-400">
+                    <img src="images/med.png" alt="Service We Provide">
+                </div>
+                <div class="col-span-3 sm:col-span-1 h-96 bg-gray-400">
+                    <img src="images/inject.png" alt="Service We Provide">
+                </div>
+                <div class="col-span-3 sm:col-span-1 h-96 bg-gray-400">
+                    <img src="images/spa.png" alt="Service We Provide">
+                </div>
             </div>
         </x-section>
     </div>
 
+    <!-- Employees -->
     <div class="bg-spa-100">
         <x-section>
             <div class="grid grid-cols-3">
@@ -53,10 +61,20 @@
             <div class="grid grid-cols-4 gap-3 mt-3">
                 @forelse ($employees as $employee)
                     <div class="col-span-4 sm:col-span-1">
-                        <img src="{{ Storage::url($employee->image_url) }}" alt="{{ $employee->name }}">
-                        <div class="p-4 font-mont bg-white">
-                            <div class="text-xl">{{ $employee->name }}</div>
-                            <div>{{ $employee->title }}</div>
+                        <div>
+                            @production
+                                <img src="{{ Storage::url($employee->image_url) }}" alt="{{ $employee->name }}">
+                            @else
+                                <img src="images/tonya.png" alt="{{ $employee->name }}">
+                            @endproduction
+                        </div>
+                        <div>
+                            <div class="p-4 font-mont bg-white">
+                                <div class="text-xl">{{ $employee->name }}</div>
+                                @foreach (explode('-', $employee->title) as $title)
+                                    <div>{{ $title }}</div>
+                                @endforeach
+                            </div>
                         </div>
                     </div>
                 @empty
