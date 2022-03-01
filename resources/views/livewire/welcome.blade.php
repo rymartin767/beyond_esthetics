@@ -6,8 +6,8 @@
                 <div class="col-span-3 sm:col-span-1 bg-spa-200">
                     <img src="images/tonya.png" alt="Tonya Goulding, Owner">
                 </div>
-                <div class="col-span-3 sm:col-span-1 flex flex-col bg-black p-24">
-                    <div class="flex flex-col border-l-4 border-spa-200 text-white text-4xl">
+                <div class="col-span-3 sm:col-span-1 flex flex-col bg-black p-6 sm:p-24">
+                    <div class="flex flex-col border-l-4 border-spa-200 text-white text-3xl sm:text-4xl">
                         <div class="pl-4">Helping People Feel</div class="pl-4">
                         <div class="pl-4">Beautiful And Confident</div>
                     </div>
@@ -54,11 +54,13 @@
                     <div class="border-l-4 border-black">
                         <div class="pl-4">
                             <div class="font-mont text-5xl">Tonya Goulding</div>
-                            <div class="mt-4 font-mont text-xl">
+                            <div class="mt-4 font-mont text-xl tracking-wide">
                                 <div>Owner/Founder</div>
-                                <div>Certified Esthetician</div>
+                                <div>Licensed Esthetician</div>
+                                <div>AIIC Master Certified Permanent Makeup Artist</div>
                                 <div>Certified Permanent Makeup Trainer</div>
-                                <div>Dermaplane Pro Ohio Trainer</div>
+                                <div>Certified Dermaplane Pro Trainer</div>
+                                <div>Skincare Specialist</div>
                             </div>
                         </div>
                     </div>
@@ -78,7 +80,7 @@
                                 <img src="images/tonya.png" alt="{{ $employee->name }}">
                             @endproduction
                         </div>
-                        <div class="bg-pink-400 h-36">
+                        <div class="bg-pink-400 h-28">
                             <div class="p-4 font-mont bg-white min-h-full">
                                 <div class="text-xl">{{ $employee->name }}</div>
                                 @foreach (explode('-', $employee->title) as $title)

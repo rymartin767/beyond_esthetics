@@ -3,7 +3,7 @@
         <div class="grid grid-cols-7 gap-3">
             <!-- Mission Statement -->
             <div class="col-span-7 sm:col-span-2 p-6 bg-spa-200 flex flex-wrap content-center">
-                <div class="text-center">
+                <div class="text-white">
                     Beyond Esthetics means 'seeing beyond with what the natural eye sees'. Sometimes the most effective way to help a client is simply listening to a need or giving someone a hug. Knowing that the best treatment is sometimes good old-fashioned TLC, Tonya's husband Steve came up with the tagline, "Come get some TLC from TLG". Beyond Esthetics started with just Tonya and has grown to over 20 employees and two locations.
                 </div>
             </div>
@@ -24,7 +24,7 @@
                     </div>
                     <div class="text-center">
                         <div class="text-2xl mb-3">FOLLOW US</div>
-                        <div class="flex flex-row items-center justify-center space-x-4">
+                        <div class="flex flex-row items-center justify-center space-x-8">
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" class="h-10 w-10 fill-current text-spa-200">
                                 <!--! Font Awesome Pro 6.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc.-->
                                 <path d="m279.14 288 14.22-92.66h-88.91v-60.13c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S260.43 0 225.36 0c-73.22 0-121.08 44.38-121.08 124.72v70.62H22.89V288h81.39v224h100.17V288z" />
@@ -45,14 +45,18 @@
             <div class="col-span-7 sm:col-span-2 p-6">
                 <div class="text-center text-2xl mb-3">OFFICE HOURS</div>
                 @foreach (config('general.hours') as $k => $v)
-                <div class="text-center mb-3">
-                    <div class="text-lg underline uppercase mb-1">{{ $k }}</div>
-                    @foreach ($v as $day => $hours)
-                    <div>{{ $day }} : {{ $hours }}</div>
-                    @endforeach
-                </div>
+                    <div class="mb-3">
+                        <div class="text-center text-lg underline uppercase mb-1">{{ $k }}</div>
+                        @foreach ($v as $day => $hours)
+                            <div class="text-center">{{ $day }} : {{ $hours }}</div>
+                        @endforeach
+                    </div>
                 @endforeach
             </div>
+        </div>
+        <div class="flex justify-between mt-3 border-t border-spa-200 py-3">
+            <div class="text-sm text-gray-600">&copy; {{ now()->format('Y') }} Beyond Esthetics</div>
+            <div class="text-sm text-gray-600">Designed with love + laravel by NT4C</div>
         </div>
     </div>
 </footer>
