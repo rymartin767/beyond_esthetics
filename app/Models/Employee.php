@@ -21,7 +21,9 @@ class Employee extends Model
     protected static function booted()
     {
         static::deleting(function ($employee) {
-            Storage::delete($employee->image_url);
+            if ($employee->image_url !== null) {
+                Storage::delete($employee->image_url);
+            }
         });
     }
 }
