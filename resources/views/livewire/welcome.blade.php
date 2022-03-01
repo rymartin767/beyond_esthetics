@@ -72,7 +72,7 @@
 
             <div class="grid grid-cols-4 gap-3 mt-3">
                 @forelse ($employees as $employee)
-                    <div class="col-span-4 sm:col-span-1">
+                    <div class="col-span-4 sm:col-span-1 flex flex-col flex-wrap h-full">
                         <div>
                             @production
                                 <img src="{{ Storage::url($employee->image_url) }}" alt="{{ $employee->name }}">
@@ -80,8 +80,8 @@
                                 <img src="images/tonya.png" alt="{{ $employee->name }}">
                             @endproduction
                         </div>
-                        <div class="bg-pink-400 h-28">
-                            <div class="p-4 font-mont bg-white min-h-full">
+                        <div>
+                            <div class="p-4 font-mont bg-white h-36">
                                 <div class="text-xl">{{ $employee->name }}</div>
                                 @foreach (explode('-', $employee->title) as $title)
                                     <div class="text-sm tracking-wider">{{ $title }}</div>
@@ -96,6 +96,8 @@
     </div>
 
     <div class="bg-white h-96">
-        <x-section title="Section Title"></x-section>
+        <x-section title="Section Title">
+            
+        </x-section>
     </div>
 </div>
