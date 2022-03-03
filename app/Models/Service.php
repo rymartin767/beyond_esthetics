@@ -22,14 +22,13 @@ class Service extends Model
     protected function slug(): Attribute
     {
         return Attribute::make(
-            set: fn () => str($this->name)->lower(),
             get: fn () => str($this->name)->slug(),
         );
     }
 
     public function logos()
     {
-        $key = str($this->name)->lower();
+        $key = str($this->name)->slug();
         return config("general.logos.$key");
     }
 
