@@ -4,12 +4,12 @@
         <div class="flex justify-between h-16">
             <div class="flex">
                 <!-- Navigation Links -->
-                <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex sm:items-center">
+                <div class="hidden space-x-10 sm:-my-px sm:ml-8 sm:flex sm:items-center">
                     <x-jet-nav-link href="{{ route('home') }}" :active="request()->routeIs('home')">
                         {{ __('HOME') }}
                     </x-jet-nav-link>
 
-                    <x-jet-nav-link href="{{ route('home') }}" :active="request()->routeIs('home')">
+                    <x-jet-nav-link href="{{ route('home') }}" :active="request()->routeIs('')">
                         {{ __('SPECIALS') }}
                     </x-jet-nav-link>
 
@@ -17,17 +17,21 @@
                         {{ __('SERVICES') }}
                     </x-jet-nav-link>
 
-                    <x-jet-nav-link href="{{ route('home') }}" :active="request()->routeIs('home')">
+                    <x-jet-nav-link href="{{ route('home') }}" :active="request()->routeIs('')">
                         {{ __('ABOUT') }}
                     </x-jet-nav-link>
 
-                    <x-jet-nav-link href="{{ route('home') }}" :active="request()->routeIs('home')">
+                    <x-jet-nav-link href="{{ route('home') }}" :active="request()->routeIs('')">
                         {{ __('CONTACT US') }}
                     </x-jet-nav-link>
                     
-                    <div class="">
+                    <div class="border-2 border-white pr-1">
                         <img src="/images/logo.svg" alt="Beyond Esthetics Logo" class="h-10 w-10">
                     </div>
+
+                    <x-jet-nav-link href="{{ route('home') }}" :active="request()->routeIs('home')">
+                        {{ __('FAQs') }}
+                    </x-jet-nav-link>
                 </div>
             </div>
 

@@ -4,7 +4,7 @@
         <x-section>
             <div class="grid grid-cols-2">
                 <div class="col-span-3 sm:col-span-1 bg-spa-200">
-                    <img src="images/cover.svg" alt="Tonya Goulding, Owner">
+                    <img src="images/cover.jpg" alt="Tonya Goulding, Owner">
                 </div>
                 <div class="col-span-3 sm:col-span-1 flex flex-col bg-black p-6 sm:p-24">
                     <div class="flex flex-col border-l-4 border-spa-200 text-white text-3xl sm:text-4xl">
@@ -70,9 +70,9 @@
                 </div>
             </div>
 
-            <div class="grid grid-cols-4 gap-3 mt-3">
+            <div class="grid grid-cols-5 gap-3 mt-3">
                 @forelse ($employees as $employee)
-                    <div class="col-span-4 sm:col-span-1 flex flex-col flex-wrap h-full">
+                    <div class="col-span-5 sm:col-span-1 flex flex-col flex-wrap h-full">
                         <div>
                             @production
                                 <img src="{{ Storage::url($employee->image_url) }}" alt="{{ $employee->name }}">

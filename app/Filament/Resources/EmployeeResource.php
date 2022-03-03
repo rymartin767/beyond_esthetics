@@ -8,11 +8,13 @@ use App\Models\Employee;
 use Filament\Resources\Form;
 use Filament\Resources\Table;
 use Filament\Resources\Resource;
+use Filament\Tables\Columns\IconColumn;
 use Filament\Tables\Columns\TextColumn;
 use Filament\Forms\Components\TextInput;
 use Filament\Tables\Columns\ImageColumn;
 use Filament\Forms\Components\FileUpload;
 use Filament\Forms\Components\RichEditor;
+use Filament\Tables\Columns\BooleanColumn;
 use App\Filament\Resources\EmployeeResource\Pages;
 use App\Filament\Resources\EmployeeResource\RelationManagers;
 
@@ -49,7 +51,15 @@ class EmployeeResource extends Resource
                 ImageColumn::make('image_url')->label('Image')->disk('s3')->rounded(),
                 TextColumn::make('name'),
                 TextColumn::make('title'),
-                TextColumn::make('bio'),
+                IconColumn::make('bio')
+                    ->options([
+                        'heroicon-o-x-circle',
+                        'heroicon-o-check' => fn ($state): bool => $state !== null,
+                    ])
+                    ->colors([
+                        'success',
+                        'danger' => fn ($state): bool => $state === null,
+                    ])
             ])
             ->filters([
                 //
