@@ -21,8 +21,8 @@ return new class extends Migration
             $table->string('description')->nullable();
             $table->text('bullets')->nullable();
             $table->decimal('msrp', 9, 2, true);
-            $table->string('image_urls')->nullable();
-            $table->string('video_urls')->nullable();
+            $table->json('image_urls')->nullable();
+            $table->json('video_urls')->nullable();
             $table->timestamps();
         });
     }
