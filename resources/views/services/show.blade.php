@@ -11,9 +11,9 @@
                     <div class="grid grid-cols-3 gap-3">
                         <div class="col-span-3 text-center py-8 text-3xl text-spa-200">{{ $service->name }} targets:</div>
                         @foreach ($service->logos() as $k => $v)
-                        <div class="col-span-3 sm:col-span-1 border-4 border-spa-200 hover:border-black">
-                            <img src="{{ $v }}" alt="{{ $k }} Image">
-                        </div>
+                            <div class="col-span-3 sm:col-span-1 border-4 border-spa-200 hover:border-black">
+                                <img src="{{ $v }}" alt="{{ $k }} Image">
+                            </div>
                         @endforeach
                     </div>
                 </div>

@@ -23,7 +23,10 @@ return [
     ],
 
     'logos' => [
-        'dermaplane' => [
+        'dermal-fillers' => [
+
+        ],
+        'dermaplane-facial' => [
             'Mild Exfoliation' => '/images/services/logos/mild_exfoliation.svg',
             'Pore Size' => '/images/services/logos/pore_size.svg',
             'Semi Aggressive' => '/images/services/logos/semi_aggressive.svg',
