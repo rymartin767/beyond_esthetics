@@ -36,7 +36,7 @@ class ServiceResource extends Resource
                 RichEditor::make('bullets')->rules(['nullable']),
                 TextInput::make('msrp')
                     ->numeric()
-                    ->minValue(1)
+                    ->minValue(0)
                     ->maxValue(10000)
                     ->mask(fn (TextInput\Mask $mask) => $mask->money('$', ',', 2))
                     ->label('MSRP'),
