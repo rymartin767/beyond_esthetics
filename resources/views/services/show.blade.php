@@ -5,16 +5,17 @@
             <div class="max-w-7xl mx-auto text-4xl py-8 uppercase">{{ $service->name }}</div>
             <div class="grid grid-cols-2">
                 <div class="col-span-2 sm:col-span-1 bg-slate-400">
-                    <img src="{{ Storage::url($service->image_urls[1]) }}" alt="{{ $service->name }} Image">
+                    <img src="{{ $service->titleImage() }}" alt="{{ $service->name }} Image">
                 </div>
                 <div class="col-span-2 sm:col-span-1 bg-gray-200 px-24 py-8">
                     <div class="grid grid-cols-3 gap-3">
                         <div class="col-span-3 text-center py-8 text-3xl text-spa-200">{{ $service->name }} targets:</div>
-                        @foreach ($service->logos() as $k => $v)
+                        @forelse ($service->logos() as $k => $v)
                             <div class="col-span-3 sm:col-span-1 border-4 border-spa-200 hover:border-black">
                                 <img src="{{ $v }}" alt="{{ $k }} Image">
                             </div>
-                        @endforeach
+                        @empty
+                        @endforelse
                     </div>
                 </div>
                 <!-- Description -->
@@ -24,11 +25,11 @@
                     </div>
                 </div>
                 <div class="col-span-2 sm:col-span-1 bg-black h-96 flex flex-wrap content-center">
-                    <div class="w-full text-center text-5xl text-white">WHAT IS {{ $service->name }}?</div>
+                    <div class="w-full text-center text-4xl text-white">What is {{ $service->name }}?</div>
                 </div>
 
                 <div class="col-span-2 sm:col-span-1 bg-gray-200">
-                    <img src="{{ Storage::url($service->image_urls[2]) }}" alt="">
+                    <img src="{{ $service->bulletImage() }}" alt="">
                 </div>
                 <div class="col-span-2 sm:col-span-1 flex flex-wrap content-center">
                     <div class="p-12">

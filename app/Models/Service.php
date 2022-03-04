@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use Exception;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Database\Eloquent\Casts\Attribute;
@@ -29,7 +30,34 @@ class Service extends Model
     public function logos()
     {
         $key = str($this->name)->slug();
-        return config("general.logos.$key");
+        return config("general.logos.$key") ?? [];
+    }
+
+    public function portrait()
+    {
+        try {
+            return Storage::url($this->image_urls[0]);
+        } catch (Exception)  {
+            return 'images/services/default_portrait.jpg';
+        }
+    }
+
+    public function titleImage()
+    {
+        try {
+            return Storage::url($this->image_urls[1]);
+        } catch (Exception)  {
+            return 'images/services/default_title.jpg';
+        }
+    }
+
+    public function bulletImage()
+    {
+        try {
+            return Storage::url($this->image_urls[2]);
+        } catch (Exception)  {
+            return 'images/services/default_bullet.jpg';
+        }
     }
 
     protected static function booted()
@@ -41,10 +69,5 @@ class Service extends Model
                 }
             }
         });
-    }
-
-    public function specials()
-    {
-        $this->hasMany(Special::class);
     }
 }

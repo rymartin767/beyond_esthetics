@@ -9,7 +9,7 @@
                         {{ __('HOME') }}
                     </x-jet-nav-link>
 
-                    <x-jet-nav-link href="{{ route('home') }}" :active="request()->routeIs('')">
+                    <x-jet-nav-link href="{{ route('specials') }}" :active="request()->routeIs('specials')">
                         {{ __('SPECIALS') }}
                     </x-jet-nav-link>
 
@@ -29,7 +29,7 @@
                         <img src="/images/logo.svg" alt="Beyond Esthetics Logo" class="h-10 w-10">
                     </div>
 
-                    <x-jet-nav-link href="{{ route('home') }}" :active="request()->routeIs('home')">
+                    <x-jet-nav-link href="{{ route('home') }}" :active="request()->routeIs('')">
                         {{ __('FAQs') }}
                     </x-jet-nav-link>
                 </div>

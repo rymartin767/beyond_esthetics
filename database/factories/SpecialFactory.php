@@ -18,12 +18,11 @@ class SpecialFactory extends Factory
     public function definition()
     {
         return [
-            'service_id' => Service::factory(),
             'description' => $this->faker->sentence(5, true),
             'sale_price' => $this->faker->randomFloat(2, 50, 1000),
             'start_date' => $this->faker->date(),
             'end_date' => $this->faker->date(),
-            'locations' => ['Ashland', 'Ontario'],
+            'locations' => ['ontario'],
             'image_url' => null
         ];
     }

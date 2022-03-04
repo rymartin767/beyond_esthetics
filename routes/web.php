@@ -3,6 +3,8 @@
 use App\Http\Livewire\Home;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ServiceController;
+use App\Http\Controllers\SpecialController;
+use App\Models\Special;
 
 /*
 |--------------------------------------------------------------------------
@@ -24,5 +26,8 @@ Route::middleware(['auth'])->group(function () {
 
     // SERVICES
     Route::get('/services', [ServiceController::class, 'index'])->name('services');
-    Route::get('/services/{service:id}', [ServiceController::class, 'show'])->name('services.show');
+    Route::get('/services/{service}', [ServiceController::class, 'show'])->name('services.show');
+
+    // SPECIALS
+    Route::get('/specials', SpecialController::class)->name('specials');
 });

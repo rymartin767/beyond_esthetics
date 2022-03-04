@@ -20,7 +20,7 @@ class ServiceFactory extends Factory
             'name' => $this->faker->sentence(2, false),
             'type' => collect(['medical', 'spa', 'injectables'])->random(),
             'locations' => ['ashland','ontario'],
-            'description' => $this->faker->sentence(40, true),
+            'description' => $this->faker->sentence(20, true),
             'bullets' => $this->faker->paragraph(8, true),
             'msrp' => $this->faker->randomFloat(2, 100, 2000), 
             'image_urls' => null,

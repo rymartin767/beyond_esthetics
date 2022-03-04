@@ -11,7 +11,6 @@ class Special extends Model
     use HasFactory;
 
     protected $fillable = [
-        'service_id',
         'description',
         'sale_price',
         'start_date',
@@ -33,8 +32,14 @@ class Special extends Model
         });
     }
 
-    public function service()
+    public function image()
     {
-        return $this->belongsTo(Service::class);
+        if($this->image_url !== null) {
+            if(Storage::exists($this->image_url)) {
+                return Storage::url($this->image_url);
+            }
+        }
+
+        return 'images/services/default_portrait.jpg';
     }
 }

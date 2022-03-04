@@ -15,8 +15,7 @@ return new class extends Migration
     {
         Schema::create('specials', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('service_id')->constrained();
-            $table->string('description');
+            $table->text('description');
             $table->decimal('sale_price', 9, 2, true);
             $table->date('start_date');
             $table->date('end_date');
