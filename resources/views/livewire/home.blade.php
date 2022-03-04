@@ -35,9 +35,9 @@
                 <div class="col-span-3 sm:col-span-1">
                     <a href="/services#spa" class="cursor-pointer">
                         <div class="overflow-hidden">
-                                <img src="images/spa.png" alt="Service We Provide" class="transition opacity-70 duration-700 ease-in-out hover:scale-125 hover:opacity-100">
-                            </div>
-                            <div class="mt-2 tracking-widest">SPA</div>
+                            <img src="images/spa.png" alt="Service We Provide" class="transition opacity-70 duration-700 ease-in-out hover:scale-125 hover:opacity-100">
+                        </div>
+                        <div class="mt-2 tracking-widest">SPA</div>
                     </a>
                 </div>
                 <div class="col-span-3 sm:col-span-1">
@@ -55,8 +55,9 @@
     <!-- Employees -->
     <div class="bg-spa-100">
         <x-section>
-            <div class="grid grid-cols-3">
-                <!-- Text Left -->
+            <!-- Tonya -->
+            <div class="grid grid-cols-3 bg-pink-200">
+                <!-- Tonya Left -->
                 <div class="col-span-3 sm:col-span-2 flex flex-wrap content-center">
                     <div class="bg-black text-white p-8">
                         <div class="border-l-4 border-black">
@@ -74,44 +75,49 @@
                         </div>
                     </div>
                 </div>
-                <!-- Image Right -->
+                <!-- Tonya Image Right -->
                 <div class="col-span-3 sm:col-span-1">
                     <img src="images/tonya.png" alt="Tonya Goulding, Owner" class="rounded-full">
                 </div>
             </div>
 
-            <div class="grid grid-cols-4 gap-3 mt-3">
+            <!-- Employees -->
+            <div class="grid grid-cols-4 gap-3 mt-12">
                 @forelse ($employees as $employee)
-                    <div class="col-span-2 sm:col-span-1 flex flex-col flex-wrap h-full">
-                        <div>
-                            @production
-                                <img src="{{ Storage::url($employee->image_url) }}" alt="{{ $employee->name }}">
-                            @else
-                                <img src="images/tonya.png" alt="{{ $employee->name }}">
-                            @endproduction
-                        </div>
-                        <div>
-                            <div class="p-4 font-mont bg-white h-32">
-                                <div class="text-xl">{{ $employee->name }}</div>
-                                @foreach (explode('-', $employee->title) as $title)
-                                    <div class="text-sm tracking-wider">{{ $title }}</div>
-                                @endforeach
-                            </div>
+                <div class="col-span-2 sm:col-span-1 flex flex-col flex-wrap bg-white">
+                    <div>
+                        @production
+                        <img src="{{ Storage::url($employee->image_url) }}" alt="{{ $employee->name }}">
+                        @else
+                        <img src="images/tonya.png" alt="{{ $employee->name }}">
+                        @endproduction
+                    </div>
+                    <div>
+                        <div class="p-4 font-mont bg-white">
+                            <div class="text-xl">{{ $employee->name }}</div>
+                            @foreach (explode('-', $employee->title) as $title)
+                            <div class="text-sm tracking-wider">{{ $title }}</div>
+                            @endforeach
                         </div>
                     </div>
+                </div>
                 @empty
                 @endforelse
             </div>
+
         </x-section>
     </div>
 
-    <!-- Reviews -->
-    <div class="bg-white">
-        <x-section title="Don't Take Our Word For It">
-            <div class="text-center mt-4 mb-16 text-gray-500 text-lg">Here's what our patients have to say about their experience.</div>
+    <!-- New Reviews -->
+    <div class="bg-white py-20">
+        <div class="max-w-7xl mx-auto">
+            <div class="mb-12">
+                <div class="text-center text-4xl mb-4 text-spa-200">Don’t take our word for it</div>
+                <div class="text-center text-slate-500">Here’s what our patients have to say about their experience.</div>
+            </div>
             <div class="grid grid-cols-2 gap-8">
                 @forelse ($reviews as $review)
-                    <div class="col-span-2 sm:col-span-1">
+                    <div class="col-span-2 sm:col-span-1 p-6">
                         <div class="flex flex-row">
                             <img src="{{ $review->image() }}" alt="" class="h-28 w-28">
                             <div class="px-8">
@@ -140,6 +146,7 @@
                     </div>
                 @endforelse
             </div>
-        </x-section>
+        </div>
     </div>
+
 </div>

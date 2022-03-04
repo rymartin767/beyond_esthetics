@@ -29,6 +29,6 @@ class Review extends Model
             return Storage::url($this->image_url);
         }
 
-        return 'images/quote.svg';
+        return "images/$this->social_media.svg";
     }
 }
