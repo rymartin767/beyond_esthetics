@@ -3,7 +3,7 @@
 return [
     'hours' => [
         'ontario' => [
-            'Monday' => '7AM to 5PM.svg',
+            'Monday' => '7AM to 5PM',
             'Tuesday' => '7AM to 5PM',
             'Wednesday' => '7AM to 5PM',
             'Thursday' => '7AM to 5PM',
