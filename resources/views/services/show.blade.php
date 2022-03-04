@@ -1,5 +1,6 @@
 <x-app-layout>
     <div class="font-mont">
+
         <!-- Product -->
         <div>
             <div class="max-w-7xl mx-auto text-4xl py-8 uppercase">{{ $service->name }}</div>
@@ -8,34 +9,43 @@
                     <img src="{{ $service->titleImage() }}" alt="{{ $service->name }} Image">
                 </div>
                 <div class="col-span-2 sm:col-span-1 bg-gray-200 px-24 py-8">
-                    <div class="grid grid-cols-3 gap-3">
-                        <div class="col-span-3 text-center py-8 text-3xl text-spa-200">{{ $service->name }} targets:</div>
+                    <div class="grid grid-cols-6 gap-3">
+                        <div class="col-span-6 text-center py-8 text-3xl text-spa-200">{{ $service->name }} targets:</div>
                         @forelse ($service->logos() as $k => $v)
-                            <div class="col-span-3 sm:col-span-1 border-4 border-spa-200 hover:border-black">
+                            <div class="col-span-3 sm:col-span-2 border-4 border-spa-200 hover:border-black">
                                 <img src="{{ $v }}" alt="{{ $k }} Image">
                             </div>
                         @empty
+                            <div>No Logos Found.</div>
                         @endforelse
                     </div>
                 </div>
-                <!-- Description -->
-                <div class="col-span-2 sm:col-span-1 bg-white h-96 flex flex-wrap content-center">
-                    <div class="px-24 text-xl leading-7">
-                        {!! $service->description !!}
-                    </div>
-                </div>
-                <div class="col-span-2 sm:col-span-1 bg-black h-96 flex flex-wrap content-center">
-                    <div class="w-full text-center text-4xl text-white">What is {{ $service->name }}?</div>
-                </div>
+            </div>
+        </div>
 
-                <div class="col-span-2 sm:col-span-1 bg-gray-200">
-                    <img src="{{ $service->bulletImage() }}" alt="">
+
+        <!-- Description -->
+        <div class="grid grid-cols-2">
+            <div class="col-span-2 sm:col-span-1 bg-white h-96 flex flex-wrap content-center">
+                <div class="px-24 text-xl leading-7">
+                    {!! $service->description !!}
                 </div>
-                <div class="col-span-2 sm:col-span-1 flex flex-wrap content-center">
-                    <div class="p-12">
-                        <div class="service-bullets">
-                            {!! $service->bullets !!}
-                        </div>
+            </div>
+            <div class="order-first sm:order-last col-span-2 sm:col-span-1 bg-black h-96 flex flex-wrap content-center">
+                <div class="w-full text-center text-4xl text-white">What is {{ $service->name }}?</div>
+            </div>
+        </div>
+
+        <!-- Product Bullets -->
+        <div class="grid grid-cols-2">
+            <div class="col-span-2 sm:col-span-1 bg-gray-200">
+                <img src="{{ $service->bulletImage() }}" alt="">
+            </div>
+            
+            <div class="col-span-2 sm:col-span-1 flex flex-wrap content-center">
+                <div class="p-12">
+                    <div class="service-bullets">
+                        {!! $service->bullets !!}
                     </div>
                 </div>
             </div>
@@ -74,8 +84,8 @@
                     <iframe width="560" height="315" src="https://www.youtube.com/embed/{{ $service->video_urls }}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </div>
             </div>
-            <div class="col-span-2 sm:col-span-1 flex flex-wrap content-center">
-                <div class="w-full text-center text-5xl font-semibold"><span class="text-spa-200">Watch</span> & Learn.</div>
+            <div class="order-first sm:order-last col-span-2 sm:col-span-1 flex flex-wrap content-center">
+                <div class="w-full text-center text-5xl font-semibold py-8"><span class="text-spa-200">Watch</span> & Learn.</div>
             </div>
         </div>
 
@@ -96,9 +106,9 @@
         </div>
 
         <!-- Book Now, Pay Later -->
-        <div class="max-w-7xl mx-auto py-12">
+        <div class="max-w-7xl mx-auto py-12 px-6 sm:px-0">
             <div class="grid grid-cols-4 gap-3">
-                <div class="col-span-4 sm:col-span-1 text-4xl font-black">
+                <div class="col-span-4 sm:col-span-1 text-4xl font-black mb-4 sm:mb-0">
                     <a href="https://carecredit.com/go/443shq/." target="_blank" class="hover:text-spa-200">
                         <div>Book Now.</div>
                         <div>Pay Later.</div>
