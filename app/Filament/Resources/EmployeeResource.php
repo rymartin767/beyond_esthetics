@@ -48,9 +48,9 @@ class EmployeeResource extends Resource
     {
         return $table
             ->columns([
-                ImageColumn::make('image_url')->label('Image')->disk('s3')->rounded(),
                 TextColumn::make('name'),
-                TextColumn::make('title'),
+                TextColumn::make('title')
+                    ->limit(30),
                 IconColumn::make('bio')
                     ->options([
                         'heroicon-o-x-circle',
@@ -59,7 +59,17 @@ class EmployeeResource extends Resource
                     ->colors([
                         'success',
                         'danger' => fn ($state): bool => $state === null,
+                    ]),
+                IconColumn::make('image_url')
+                    ->options([
+                        'heroicon-o-x-circle',
+                        'heroicon-o-check' => fn ($state): bool => $state !== null,
                     ])
+                    ->colors([
+                        'success',
+                        'danger' => fn ($state): bool => $state === null,
+                    ])
+                    ->label('Image Saved')
             ])
             ->filters([
                 //
