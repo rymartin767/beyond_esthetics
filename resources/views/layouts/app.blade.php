@@ -18,10 +18,8 @@
         <!-- Scripts -->
         <script src="{{ mix('js/app.js') }}" defer></script>
     </head>
-    <body class="font-sans antialiased">
-        <x-jet-banner />
-
-        <div class="min-h-screen bg-gray-100">
+    <body>
+        <div class="min-h-screen flex flex-col">
             @livewire('navigation-menu')
 
             <!-- Page Heading -->
@@ -33,10 +31,16 @@
                 </header>
             @endif
 
+            <x-jet-banner />
+
             <!-- Page Content -->
-            <main>
-                {{ $slot }}
+            <main class="flex-1">
+                <div>
+                    {{ $slot }}
+                </div>
             </main>
+
+            @include('layouts.footer')
         </div>
 
         @stack('modals')

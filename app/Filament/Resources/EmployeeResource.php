@@ -1,0 +1,94 @@
+<?php
+
+namespace App\Filament\Resources;
+
+use Filament\Forms;
+use Filament\Tables;
+use App\Models\Employee;
+use Filament\Resources\Form;
+use Filament\Resources\Table;
+use Filament\Resources\Resource;
+use Filament\Tables\Columns\IconColumn;
+use Filament\Tables\Columns\TextColumn;
+use Filament\Forms\Components\TextInput;
+use Filament\Tables\Columns\ImageColumn;
+use Filament\Forms\Components\FileUpload;
+use Filament\Forms\Components\RichEditor;
+use Filament\Tables\Columns\BooleanColumn;
+use App\Filament\Resources\EmployeeResource\Pages;
+use App\Filament\Resources\EmployeeResource\RelationManagers;
+
+class EmployeeResource extends Resource
+{
+    protected static ?string $model = Employee::class;
+
+    protected static ?string $navigationIcon = 'heroicon-o-users';
+
+    public static function form(Form $form): Form
+    {
+        return $form
+            ->schema([
+                TextInput::make('name')->required(),
+                TextInput::make('title')->required(),
+                RichEditor::make('bio'),
+                FileUpload::make('image_url')
+                ->rules([
+                    'required',
+                    'file',
+                    'mimes:png,jpg'
+                ])
+                ->imageCropAspectRatio('1:1')
+                ->disk('s3')
+                ->directory('images/employees')
+                ->visibility('public')
+            ]);
+    }
+
+    public static function table(Table $table): Table
+    {
+        return $table
+            ->columns([
+                TextColumn::make('name'),
+                TextColumn::make('title')
+                    ->limit(30),
+                IconColumn::make('bio')
+                    ->options([
+                        'heroicon-o-x-circle',
+                        'heroicon-o-check' => fn ($state): bool => $state !== null,
+                    ])
+                    ->colors([
+                        'success',
+                        'danger' => fn ($state): bool => $state === null,
+                    ]),
+                IconColumn::make('image_url')
+                    ->options([
+                        'heroicon-o-x-circle',
+                        'heroicon-o-check' => fn ($state): bool => $state !== null,
+                    ])
+                    ->colors([
+                        'success',
+                        'danger' => fn ($state): bool => $state === null,
+                    ])
+                    ->label('Image Saved')
+            ])
+            ->filters([
+                //
+            ]);
+    }
+
+    public static function getRelations(): array
+    {
+        return [
+            //
+        ];
+    }
+
+    public static function getPages(): array
+    {
+        return [
+            'index' => Pages\ListEmployees::route('/'),
+            'create' => Pages\CreateEmployee::route('/create'),
+            'edit' => Pages\EditEmployee::route('/{record}/edit'),
+        ];
+    }
+}

@@ -1,6 +1,10 @@
 <?php
 
+use App\Http\Livewire\Home;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ServiceController;
+use App\Http\Controllers\SpecialController;
+use App\Models\Special;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,10 +17,17 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::view('/', 'mx')->middleware('web')->name('mx');
 
-Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
-    return view('dashboard');
-})->name('dashboard');
+Route::middleware(['auth'])->group(function () {
+
+    // HOMEPAGE
+    Route::get('/home', Home::class)->name('home');
+
+    // SERVICES
+    Route::get('/services', [ServiceController::class, 'index'])->name('services');
+    Route::get('/services/{service}', [ServiceController::class, 'show'])->name('services.show');
+
+    // SPECIALS
+    Route::get('/specials', SpecialController::class)->name('specials');
+});
