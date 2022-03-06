@@ -1,11 +1,11 @@
 <x-app-layout>
     @forelse ($services->groupBy('type') as $k => $v)
         <x-section title="{{ str($k)->upper() }} SERVICES">
-            <div class="grid grid-cols-2">
+            <div class="grid grid-cols-2 gap-3">
                 @foreach ($v->sortByDesc('msrp') as $service)
                     <div class="col-span-2 sm:col-span-1" id="{{ $k }}">
                         <a href="{{ route('services.show', ['service' => $service->id]) }}">
-                            <img src="{{ $service->portrait() }}" alt="{{ $service->name }} Image">
+                            <img src="{{ $service->image('portrait') }}" alt="{{ $service->name }} Image">
                         </a>
                     </div>
                 @endforeach

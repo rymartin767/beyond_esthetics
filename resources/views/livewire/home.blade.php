@@ -56,14 +56,14 @@
     <div class="bg-spa-100">
         <x-section>
             <!-- Tonya -->
-            <div class="grid grid-cols-3 bg-pink-200">
+            <div class="grid grid-cols-3">
                 <!-- Tonya Left -->
-                <div class="col-span-3 sm:col-span-2 flex flex-wrap content-center">
+                <div class="col-span-3 sm:col-span-2 order-last sm:order-first flex flex-wrap content-center">
                     <div class="bg-black text-white p-8">
                         <div class="border-l-4 border-black">
                             <div class="font-mont text-5xl">Tonya Goulding</div>
                             <div class="pl-4 border-l-4 border-spa-200">
-                                <div class="mt-4 font-mont text-xl tracking-wide">
+                                <div class="mt-4 font-mont text-sm sm:text-xl tracking-wide">
                                     <div>Owner/Founder</div>
                                     <div>Licensed Esthetician</div>
                                     <div>AIIC Master Certified Permanent Makeup Artist</div>
@@ -76,8 +76,8 @@
                     </div>
                 </div>
                 <!-- Tonya Image Right -->
-                <div class="col-span-3 sm:col-span-1">
-                    <img src="images/tonya.png" alt="Tonya Goulding, Owner" class="rounded-full">
+                <div class="col-span-3 sm:col-span-1 mb-3 sm:mb-0">
+                    <img src="images/tonya.png" alt="Tonya Goulding, Owner">
                 </div>
             </div>
 
@@ -92,7 +92,7 @@
                             <div class="p-4 font-mont bg-white">
                                 <div class="text-xl">{{ $employee->name }}</div>
                                 @foreach (explode('-', $employee->title) as $title)
-                                <div class="text-sm tracking-wider">{{ $title }}</div>
+                                    <div class="text-xs tracking-wider">{{ $title }}</div>
                                 @endforeach
                             </div>
                         </div>
@@ -107,45 +107,47 @@
         </x-section>
     </div>
 
-    <!-- New Reviews -->
+    <!-- Reviews -->
     <div class="bg-white py-20">
-        <div class="max-w-7xl mx-auto">
-            <div class="mb-12">
-                <div class="text-center text-4xl mb-4 text-spa-200">Don’t take our word for it</div>
-                <div class="text-center text-slate-500">Here’s what our patients have to say about their experience.</div>
-            </div>
-            <div class="grid grid-cols-2 gap-8">
-                @forelse ($reviews as $review)
-                    <div class="col-span-2 sm:col-span-1 p-6">
-                        <div class="flex flex-row">
-                            <img src="{{ $review->image() }}" alt="" class="h-28 w-28">
-                            <div class="px-8">
-                                <div>
-                                    {!! $review->comments !!}
-                                </div>
-                                <div class="mt-4 text-xl">
-                                    - {{ $review->name }}
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                @empty
-                    <div class="col-span-2 sm:col-span-1">
-                        <div class="flex flex-row">
-                            <img src="images/quote.svg" alt="" class="h-24 w-24">
-                            <div class="px-8">
-                                <div>
-                                    No reviews for this service yet...
-                                </div>
-                                <div class="mt-4 text-xl">
-                                    - No Reviews
+        <x-section title="Don't Take Our Word For It">
+            <div>
+                <div class="mb-12">
+                    <div class="text-center text-slate-500">Here’s what our patients have to say about their experience.</div>
+                </div>
+                <div class="grid grid-cols-2 gap-8">
+                    @forelse ($reviews as $review)
+                        <div class="col-span-2 sm:col-span-1 p-6">
+                            <div class="flex flex-row">
+                                <img src="{{ $review->image() }}" alt="" class="hidden sm:block h-28 w-28">
+                                <div class="sm:px-8">
+                                    <div>
+                                        {!! $review->comments !!}
+                                    </div>
+                                    <div class="flex flex-row items-center mt-4">
+                                        <img src="{{ $review->image() }}" alt="" class="block sm:hidden h-8 w-8">
+                                        <div class="text-xl pt-1 pl-4">- {{ $review->name }}</div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                @endforelse
+                    @empty
+                        <div class="col-span-2 sm:col-span-1">
+                            <div class="flex flex-row">
+                                <img src="images/quote.svg" alt="" class="h-24 w-24">
+                                <div class="px-8">
+                                    <div>
+                                        No reviews for this service yet...
+                                    </div>
+                                    <div class="mt-4 text-xl">
+                                        - No Reviews
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    @endforelse
+                </div>
             </div>
-        </div>
+        </x-section>
     </div>
 
 </div>

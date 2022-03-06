@@ -6,7 +6,7 @@
             <div class="max-w-7xl mx-auto text-4xl py-8 uppercase">{{ $service->name }}</div>
             <div class="grid grid-cols-2">
                 <div class="col-span-2 sm:col-span-1 bg-slate-400">
-                    <img src="{{ $service->titleImage() }}" alt="{{ $service->name }} Image">
+                    <img src="{{ $service->image('title') }}" alt="{{ $service->name }} Image">
                 </div>
                 <div class="col-span-2 sm:col-span-1 bg-gray-200 px-24 py-8">
                     <div class="grid grid-cols-6 gap-3">
@@ -39,7 +39,7 @@
         <!-- Product Bullets -->
         <div class="grid grid-cols-2">
             <div class="col-span-2 sm:col-span-1 bg-gray-200">
-                <img src="{{ $service->bulletImage() }}" alt="">
+                <img src="{{ $service->image('bullet') }}" alt="">
             </div>
             
             <div class="col-span-2 sm:col-span-1 flex flex-wrap content-center">
@@ -51,31 +51,36 @@
             </div>
         </div>
 
-        <!-- Testimonials -->
-        <div class="max-w-7xl mx-auto py-20">
-            <div class="grid grid-cols-2">
-                <div class="col-span-2">
-                    <div class="mb-12">
-                        <div class="text-center text-4xl mb-4">Don’t take our word for it</div>
-                        <div class="text-center">Here’s what our patients have to say about their experience.</div>
-                    </div>
-                </div>
-                <div class="col-span-1 flex flex-row">
+        <!-- Reviews -->
+        @if(!$service->reviews->isEmpty())
+            <div class="bg-white py-20">
+                <x-section title="Don't Take Our Word For It">
                     <div>
-                        <img src="/images/quote.svg" alt="" class="h-32 w-32">
-                    </div>
-                    <div class="flex-1 px-12 py-2">
-                        <div>
-                            this is a review of the product
+                        <div class="mb-12">
+                            <div class="text-center text-slate-500">Here’s what our patients have to say about their experience with this service.</div>
                         </div>
-                        <div class="py-6">
-                            <div>- Jessica Simpson</div>
-                            <div>@twitter_jessica_person</div>
+                        <div class="grid grid-cols-2 gap-8">
+                            @foreach ($service->reviews as $review)
+                                <div class="col-span-2 sm:col-span-1 p-6">
+                                    <div class="flex flex-row">
+                                        <img src="{{ $review->image() }}" alt="" class="hidden sm:block h-28 w-28">
+                                        <div class="sm:px-8">
+                                            <div>
+                                                {!! $review->comments !!}
+                                            </div>
+                                            <div class="flex flex-row items-center mt-4">
+                                                <img src="{{ $review->image() }}" alt="" class="block sm:hidden h-8 w-8">
+                                                <div class="text-xl pt-1 pl-4">- {{ $review->name }}</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            @endforeach
                         </div>
                     </div>
-                </div>
+                </x-section>
             </div>
-        </div>
+        @endif
 
         <!-- Youtube -->
         <div class="grid grid-cols-2 bg-gray-100">

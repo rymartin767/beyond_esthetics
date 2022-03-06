@@ -27,39 +27,6 @@ class Service extends Model
         );
     }
 
-    public function logos()
-    {
-        $key = str($this->name)->slug();
-        return config("general.logos.$key") ?? [];
-    }
-
-    public function portrait()
-    {
-        try {
-            return Storage::url($this->image_urls[0]);
-        } catch (Exception)  {
-            return 'images/services/default_portrait.jpg';
-        }
-    }
-
-    public function titleImage()
-    {
-        try {
-            return Storage::url($this->image_urls[1]);
-        } catch (Exception)  {
-            return 'images/services/default_title.jpg';
-        }
-    }
-
-    public function bulletImage()
-    {
-        try {
-            return Storage::url($this->image_urls[2]);
-        } catch (Exception)  {
-            return 'images/services/default_bullet.jpg';
-        }
-    }
-
     protected static function booted()
     {
         static::deleting(function ($service) {
@@ -69,5 +36,39 @@ class Service extends Model
                 }
             }
         });
+    }
+
+    public function logos()
+    {
+        $key = str($this->name)->slug();
+        return config("general.logos.$key") ?? [];
+    }
+
+    public function image(string $label)
+    {
+        if ($this->image_urls == null) {
+            return "/images/services/default_$label.jpg";
+        }
+
+        try {
+            if ($label == 'portrait') {
+                return Storage::url($this->image_urls[0]);
+            }
+
+            if ($label == 'title') {
+                return Storage::url($this->image_urls[1]);
+            }
+
+            if ($label == 'bullet') {
+                return Storage::url($this->image_urls[2]);
+            }
+        } catch (Exception) {
+            return "/images/services/default_$label.jpg";
+        }
+    }
+
+    public function reviews()
+    {
+        return $this->hasMany(Review::class);
     }
 }
