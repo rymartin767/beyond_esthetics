@@ -26,4 +26,13 @@ class Employee extends Model
             }
         });
     }
+
+    public function image()
+    {
+        if ($this->image_url !== null && Storage::exists($this->image_url)) {
+            return Storage::url($this->image_url);
+        }
+
+        return 'images/coming_soon.png';
+    }
 }
