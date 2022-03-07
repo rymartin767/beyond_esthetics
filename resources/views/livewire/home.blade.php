@@ -86,7 +86,7 @@
                 @forelse ($employees as $employee)
                     <div class="col-span-2 sm:col-span-1 flex flex-col flex-wrap bg-white">
                         <div>
-                            <img src="{{ $employee->image() }}" alt="{{ $employee->name }}">
+                            <img src="{{ $employee->images->isNotEmpty() ? Storage::url($employee->images->first()->url) : '/images/employees/coming_soon.png' }}" alt="{{ $employee->name }} Image">
                         </div>
                         <div>
                             <div class="p-4 font-mont bg-white">
