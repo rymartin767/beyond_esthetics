@@ -13,13 +13,11 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('specials', function (Blueprint $table) {
+        Schema::create('images', function (Blueprint $table) {
             $table->id();
-            $table->text('description');
-            $table->decimal('sale_price', 9, 2, true);
-            $table->date('start_date');
-            $table->date('end_date');
-            $table->json('locations');
+            $table->morphs('imageable');
+            $table->string('url');
+            $table->string('tag')->nullable();
             $table->timestamps();
         });
     }
@@ -31,6 +29,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('specials');
+        Schema::dropIfExists('images');
     }
 };

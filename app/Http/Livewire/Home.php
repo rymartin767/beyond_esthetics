@@ -11,7 +11,7 @@ class Home extends Component
     public function render()
     {
         return view('livewire.home', [
-            'employees' => Employee::with('images')->get(),
+            'employees' => Employee::with('image')->get(),
             'reviews' => Review::general()->get()
         ]);
     }

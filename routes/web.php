@@ -4,9 +4,6 @@ use App\Http\Livewire\Home;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ServiceController;
 use App\Http\Controllers\SpecialController;
-use App\Models\Employee;
-use App\Models\Service;
-use App\Models\Special;
 
 /*
 |--------------------------------------------------------------------------
@@ -32,10 +29,4 @@ Route::middleware(['auth'])->group(function () {
 
     // SPECIALS
     Route::get('/specials', SpecialController::class)->name('specials');
-
-    // LAB
-    Route::view('/lab', 'lab', [
-        'employees' => Employee::all()->toJson(),
-        'services' => Service::all()->toJson()
-    ]);
 });

@@ -22,48 +22,39 @@ return [
         ]
     ],
 
-    'logos' => [
-        'dermal-fillers' => [
-
-        ],
-        'dermaplane-facial' => [
-            'Mild Exfoliation' => '/images/services/logos/mild_exfoliation.svg',
-            'Pore Size' => '/images/services/logos/pore_size.svg',
-            'Semi Aggressive' => '/images/services/logos/semi_aggressive.svg',
-            'Fine Lines' => '/images/services/logos/fine_lines.svg',
-            'Brighten Skin' => '/images/services/logos/brighten_skin.svg',
-            'Fat Ablation' => '/images/services/logos/fat_ablation.svg',
-            'Collagen Inducing' => '/images/services/logos/collagen_inducing.svg',
-            'Cellular Turnover' => '/images/services/logos/cellular_turnover.svg',
-            'Tighten Skin' => '/images/services/logos/tighten_skin.svg',
-            'Acne Correction' => '/images/services/logos/acne_correction.svg',
-            'Stretch Marks and Scars' => '/images/services/logos/stretch_marks.svg'
-        ],
-        'morpheus8' => [
-            'Mild Exfoliation' => '/images/services/logos/mild_exfoliation.svg',
-            'Pore Size' => '/images/services/logos/pore_size.svg',
-            'Semi Aggressive' => '/images/services/logos/semi_aggressive.svg',
-            'Fine Lines' => '/images/services/logos/fine_lines.svg',
-            'Brighten Skin' => '/images/services/logos/brighten_skin.svg',
-            'Fat Ablation' => '/images/services/logos/fat_ablation.svg',
-            'Collagen Inducing' => '/images/services/logos/collagen_inducing.svg',
-            'Cellular Turnover' => '/images/services/logos/cellular_turnover.svg',
-            'Tighten Skin' => '/images/services/logos/tighten_skin.svg',
-            'Acne Correction' => '/images/services/logos/acne_correction.svg',
-            'Stretch Marks and Scars' => '/images/services/logos/stretch_marks.svg'
-        ],
-        'morpheus8-body' => [
-            'Mild Exfoliation' => '/images/services/logos/mild_exfoliation.svg',
-            'Pore Size' => '/images/services/logos/pore_size.svg',
-            'Semi Aggressive' => '/images/services/logos/semi_aggressive.svg',
-            'Fine Lines' => '/images/services/logos/fine_lines.svg',
-            'Brighten Skin' => '/images/services/logos/brighten_skin.svg',
-            'Fat Ablation' => '/images/services/logos/fat_ablation.svg',
-            'Collagen Inducing' => '/images/services/logos/collagen_inducing.svg',
-            'Cellular Turnover' => '/images/services/logos/cellular_turnover.svg',
-            'Tighten Skin' => '/images/services/logos/tighten_skin.svg',
-            'Acne Correction' => '/images/services/logos/acne_correction.svg',
-            'Stretch Marks and Scars' => '/images/services/logos/stretch_marks.svg'
+    'employees' => [
+        'quals' => [
+            'bsn' => 'BSN',
+            'ccma' => 'CCMA',
+            'cnp' => 'CNP',
+            'facs' => 'FACS',
+            'le' => 'LE',
+            'ma' => 'MA',
+            'md' => 'MD',
+            'rn' => 'RN'
         ]
-    ]
+    ],
+
+    'image_tags' => [
+        'portrait' => 'Employee Portrait | JPG | 1080x1080px',
+        'landscape' => 'Service Landscape | JPG | 1690x1080px',
+        'title' => 'Service Title | JPG | 500x500px',
+        'bulletin' => 'Service Bulletin | JPG | 1200x1500px'
+    ],
+
+    'services' => [
+        'treatments' => [
+            'mild_exfoliation' => 'Mild Exfoliation',
+            'pore_size' => 'Pore Size',
+            'semi_aggressive' => 'Semi Aggressive',
+            'fine_lines' => 'Fine Lines',
+            'brighten_skin' => 'Brighten Skin',
+            'fat_ablation' => 'Fat Ablation',
+            'collagen_inducing' => 'Collagen Inducing',
+            'cellular_turnover' => 'Cellular Turnover',
+            'tighten_skin' => 'Tighten Skin',
+            'acne_correction' => 'Acne Correction',
+            'stretch_marks_and_scars' => 'Stretch Marks and Scars'
+        ]
+    ],
 ];

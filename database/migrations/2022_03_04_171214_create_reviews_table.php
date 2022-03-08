@@ -21,7 +21,6 @@ return new class extends Migration
             $table->text('comments');
             $table->string('social_media');
             $table->string('social_media_username')->nullable();
-            $table->string('image_url')->nullable();
             $table->timestamps();
         });
     }

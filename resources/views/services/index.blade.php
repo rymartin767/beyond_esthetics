@@ -5,7 +5,7 @@
                 @foreach ($v->sortByDesc('msrp') as $service)
                     <div class="col-span-2 sm:col-span-1" id="{{ $k }}">
                         <a href="{{ route('services.show', ['service' => $service->id]) }}">
-                            <img src="{{ $service->image('portrait') }}" alt="{{ $service->name }} Image">
+                            <img src="{{ $service->images->where('tag', 'landscape')->isEmpty() ? '/images/services/landscape_missing.jpg' : Storage::url($service->images->where('tag', 'landscape')->first()->url) }}" alt="{{ $service->name }} Image">
                         </a>
                     </div>
                 @endforeach

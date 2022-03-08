@@ -6,14 +6,14 @@
             <div class="max-w-7xl mx-auto text-4xl py-8 uppercase">{{ $service->name }}</div>
             <div class="grid grid-cols-2">
                 <div class="col-span-2 sm:col-span-1 bg-slate-400">
-                    <img src="{{ $service->image('title') }}" alt="{{ $service->name }} Image">
+                    <img src="{{ $service->images->where('tag', 'title')->isEmpty() ? '/images/services/title_missing.jpg' : Storage::url($service->images->where('tag', 'title')->first()->url) }}" alt="{{ $service->name }} Image">
                 </div>
                 <div class="col-span-2 sm:col-span-1 bg-gray-200 px-24 py-8">
                     <div class="grid grid-cols-6 gap-3">
                         <div class="col-span-6 text-center py-8 text-3xl text-spa-200">{{ $service->name }} targets:</div>
-                        @forelse ($service->logos() as $k => $v)
+                        @forelse ($service->treatments as $treatment)
                             <div class="col-span-3 sm:col-span-2 border-4 border-spa-200 hover:border-black">
-                                <img src="{{ $v }}" alt="{{ $k }} Image">
+                                <img src="/images/services/treatments/{{$treatment}}.svg" alt="{{ str($treatment)->replace('_', ' ')->title() }} Image">
                             </div>
                         @empty
                             <div>No Logos Found.</div>
@@ -22,7 +22,6 @@
                 </div>
             </div>
         </div>
-
 
         <!-- Description -->
         <div class="grid grid-cols-2">
@@ -39,7 +38,7 @@
         <!-- Product Bullets -->
         <div class="grid grid-cols-2">
             <div class="col-span-2 sm:col-span-1 bg-gray-200">
-                <img src="{{ $service->image('bullet') }}" alt="">
+                <img src="{{ $service->images->where('tag', 'bulletin')->isEmpty() ? '/images/services/bulletin_missing.jpg' : Storage::url($service->images->where('tag', 'bulletin')->first()->url) }}" alt="">
             </div>
             
             <div class="col-span-2 sm:col-span-1 flex flex-wrap content-center">
@@ -86,7 +85,7 @@
         <div class="grid grid-cols-2 bg-gray-100">
             <div class="col-span-2 sm:col-span-1">
                 <div class="flex justify-center">
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/{{ $service->video_urls }}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/{{ $service->video_url }}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </div>
             </div>
             <div class="order-first sm:order-last col-span-2 sm:col-span-1 flex flex-wrap content-center">

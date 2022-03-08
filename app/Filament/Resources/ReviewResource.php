@@ -42,16 +42,7 @@ class ReviewResource extends Resource
                     ->options(['facebook' => 'Facebook', 'twitter' => 'Twitter', 'instagram' => 'Instagram', 'web' => 'Website'])
                     ->required(),
                 TextInput::make('social_media_username')
-                    ->nullable(),
-                FileUpload::make('image_url')
-                    ->rules([
-                        'nullable',
-                        'file',
-                        'mimes:png,jpg'
-                    ])
-                    ->disk('s3')
-                    ->directory('images/reviews')
-                    ->visibility('public')
+                    ->nullable()
             ]);
     }
 

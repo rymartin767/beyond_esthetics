@@ -8,8 +8,10 @@ class ServiceController extends Controller
 {
     public function index()
     {
-        $services = Service::where('name', '!=', 'General')->get();
-        return view('services.index', compact('services'));
+        $services = Service::where('name', '!=', 'General')->with('images')->get();
+        return view('services.index', [
+            'services' => $services
+        ]);
     }
 
     public function show(Service $service)

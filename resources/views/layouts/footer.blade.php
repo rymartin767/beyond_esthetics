@@ -1,8 +1,8 @@
-<footer class="bg-gray-200 font-mont">
-    <div class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
+<footer class="bg-gray-100 font-mont border-t border-gray-200">
+    <div class="max-w-7xl mx-auto py-6 px-4 lg:px-8">
         <div class="grid grid-cols-7 gap-3">
             <!-- Mission Statement -->
-            <div class="col-span-7 sm:col-span-2 p-6 bg-spa-200 flex flex-wrap content-center text-white">
+            <div class="col-span-7 lg:col-span-2 p-6 bg-spa-200 flex flex-wrap content-center text-white">
                 <div>
                     Beyond Esthetics means 'seeing beyond with what the natural eye sees'. Sometimes the most effective way to help a client is simply listening to a need or giving someone a hug. Knowing that the best treatment is sometimes good old-fashioned TLC, Tonya's husband Steve came up with the tagline, "Come get some TLC from TLG".
                 </div>
@@ -11,7 +11,7 @@
                 </div>
             </div>
             <!-- Contact Information -->
-            <div class="col-span-7 sm:col-span-3 p-6 flex flex-wrap content-center">
+            <div class="col-span-7 lg:col-span-3 p-6 flex flex-wrap content-center">
                 <div class="flex flex-col grow space-y-10">
                     <div class="text-center">
                         <div class="text-2xl mb-3">WHERE TO FIND US</div>
@@ -51,7 +51,7 @@
                 </div>
             </div>
             <!-- Hours -->
-            <div class="col-span-7 sm:col-span-2 p-6">
+            <div class="col-span-7 lg:col-span-2 p-6">
                 <div class="text-center text-2xl mb-3">OFFICE HOURS</div>
                 @foreach (config('general.hours') as $k => $v)
                     <div class="mb-3">
@@ -63,11 +63,11 @@
                 @endforeach
             </div>
         </div>
-        <div class="flex flex-col sm:flex-row sm:justify-between sm:items-center mt-3 border-t border-spa-200 py-3">
+        <div class="flex flex-col lg:flex-row lg:justify-between lg:items-center mt-3 border-t border-spa-200 py-3">
             <div class="text-sm text-gray-600 text-center">
                 &copy; {{ now()->format('Y') }} Beyond Esthetics
             </div>
-            <div class="flex flex-row items-center space-x-1 mx-auto sm:mx-0">
+            <div class="flex flex-row items-center space-x-1 mx-auto lg:mx-0">
                 <div class="text-sm text-gray-600">Designed with</div>
                 <span>
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="fill-current text-spa-200 h-3 w-3">

@@ -3,11 +3,11 @@
     <div class="bg-white">
         <x-section>
             <div class="grid grid-cols-2">
-                <div class="col-span-3 sm:col-span-1 bg-spa-200">
+                <div class="col-span-3 lg:col-span-1 bg-spa-200">
                     <img src="images/cover.jpg" alt="Tonya Goulding, Owner">
                 </div>
-                <div class="col-span-3 sm:col-span-1 flex flex-col bg-black p-6 sm:p-24">
-                    <div class="flex flex-col border-l-4 border-spa-200 text-white text-3xl sm:text-4xl">
+                <div class="col-span-3 lg:col-span-1 flex flex-col bg-black p-6 lg:p-24">
+                    <div class="flex flex-col border-l-4 border-spa-200 text-white text-3xl lg:text-4xl">
                         <div class="pl-4">Helping People Feel</div class="pl-4">
                         <div class="pl-4">Beautiful And Confident</div>
                     </div>
@@ -58,12 +58,12 @@
             <!-- Tonya -->
             <div class="grid grid-cols-3">
                 <!-- Tonya Left -->
-                <div class="col-span-3 sm:col-span-2 order-last sm:order-first flex flex-wrap content-center">
+                <div class="col-span-3 lg:col-span-2 order-last lg:order-first flex flex-wrap content-center">
                     <div class="bg-black text-white p-8">
                         <div class="border-l-4 border-black">
                             <div class="font-mont text-5xl">Tonya Goulding</div>
                             <div class="pl-4 border-l-4 border-spa-200">
-                                <div class="mt-4 font-mont text-sm sm:text-xl tracking-wide">
+                                <div class="mt-4 font-mont text-sm lg:text-xl tracking-wide">
                                     <div>Owner/Founder</div>
                                     <div>Licensed Esthetician</div>
                                     <div>AIIC Master Certified Permanent Makeup Artist</div>
@@ -76,7 +76,7 @@
                     </div>
                 </div>
                 <!-- Tonya Image Right -->
-                <div class="col-span-3 sm:col-span-1 mb-3 sm:mb-0">
+                <div class="col-span-3 lg:col-span-1 mb-3 lg:mb-0">
                     <img src="images/tonya.png" alt="Tonya Goulding, Owner">
                 </div>
             </div>
@@ -86,7 +86,7 @@
                 @forelse ($employees as $employee)
                     <div class="col-span-2 sm:col-span-1 flex flex-col flex-wrap bg-white">
                         <div>
-                            <img src="{{ $employee->images->isNotEmpty() ? Storage::url($employee->images->first()->url) : '/images/employees/coming_soon.png' }}" alt="{{ $employee->name }} Image">
+                            <img src="{{ is_null($employee->image) ? '/images/employees/coming_soon.png' : Storage::url($employee->image->url) }}" alt="{{ $employee->name }}">
                         </div>
                         <div>
                             <div class="p-4 font-mont bg-white">
@@ -103,7 +103,6 @@
                     </div>
                 @endforelse
             </div>
-
         </x-section>
     </div>
 
@@ -116,22 +115,22 @@
                 </div>
                 <div class="grid grid-cols-2 gap-8">
                     @forelse ($reviews as $review)
-                        <div class="col-span-2 sm:col-span-1 p-6">
+                        <div class="col-span-2 lg:col-span-1 p-6">
                             <div class="flex flex-row">
-                                <img src="{{ $review->image() }}" alt="" class="hidden sm:block h-28 w-28">
-                                <div class="sm:px-8">
+                                <img src="{{ $review->image() }}" alt="" class="hidden lg:block h-28 w-28">
+                                <div class="lg:px-8">
                                     <div>
                                         {!! $review->comments !!}
                                     </div>
                                     <div class="flex flex-row items-center mt-4">
-                                        <img src="{{ $review->image() }}" alt="" class="block sm:hidden h-8 w-8">
+                                        <img src="{{ $review->image() }}" alt="" class="block lg:hidden h-8 w-8">
                                         <div class="text-xl pt-1 pl-4">- {{ $review->name }}</div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     @empty
-                        <div class="col-span-2 sm:col-span-1">
+                        <div class="col-span-2 lg:col-span-1">
                             <div class="flex flex-row">
                                 <img src="images/quote.svg" alt="" class="h-24 w-24">
                                 <div class="px-8">
@@ -149,5 +148,4 @@
             </div>
         </x-section>
     </div>
-
 </div>

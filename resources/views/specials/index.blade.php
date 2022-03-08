@@ -1,7 +1,7 @@
 <x-app-layout>
     <div class="max-w-5xl mx-auto my-12">
         <div class="grid grid-cols-2 gap-6">
-            @foreach ($specials as $special)
+            @forelse ($specials as $special)
                 <div class="col-span-2 sm:col-span-1 shadow-md">
                     <div>
                         <img src="{{ $special->image() }}" alt="">
@@ -21,7 +21,11 @@
                         <div class="text-spa-200 hover:text-black cursor-pointer">Get Enrolled</div>
                     </div>
                 </div>
-            @endforeach
+            @empty
+                <div class="col-span-2 text-center text-3xl">
+                    New Specials Coming! Check back soon!
+                </div>
+            @endforelse
         </div>
     </div>
 </x-app-layout>
