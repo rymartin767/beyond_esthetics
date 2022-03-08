@@ -17,7 +17,8 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        $employees = json_decode(Storage::disk('public')->get('employees.json'));
+        $file = file_get_contents('public/employees.json');
+        $employees = json_decode($file);
         foreach($employees as $emp) {
             Employee::create([
                 'name' => $emp->name,
@@ -27,7 +28,8 @@ class DatabaseSeeder extends Seeder
             ]);
         }
 
-        $services = json_decode(Storage::disk('public')->get('services.json'));
+        $file2 = file_get_contents('public/services.json');
+        $services = json_decode($file2);
         foreach($services as $service) {
             Service::create([
                 'name' => $service->name,
