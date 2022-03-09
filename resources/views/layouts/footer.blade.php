@@ -17,7 +17,7 @@
                         <div class="text-2xl mb-3">WHERE TO FIND US</div>
                         <div>Two locations to better serve you</div>
                         <div>2021 Park Ave. W., Ontario, OH</div>
-                        <div>207 E. Liberty St., Ashland, OH</div>
+                        <div>27 W. Main St., Ashland, OH</div>
                     </div>
                     <div class="text-center">
                         <div class="text-2xl mb-3">HOW TO CONTACT US</div>

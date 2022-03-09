@@ -1,7 +1,7 @@
 <nav x-data="{ open: false }" class="bg-spa-200">
 
     <!-- Primary Navigation Menu -->
-    <div class="max-w-7xl mx-auto px-4 lg:px-8 h-16 bg-pink-300">
+    <div class="max-w-7xl mx-auto px-4 lg:px-8 h-16">
         <div class="flex flex-row">
             <!-- Left Menu -->
             <div class="flex-1">

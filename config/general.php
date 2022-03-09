@@ -12,13 +12,13 @@ return [
             'Sunday' => '7AM to 5PM',
         ],
         'ashland' => [
-            'Monday' => '7AM to 5PM',
-            'Tuesday' => '7AM to 5PM',
-            'Wednesday' => '7AM to 5PM',
-            'Thursday' => '7AM to 5PM',
-            'Friday' => '7AM to 5PM',
-            'Saturday' => '7AM to 5PM',
-            'Sunday' => '7AM to 5PM',
+            'Monday' => 'Closed',
+            'Tuesday' => '9AM to 5PM',
+            'Wednesday' => 'Closed',
+            'Thursday' => 'Closed',
+            'Friday' => '9AM to 5PM',
+            'Saturday' => 'Closed',
+            'Sunday' => 'Closed',
         ]
     ],
 

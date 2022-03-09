@@ -67,12 +67,7 @@ class ServiceResource extends Resource
         return $table
             ->columns([
                 TextColumn::make('name'),
-                IconColumn::make('type')
-                    ->options([
-                        'heroicon-o-heart' => fn ($state): bool => $state === 'medical',
-                        'heroicon-o-eye' => fn ($state): bool => $state === 'spa',
-                        'heroicon-o-chip' => fn ($state): bool => $state === 'injectables',
-                    ]),
+                TextColumn::make('type'),
                 TextColumn::make('locations'),
                 TextColumn::make('msrp'),
                 IconColumn::make('video_url')
@@ -80,6 +75,7 @@ class ServiceResource extends Resource
                         'heroicon-o-check' => fn ($state): bool => $state !== null,
                         'heroicon-o-chip' => fn ($state): bool => $state == null,
                     ]),
+                TextColumn::make('images_count')->counts('images')
             ])
             ->filters([
                 //
