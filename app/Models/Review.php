@@ -3,7 +3,6 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Support\Facades\Storage;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 
 class Review extends Model
@@ -16,6 +15,12 @@ class Review extends Model
 
     public function scopeGeneral($query)
     {
-        return $query->where('id', 1);
+        $id = Service::where('name', 'general')->get()->first()->id;
+        return $query->where('service_id', $id);
+    }
+
+    public function service()
+    {
+        return $this->belongsTo(Service::class);
     }
 }

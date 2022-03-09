@@ -44,17 +44,30 @@ return [
 
     'services' => [
         'treatments' => [
+            'acne_correction' => 'Acne Correction',
+            'brown_spots' => 'Brown Spots',
+            'brighten_skin' => 'Brighten Skin',
+            'cellular_turnover' => 'Cellular Turnover',
+            'chin_definition' => 'Chin Definition',
+            'collagen_inducing' => 'Collagen Inducing',
+            'eyelid_hoodlings' => 'Eyelid Hoodlings',
+            'fat_ablation' => 'Fat Ablation',
+            'fine_lines' => 'Fine Lines',
+            'hollow_temples' => 'Hollow Temples',
+            'jawline_definition' => 'Jawline Definition',
+            'marionette_lines' => 'Marionette Lines',
             'mild_exfoliation' => 'Mild Exfoliation',
+            'necklace_lines' => 'Necklace Lines',
+            'perioral_lines' => 'Perioral Lines',
+            'red_spots' => 'Red Spots',
+            'restore_cheek_volume' => 'Restore Cheek Volume',
+            'restore_hand_volume' => 'Restore Hand Volume',
             'pore_size' => 'Pore Size',
             'semi_aggressive' => 'Semi Aggressive',
-            'fine_lines' => 'Fine Lines',
-            'brighten_skin' => 'Brighten Skin',
-            'fat_ablation' => 'Fat Ablation',
-            'collagen_inducing' => 'Collagen Inducing',
-            'cellular_turnover' => 'Cellular Turnover',
+            'stretch_marks_and_scars' => 'Stretch Marks and Scars',
             'tighten_skin' => 'Tighten Skin',
-            'acne_correction' => 'Acne Correction',
-            'stretch_marks_and_scars' => 'Stretch Marks and Scars'
+            'undereye_hollows' => 'Undereye Hollows',
+            'wrinkles_around_eyes' => 'Wrinkles Around Eyes'
         ]
     ],
 ];

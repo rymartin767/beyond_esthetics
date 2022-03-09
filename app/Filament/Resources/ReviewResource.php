@@ -16,6 +16,7 @@ use App\Filament\Resources\ReviewResource\Pages;
 use App\Filament\Resources\ReviewResource\RelationManagers;
 use App\Models\Service;
 use Filament\Forms\Components\Select;
+use Filament\Tables\Columns\TextColumn;
 
 class ReviewResource extends Resource
 {
@@ -50,7 +51,9 @@ class ReviewResource extends Resource
     {
         return $table
             ->columns([
-                //
+                TextColumn::make('name'),
+                TextColumn::make('comments'),
+                TextColumn::make('social_media')
             ])
             ->filters([
                 //
