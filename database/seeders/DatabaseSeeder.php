@@ -2,11 +2,10 @@
 
 namespace Database\Seeders;
 
-use App\Models\Employee;
 use App\Models\Service;
-use Illuminate\Database\Console\Seeds\WithoutModelEvents;
+use App\Models\Employee;
 use Illuminate\Database\Seeder;
-use Illuminate\Support\Facades\Storage;
+use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 
 class DatabaseSeeder extends Seeder
 {
@@ -23,7 +22,7 @@ class DatabaseSeeder extends Seeder
             Employee::create([
                 'name' => $emp->name,
                 'title' => $emp->title,
-                'qualifications' => null,
+                'qualifications' => $emp->qualifications,
                 'bio' => $emp->bio
             ]);
         }
