@@ -1,4 +1,12 @@
 <footer class="bg-gray-100 font-mont border-t border-gray-200">
+    <div class="flex flex-row sm:hidden">
+        <div class="flex-1 px-8 bg-gray-100">
+            <button><a href="">CALL</a></button>
+        </div>
+        <div class="flex-1 px-8 bg-gray-200">ONE</div>
+        <div class="flex-1 px-8 bg-gray-300">ONE</div>
+    </div>
+    
     <div class="max-w-7xl mx-auto py-6 px-4 lg:px-8">
         <div class="grid grid-cols-7 gap-3">
             <!-- Mission Statement -->
@@ -27,7 +35,7 @@
                     </div>
                     <div class="text-center">
                         <div class="text-2xl mb-3">FOLLOW US</div>
-                        <div class="flex flex-row items-center justify-center space-x-8">
+                        <div class="flex flex-row items-center justify-around">
                             <a href="https://www.facebook.com/BeyondEstheticsMansfield">
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" class="h-10 w-10 fill-current text-spa-200">
                                     <!--! Font Awesome Pro 6.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc.-->
