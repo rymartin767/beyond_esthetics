@@ -12,7 +12,7 @@
                     <div class="grid grid-cols-6 gap-3">
                         <div class="col-span-6 text-center py-8 text-3xl text-spa-200">{{ $service->name }} targets:</div>
                             <div class="col-span-3 sm:col-span-2 border-4 border-spa-200 hover:border-black">
-                                <img src="/images/services/treatments/brown_spots_500.jpg" alt="">
+                                <img src="/images/services/treatments/brown_spots.jpg" alt="">
                             </div>
                         @forelse ($service->treatments as $treatment)
                             <div class="col-span-3 sm:col-span-2 border-4 border-spa-200 hover:border-black">

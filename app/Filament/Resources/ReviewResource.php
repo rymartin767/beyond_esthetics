@@ -15,6 +15,7 @@ use Filament\Forms\Components\RichEditor;
 use App\Filament\Resources\ReviewResource\Pages;
 use App\Filament\Resources\ReviewResource\RelationManagers;
 use App\Models\Service;
+use Faker\Provider\ar_EG\Text;
 use Filament\Forms\Components\Select;
 use Filament\Tables\Columns\TextColumn;
 
@@ -52,8 +53,10 @@ class ReviewResource extends Resource
         return $table
             ->columns([
                 TextColumn::make('name'),
-                TextColumn::make('comments'),
-                TextColumn::make('social_media')
+                TextColumn::make('social_media'),
+                TextColumn::make('comments')
+                    ->wrap(),
+                TextColumn::make('service_id')
             ])
             ->filters([
                 //
