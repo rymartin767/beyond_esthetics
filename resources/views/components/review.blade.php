@@ -8,9 +8,9 @@
                 <div>{!! $review->comments !!}</div>
                 <div class="flex flex-row items-center mt-4">
                     <div class="flex-none lg:hidden">
-                        <img src="images/reviews/facebook.svg" alt="" class="h-8 w-auto">
+                        <img src="images/reviews/{$review->social_media}.svg" alt="" class="h-8 w-auto">
                     </div>
-                    <div class="text-xl pt-1">- {{ $review->name }}</div>
+                    <div class="text-xl pt-1 pl-3">- {{ $review->name }}</div>
                 </div>
             </div>
         </div>
