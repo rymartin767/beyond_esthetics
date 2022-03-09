@@ -17,12 +17,9 @@ use App\Models\Employee;
 |
 */
 
-Route::view('/', 'mx')->middleware('web')->name('mx');
+Route::get('/', Home::class)->middleware('web')->name('home');
 
 Route::middleware(['auth'])->group(function () {
-
-    // HOMEPAGE
-    Route::get('/home', Home::class)->name('home');
 
     // SERVICES
     Route::get('/services', [ServiceController::class, 'index'])->name('services');
@@ -30,9 +27,4 @@ Route::middleware(['auth'])->group(function () {
 
     // SPECIALS
     Route::get('/specials', SpecialController::class)->name('specials');
-
-    // LAB
-    Route::get('/lab', function() {
-        return Employee::all()->toJson();
-    });
 });
