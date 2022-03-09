@@ -41,7 +41,7 @@ class ReviewResource extends Resource
                 RichEditor::make('comments')
                     ->required(),
                 Select::make('social_media')
-                    ->options(['facebook' => 'Facebook', 'google' => 'Google', 'instagram' => 'Instagram'])
+                    ->options(['facebook' => 'Facebook', 'google' => 'Google', 'instagram' => 'Instagram', 'vagaro' => 'Vagaro'])
                     ->required(),
                 TextInput::make('social_media_username')
                     ->nullable()
