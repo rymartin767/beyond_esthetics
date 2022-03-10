@@ -14,7 +14,5 @@
 }
 
 .service-bullets li {
-    list-style-type: disc;
-    margin-bottom: 2rem;
-    list-style-position: inside;
+    @apply list-inside list-disc space-y-2;
 }

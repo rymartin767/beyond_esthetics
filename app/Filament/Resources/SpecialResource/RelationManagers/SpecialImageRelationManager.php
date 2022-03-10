@@ -27,7 +27,7 @@ class SpecialImageRelationManager extends MorphManyRelationManager
                         'file',
                         'mimes:png,jpg'
                     ])
-                    ->disk('public')
+                    ->disk('s3')
                     ->directory('images/specials')
                     ->visibility('public'),
                 Hidden::make('tag')

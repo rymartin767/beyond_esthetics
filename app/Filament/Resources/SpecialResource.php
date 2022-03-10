@@ -15,6 +15,7 @@ use Filament\Forms\Components\RichEditor;
 use Filament\Forms\Components\MultiSelect;
 use App\Filament\Resources\SpecialResource\Pages;
 use App\Filament\Resources\SpecialResource\RelationManagers;
+use Filament\Tables\Columns\TextColumn;
 
 class SpecialResource extends Resource
 {
@@ -44,7 +45,11 @@ class SpecialResource extends Resource
     {
         return $table
             ->columns([
-                //
+                TextColumn::make('description')->limit(30),
+                TextColumn::make('sale_price'),
+                TextColumn::make('start_date'),
+                TextColumn::make('end_date'),
+                TextColumn::make('locations'),
             ])
             ->filters([
                 //
