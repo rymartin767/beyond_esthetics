@@ -53,7 +53,7 @@
     </div>
 
     <!-- Employees -->
-    <div class="bg-spa-100">
+    <div class="bg-gradient-to-r from-spa-200 to-white py-6 sm:py-18">
         <x-section title="Meet Our Team">
             <!-- Tonya -->
             <div class="grid grid-cols-3 font-mont" style="background-image: url('images/marble_background.jpg')">

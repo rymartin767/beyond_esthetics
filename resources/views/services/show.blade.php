@@ -15,13 +15,12 @@
                                 <img src="/images/services/treatments/{{$treatment}}.jpg" alt="{{ str($treatment)->replace('_', ' ')->title() }} Image" loading="lazy">
                             </div>
                         @empty
-                            <div>No Logos Found.</div>
+                            <div class="col-span-6 text-center font-bold text-xl">Coming Soon!</div>
                         @endforelse
                 </div>
             </div>
         </div>
         
-
         <!-- Description -->
         <div class="grid grid-cols-2">
             <div class="col-span-2 sm:col-span-1 bg-white h-96 flex flex-wrap content-center">
@@ -88,7 +87,7 @@
                 </div>
             </div>
             <div class="order-first sm:order-last col-span-2 sm:col-span-1 flex flex-wrap content-center">
-                <div class="w-full text-center text-5xl font-semibold py-8"><span class="text-spa-200">Watch</span> & Learn.</div>
+                <div class="w-full text-center text-5xl font-semibold py-8 px-6"><span class="text-spa-200">Watch</span> & Learn.</div>
             </div>
         </div>
 

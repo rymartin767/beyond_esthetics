@@ -1,35 +1,35 @@
-<footer class="bg-gray-100 font-mont border-t border-gray-200">
+<footer class="bg-gradient-to-b from-spa-200 to-white font-mont border-t border-gray-200">
     <div class="max-w-7xl mx-auto py-6 px-4 lg:px-8">
         <div class="grid grid-cols-7 gap-3">
             <!-- Mission Statement -->
-            <div class="col-span-7 lg:col-span-2 p-6 bg-spa-200 flex flex-wrap content-center text-white">
+            <div class="col-span-7 lg:col-span-2 p-6 bg-black font-semibold flex flex-wrap content-center text-white">
                 <div>
-                    Beyond Esthetics means 'seeing beyond with what the natural eye sees'. Sometimes the most effective way to help a client is simply listening to a need or giving someone a hug. 
+                    Beyond Esthetics means <span class="text-spa-200">seeing beyond what the natural eye sees.</span> Sometimes the most effective way to help a client is simply listening to a need or giving someone a hug. 
                 </div>
                 <div class="mt-4">
                     Knowing that the best treatment is sometimes good old-fashioned TLC, Tonya's husband Steve came up with the tagline, "Come get some TLC from TLG".
                 </div>
                 <div class="mt-4">
-                    Beyond Esthetics started with just Tonya and has grown to over 20 employees and two locations. Come see us today!
+                    Beyond Esthetics has grown from Tonya to over 20 employees and now serves two locations. Come see us today!
                 </div>
             </div>
             <!-- Contact Information -->
             <div class="col-span-7 lg:col-span-3 p-6 flex flex-wrap content-center">
                 <div class="flex flex-col grow space-y-10">
                     <div class="text-center">
-                        <div class="text-2xl mb-3">WHERE TO FIND US</div>
-                        <div>Two locations to better serve you</div>
-                        <div>2021 Park Ave. W., Ontario, OH</div>
-                        <div>27 W. Main St., Ashland, OH</div>
+                        <div class="text-white font-black text-3xl mb-3">WHERE TO FIND US</div>
+                        <div class="font-semibold">Two locations to better serve you</div>
+                        <div class="font-semibold">2021 Park Ave. W., Ontario, OH</div>
+                        <div class="font-semibold">27 W. Main St., Ashland, OH</div>
                     </div>
                     <div class="text-center">
-                        <div class="text-2xl mb-3">HOW TO CONTACT US</div>
-                        <div>Ontario: <a href="tel:1+567-560-5558">567-560-5558</a></div>
-                        <div>Ashland: <a href="tel:1+567-560-5558">567-560-5558</a></div>
-                        <div>email: <a href="mailto:beyondestheticsspa@gmail.com">beyondestheticsspa@gmail.com</a></div>
+                        <div class="text-white font-black text-3xl mb-3">HOW TO CONTACT US</div>
+                        <div class="font-semibold">Ontario: <a href="tel:1+567-560-5558">567-560-5558</a></div>
+                        <div class="font-semibold">Ashland: <a href="tel:1+567-560-5558">567-560-5558</a></div>
+                        <div class="font-semibold">email: <a href="mailto:beyondestheticsspa@gmail.com">beyondestheticsspa@gmail.com</a></div>
                     </div>
                     <div class="text-center">
-                        <div class="text-2xl mb-3">FOLLOW US</div>
+                        <div class="text-white font-black text-3xl mb-3">FOLLOW US</div>
                         <div class="flex flex-row items-center justify-around">
                             <a href="https://www.facebook.com/BeyondEstheticsMansfield">
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" class="h-10 w-10 fill-current text-spa-200">
@@ -55,12 +55,12 @@
             </div>
             <!-- Hours -->
             <div class="col-span-7 lg:col-span-2 p-6">
-                <div class="text-center text-2xl mb-3">OFFICE HOURS</div>
+                <div class="text-white font-black text-2xl mb-3 text-center">OFFICE HOURS</div>
                 @foreach (config('general.hours') as $k => $v)
                 <div class="mb-3">
-                    <div class="text-center text-lg underline uppercase mb-1">{{ $k }}</div>
+                    <div class="text-center text-white font-semibold text-lg underline uppercase mb-1">{{ $k }}</div>
                     @foreach ($v as $day => $hours)
-                    <div class="text-center">{{ $day }} : {{ $hours }}</div>
+                        <div class="font-semibold text-center">{{ $day }} : {{ $hours }}</div>
                     @endforeach
                 </div>
                 @endforeach
