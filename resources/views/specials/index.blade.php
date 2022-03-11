@@ -1,11 +1,18 @@
 <x-app-layout>
-    <div class="max-w-7xl mx-auto my-12">
+    <div class="max-w-7xl mx-auto my-12 font-mont">
         <!-- Memberships -->
         <div class="grid grid-cols-3 gap-6">
             <!-- Medical -->
             <div class="col-span-3 sm:col-span-1">
                 <div class="flex flex-col">
-                    <img src="/images/specials/medical_membership.jpg" alt="Medical Membership">
+                    <div class="overflow-hidden rounded-tr-3xl">
+                        <img 
+                            src="/images/specials/medical_membership.jpg" 
+                            alt="Medical Membership"
+                            class="transition duration-700 ease-in-out hover:scale-110"
+                            loading="lazy"
+                        >
+                    </div>
                     <div class="shadow-md px-6">
                         <div class="py-6 text-xl font-black">Included Free Every Month:</div>
                         <div class="">
@@ -34,7 +41,7 @@
                         </ul>
                         <div class="flex justify-between items-center border-t-2 border-spa-100 mt-3 p-3 text-xl text-spa-200 font-bold">
                             <div>$125/Monthly</div>
-                            <div class=""><a href="https://www.vagaro.com/beyondestheticsspa/memberships" target="_blank">Get Enrolled</a></div>
+                            <div class=""><a href="https://www.vagaro.com/beyondestheticsspa/memberships" target="_blank">Get Enrolled!</a></div>
                         </div>
                     </div>
                 </div>
@@ -42,7 +49,14 @@
             <!-- Spa -->
             <div class="col-span-3 sm:col-span-1">
                 <div class="flex flex-col">
-                    <img src="/images/specials/spa_membership.jpg" alt="Spa Membership">
+                <div class="overflow-hidden rounded-tr-3xl">
+                        <img 
+                            src="/images/specials/spa_membership.jpg" 
+                            alt="Spa Membership"
+                            class="transition duration-700 ease-in-out hover:scale-110"
+                            loading="lazy"
+                        >
+                    </div>
                     <div class="shadow-md px-6">
                         <div class="py-6 text-xl font-black">Included Free Every Month:</div>
                         <div class="">
@@ -66,7 +80,7 @@
                         </ul>
                         <div class="flex justify-between items-center border-t-2 border-spa-100 mt-3 p-3 text-xl text-spa-200 font-bold">
                             <div>$75/Monthly</div>
-                            <div class=""><a href="https://www.vagaro.com/beyondestheticsspa/memberships" target="_blank">Get Enrolled</a></div>
+                            <div class=""><a href="https://www.vagaro.com/beyondestheticsspa/memberships" target="_blank">Get Enrolled!</a></div>
                         </div>
                     </div>
                 </div>
@@ -74,7 +88,14 @@
             <!-- Injects -->
             <div class="col-span-3 sm:col-span-1">
                 <div class="flex flex-col">
-                    <img src="/images/specials/tox_membership.jpg" alt="Injectables Membership">
+                <div class="overflow-hidden rounded-tr-3xl">
+                        <img 
+                            src="/images/specials/tox_membership.jpg" 
+                            alt="Injectables Membership"
+                            class="transition duration-700 ease-in-out hover:scale-110"
+                            loading="lazy"
+                        >
+                    </div>
                     <div class="shadow-md px-6">
                         <div class="py-6 text-xl font-black">Included Free Every Month:</div>
                         <div class="">
@@ -94,7 +115,7 @@
                         </ul>
                         <div class="flex justify-between items-center border-t-2 border-spa-100 mt-3 p-3 text-xl text-spa-200 font-bold">
                             <div>$100/Monthly</div>
-                            <div class=""><a href="https://www.vagaro.com/beyondestheticsspa/memberships" target="_blank">Get Enrolled</a></div>
+                            <div class=""><a href="https://www.vagaro.com/beyondestheticsspa/memberships" target="_blank">Get Enrolled!</a></div>
                         </div>
                     </div>
                 </div>

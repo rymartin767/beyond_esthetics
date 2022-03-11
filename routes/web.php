@@ -23,12 +23,12 @@ Route::middleware('web')->group(function () {
     Route::get('/', Home::class)->middleware('web')->name('home');
     Route::get('/services', [ServiceController::class, 'index'])->name('services');
     Route::get('/services/{service}', [ServiceController::class, 'show'])->name('services.show');
+    Route::get('/specials', SpecialController::class)->name('specials');
     Route::view('/about', 'about', ['employees' => Employee::all()])->name('about');
 });
 
 
 Route::middleware(['auth'])->group(function () {
-    Route::get('/specials', SpecialController::class)->name('specials');
     Route::view('/lab', 'lab', [
         'employees' => Employee::all(),
         'services' => Service::all(),

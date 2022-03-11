@@ -41,7 +41,7 @@ class ServiceImagesRelationManager extends MorphManyRelationManager
     {
         return $table
             ->columns([
-                ImageColumn::make('url')->rounded(),
+                ImageColumn::make('url')->rounded()->disk('s3'),
                 TextColumn::make('url')->limit(30)->label('S3 URL'),
                 TextColumn::make('tag')
             ])

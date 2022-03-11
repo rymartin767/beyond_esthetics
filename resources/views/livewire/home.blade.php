@@ -27,7 +27,7 @@
                 <div class="col-span-3 sm:col-span-1">
                     <a href="/services#medical" class="cursor-pointer">
                         <div class="overflow-hidden">
-                            <img src="images/med.png" alt="Service We Provide" class="transition opacity-70 duration-700 ease-in-out hover:scale-125 hover:opacity-100">
+                            <img src="images/med.png" alt="Service We Provide" class="transition opacity-70 duration-700 ease-in-out hover:scale-110 hover:opacity-100">
                         </div>
                         <div class="mt-2 tracking-widest">MEDICAL</div>
                     </a>
@@ -35,7 +35,7 @@
                 <div class="col-span-3 sm:col-span-1">
                     <a href="/services#spa" class="cursor-pointer">
                         <div class="overflow-hidden">
-                            <img src="images/spa.png" alt="Service We Provide" class="transition opacity-70 duration-700 ease-in-out hover:scale-125 hover:opacity-100">
+                            <img src="images/spa.png" alt="Service We Provide" class="transition opacity-70 duration-700 ease-in-out hover:scale-110 hover:opacity-100">
                         </div>
                         <div class="mt-2 tracking-widest">SPA</div>
                     </a>
@@ -43,7 +43,7 @@
                 <div class="col-span-3 sm:col-span-1">
                     <a href="/services#injectables" class="cursor-pointer">
                         <div class="overflow-hidden">
-                            <img src="images/inject.png" alt="Service We Provide" class="transition opacity-70 duration-700 ease-in-out hover:scale-125 hover:opacity-100">
+                            <img src="images/inject.png" alt="Service We Provide" class="transition opacity-70 duration-700 ease-in-out hover:scale-110 hover:opacity-100">
                         </div>
                         <div class="mt-2 tracking-widest">INJECTABLES</div>
                     </a>
@@ -78,16 +78,17 @@
             <!-- Employees -->
             <div class="grid grid-cols-12 gap-3 mt-12">
                 @forelse ($employees as $employee)
-                    <div class="col-span-12 sm:col-span-6 lg:col-span-4 xl:col-span-3 flex flex-col flex-wrap bg-white">
+                    <div class="col-span-12 sm:col-span-6 lg:col-span-4 xl:col-span-3 flex flex-col flex-wrap bg-white rounded-br-3xl overflow-hidden">
                         <a href="/about#{{ $employee->name }}">
                             <div>
-                                <img src="{{ is_null($employee->image) ? '/images/employees/coming_soon.png' : Storage::url($employee->image->url) }}" alt="{{ $employee->name }}">
+                                @livewire('image', ['database_image_url' => is_null($employee->image) ? '/images/employees/coming_soon.png' : $employee->image->url, 'alt' => $employee->name])
+                                <!-- <img src="{{ is_null($employee->image) ? '/images/employees/coming_soon.png' : Storage::url($employee->image->url) }}" alt="{{ $employee->name }}"> -->
                             </div>
                             <div>
-                                <div class="p-4 font-mont bg-white">
+                                <div class="p-4 font-mont">
                                     <div class="text-xl font-bold mb-2">{{ $employee->name }}</div>
                                     @foreach (explode('-', $employee->title) as $title)
-                                    <div class="text-xs tracking-wide mb-1">{{ $title }}</div>
+                                        <div class="text-xs tracking-wide mb-1">{{ $title }}</div>
                                     @endforeach
                                 </div>
                             </div>
