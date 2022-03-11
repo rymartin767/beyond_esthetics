@@ -79,6 +79,11 @@ class ServiceResource extends Resource
             ])
             ->filters([
                 //
+            ])
+            ->pushActions([
+                Tables\Actions\LinkAction::make('view')
+                    ->action(fn (Service $record) => redirect('/services/' . $record->id))
+                    ->color('success'),
             ]);
     }
 

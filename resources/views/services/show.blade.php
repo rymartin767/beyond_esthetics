@@ -1,35 +1,31 @@
 <x-app-layout>
     <div class="font-mont">
+        <x-section title="{{ $service->name }}"/>
 
         <!-- Product -->
-        <div>
-            <div class="max-w-7xl mx-auto text-4xl py-8 uppercase">{{ $service->name }}</div>
-            <div class="grid grid-cols-2">
-                <div class="col-span-2 sm:col-span-1 bg-slate-400">
-                    <img src="{{ $service->images->where('tag', 'title')->isEmpty() ? '/images/services/title_missing.jpg' : Storage::url($service->images->where('tag', 'title')->first()->url) }}" alt="{{ $service->name }} Image">
-                </div>
-                <div class="col-span-2 sm:col-span-1 bg-gray-200 px-24 py-8">
-                    <div class="grid grid-cols-6 gap-3">
-                        <div class="col-span-6 text-center py-8 text-3xl text-spa-200">{{ $service->name }} targets:</div>
-                            <div class="col-span-3 sm:col-span-2 border-4 border-spa-200 hover:border-black">
-                                <img src="/images/services/treatments/brown_spots.jpg" alt="">
-                            </div>
+        <div class="grid grid-cols-2">
+            <div class="col-span-2 sm:col-span-1 bg-slate-400">
+                <img src="{{ $service->images->where('tag', 'title')->isEmpty() ? '/images/services/title_missing.jpg' : Storage::url($service->images->where('tag', 'title')->first()->url) }}" alt="{{ $service->name }} Image">
+            </div>
+            <div class="col-span-2 sm:col-span-1 bg-gray-200 px-6 md:px-24 py-8">
+                <div class="grid grid-cols-6 gap-3">
+                    <div class="col-span-6 text-center py-8 text-3xl text-spa-200">{{ $service->name }} targets:</div>
                         @forelse ($service->treatments as $treatment)
-                            <div class="col-span-3 sm:col-span-2 border-4 border-spa-200 hover:border-black">
-                                <img src="/images/services/treatments/{{$treatment}}.svg" alt="{{ str($treatment)->replace('_', ' ')->title() }} Image">
+                            <div class="col-span-2 border-4 border-spa-200">
+                                <img src="/images/services/treatments/{{$treatment}}.jpg" alt="{{ str($treatment)->replace('_', ' ')->title() }} Image" loading="lazy">
                             </div>
                         @empty
                             <div>No Logos Found.</div>
                         @endforelse
-                    </div>
                 </div>
             </div>
         </div>
+        
 
         <!-- Description -->
         <div class="grid grid-cols-2">
             <div class="col-span-2 sm:col-span-1 bg-white h-96 flex flex-wrap content-center">
-                <div class="px-24 text-xl leading-7">
+                <div class="px-6 xl:px-24 text-xl leading-7">
                     {!! $service->description !!}
                 </div>
             </div>
@@ -46,7 +42,7 @@
             
             <div class="col-span-2 sm:col-span-1 flex flex-wrap content-center">
                 <div class="p-12">
-                    <div class="service-bullets">
+                    <div class="description-bulletins">
                         {!! $service->bullets !!}
                     </div>
                 </div>
@@ -88,27 +84,11 @@
         <div class="grid grid-cols-2 bg-gray-100">
             <div class="col-span-2 sm:col-span-1">
                 <div class="flex justify-center">
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/{{ $service->video_url }}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/{{ $service->video_url }}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
                 </div>
             </div>
             <div class="order-first sm:order-last col-span-2 sm:col-span-1 flex flex-wrap content-center">
                 <div class="w-full text-center text-5xl font-semibold py-8"><span class="text-spa-200">Watch</span> & Learn.</div>
-            </div>
-        </div>
-
-        <!-- FAQ -->
-        <div class="py-12">
-            <div class="text-center text-4xl mb-12">FAQs</div>
-            <div class="grid grid-cols-2">
-                <div class="col-span-2 sm:col-span-1 text-center">
-                    Coming Soon!
-                </div>
-                <div class="col-span-2 sm:col-span-1 text-center">
-                    Coming Soon!
-                </div>
-            </div>
-            <div class="text-center text-rose-400 mt-8">
-                <div>View All Of Our Product FAQ's ---></div>
             </div>
         </div>
 

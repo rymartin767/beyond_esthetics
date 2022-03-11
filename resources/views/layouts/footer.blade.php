@@ -24,8 +24,8 @@
                     </div>
                     <div class="text-center">
                         <div class="text-2xl mb-3">HOW TO CONTACT US</div>
-                        <div>Ontario: <a href="tel:567-560-5558">567-560-5558</a></div>
-                        <div>Ashland: <a href="tel:567-560-5558">567-560-5558</a></div>
+                        <div>Ontario: <a href="tel:1+567-560-5558">567-560-5558</a></div>
+                        <div>Ashland: <a href="tel:1+567-560-5558">567-560-5558</a></div>
                         <div>email: <a href="mailto:beyondestheticsspa@gmail.com">beyondestheticsspa@gmail.com</a></div>
                     </div>
                     <div class="text-center">
