@@ -10,6 +10,7 @@ class Special extends Model
     use HasFactory;
 
     protected $fillable = [
+        'name',
         'description',
         'sale_price',
         'start_date',

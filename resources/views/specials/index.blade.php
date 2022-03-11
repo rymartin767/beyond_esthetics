@@ -104,21 +104,7 @@
         <!-- Specials -->
         <div class="grid grid-cols-3 gap-6 mt-12">
             @forelse ($specials as $special)
-                <div class="col-span-3 sm:col-span-1">
-                    <div class="flex flex-col">
-                        <img src="{{ is_null($special->image) ? '/images/services/landscape_missing.jpg' : Storage::url($special->image->url) }}" alt="Spa Membership">
-                        <div class="shadow-md px-6">
-                            <div class="py-6 text-xl font-black">All The Details:</div>
-                                <div class="service-bullets">
-                                    {!! $special->description !!}
-                                </div>
-                            <div class="flex justify-between items-center border-t-2 border-spa-100 mt-3 p-3 text-xl text-spa-200 font-bold">
-                                <div>$75/Monthly</div>
-                                <div class=""><a href="mailto:beyondestheticsspa@gmail.com" target="_blank">Schedule</a></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                <x-special :special="$special"></x-special>
             @empty
                 <div class="col-span-2 text-center text-3xl">
                     New Specials Coming! Check back soon!

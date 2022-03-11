@@ -54,9 +54,11 @@ class ReviewResource extends Resource
             ->columns([
                 TextColumn::make('name'),
                 TextColumn::make('social_media'),
-                TextColumn::make('comments')
-                    ->wrap(),
                 TextColumn::make('service_id')
+                    ->formatStateUsing(function ($state) {
+                        return \App\Models\Service::find($state)->name;
+                    })
+                    ->label('Service Reviewed')
             ])
             ->filters([
                 //

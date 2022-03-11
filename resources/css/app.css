@@ -13,6 +13,6 @@
     font-family: 'Montserrat', sans-serif;
 }
 
-.service-bullets li {
-    @apply list-inside list-disc space-y-2;
+.description-bulletins li {
+    @apply list-inside list-disc mb-3;
 }

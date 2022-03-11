@@ -27,9 +27,10 @@ class SpecialResource extends Resource
     {
         return $form
             ->schema([
+                TextInput::make('name'),
+                MultiSelect::make('locations')->options(['ashland' => 'Ashland', 'ontario' => 'Ontario'])->rules('required'),
                 DatePicker::make('start_date')->rules(['required', 'date']),
                 DatePicker::make('end_date')->rules(['required', 'date']),
-                MultiSelect::make('locations')->options(['ashland' => 'Ashland', 'ontario' => 'Ontario'])->rules('required'),
                 TextInput::make('sale_price')
                     ->numeric()
                     ->minValue(1)
@@ -45,7 +46,7 @@ class SpecialResource extends Resource
     {
         return $table
             ->columns([
-                TextColumn::make('description')->limit(30),
+                TextColumn::make('name'),
                 TextColumn::make('sale_price'),
                 TextColumn::make('start_date'),
                 TextColumn::make('end_date'),

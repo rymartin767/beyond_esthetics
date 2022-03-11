@@ -9,6 +9,7 @@ use Filament\Resources\Form;
 use Filament\Resources\RelationManagers\MorphManyRelationManager;
 use Filament\Resources\Table;
 use Filament\Tables;
+use Filament\Tables\Columns\ImageColumn;
 use Filament\Tables\Columns\TextColumn;
 
 class ServiceImagesRelationManager extends MorphManyRelationManager
@@ -40,6 +41,7 @@ class ServiceImagesRelationManager extends MorphManyRelationManager
     {
         return $table
             ->columns([
+                ImageColumn::make('url')->rounded(),
                 TextColumn::make('url')->limit(30)->label('S3 URL'),
                 TextColumn::make('tag')
             ])

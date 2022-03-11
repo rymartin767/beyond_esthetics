@@ -41,9 +41,9 @@ class EmployeeResource extends Resource
         return $table
             ->columns([
                 TextColumn::make('name'),
+                TextColumn::make('qualifications'),
                 TextColumn::make('title')
                     ->limit(30),
-                TextColumn::make('qualifications'),
                 IconColumn::make('bio')
                     ->options([
                         'heroicon-o-x-circle',

@@ -18,8 +18,8 @@
                         {{ __('SPECIALS') }}
                     </x-jet-nav-link>
 
-                    <x-jet-nav-link href="{{ route('home') }}" :active="request()->routeIs('faqs')">
-                        {{ __('FAQs') }}
+                    <x-jet-nav-link href="{{ route('about') }}" :active="request()->routeIs('about')">
+                        {{ __('ABOUT US') }}
                     </x-jet-nav-link>
                 </div>
             </div>
@@ -37,15 +37,39 @@
 
                     <!-- Nav Links -->
                     <div class="hidden lg:flex lg:flex-1 lg:items-center lg:justify-around h-full">
+                        <x-jet-dropdown align="left" width="48">
+                            <x-slot name="trigger">
+                                <x-jet-nav-link class="cursor-pointer">
+                                    {{ __('RESOURCES') }}
+                                </x-jet-nav-link>
+                            </x-slot>
+
+                            <x-slot name="content">
+                                <x-jet-dropdown-link href="{{ route('home') }}">
+                                    {{ __('Pre/Post Treatment') }}
+                                </x-jet-dropdown-link>
+                                <x-jet-dropdown-link href="{{ route('home') }}">
+                                    {{ __('FAQs') }}
+                                </x-jet-dropdown-link>
+                                <x-jet-dropdown-link href="{{ route('home') }}">
+                                    {{ __('Terms of Service') }}
+                                </x-jet-dropdown-link>
+                                <x-jet-dropdown-link href="{{ route('home') }}">
+                                    {{ __('Before/After Photos') }}
+                                </x-jet-dropdown-link>
+                            </x-slot>
+                        </x-jet-dropdown>
+
                         <x-jet-nav-link href="{{ route('home') }}" :active="request()->routeIs('about')">
-                            {{ __('NEWSLETTER') }}
-                        </x-jet-nav-link>
-                        <x-jet-nav-link href="{{ route('home') }}" :active="request()->routeIs('about')">
-                            {{ __('ABOUT US') }}
+                            {{ __('SHOP') }}
                         </x-jet-nav-link>
 
                         <x-jet-nav-link href="{{ route('home') }}" :active="request()->routeIs('contact')">
-                            {{ __('CONTACT') }}
+                            {{ __('NEWSLETTER') }}
+                        </x-jet-nav-link>
+
+                        <x-jet-nav-link href="{{ route('home') }}" :active="request()->routeIs('contact')">
+                            {{ __('TRAINING') }}
                         </x-jet-nav-link>
                     </div>
 
