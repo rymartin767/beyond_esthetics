@@ -60,7 +60,7 @@
                             </x-slot>
                         </x-jet-dropdown>
 
-                        <x-jet-nav-link href="{{ route('home') }}" :active="request()->routeIs('about')">
+                        <x-jet-nav-link href="{{ route('home') }}" :active="request()->routeIs('shop')">
                             {{ __('SHOP') }}
                         </x-jet-nav-link>
 

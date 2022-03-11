@@ -92,7 +92,7 @@
         </div>
 
         <!-- Book Now, Pay Later -->
-        <div class="max-w-7xl mx-auto py-12 px-6 sm:px-0">
+        <div class="max-w-7xl mx-auto py-32 px-6 sm:px-0">
             <div class="grid grid-cols-4 gap-3">
                 <div class="col-span-4 sm:col-span-1 text-4xl font-black mb-4 sm:mb-0">
                     <a href="https://carecredit.com/go/443shq/." target="_blank" class="hover:text-spa-200">
