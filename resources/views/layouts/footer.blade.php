@@ -93,7 +93,7 @@
     <!-- Mobile Contact Bar -->
     <div class="flex flex-row fixed inset-x-0 bottom-0 sm:hidden py-3 bg-white">
         <div class="flex-1 px-2">
-            <a href="tel:+5675605558">
+            <a href="tel:1+5675605558">
                 <button class="flex items-center justify-center bg-spa-100 rounded-full w-full py-2">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="fill-current text-black h-4 w-auto">
                         <!--! Font Awesome Pro 6.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. -->
