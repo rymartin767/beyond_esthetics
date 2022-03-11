@@ -2,29 +2,36 @@
 
 namespace App\Models;
 
-use App\Traits\InteractsWithS3;
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Support\Facades\Storage;
+use Illuminate\Database\Eloquent\Casts\Attribute;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 
 class Employee extends Model
 {
-    use HasFactory, InteractsWithS3;
+    use HasFactory;
 
     protected $fillable = [
         'name',
         'title',
+        'qualifications',
         'bio',
-        'image_url'
     ];
 
-    // Model Events
+    public $casts = [
+        'qualifications' => 'array',
+    ];
+
     protected static function booted()
     {
         static::deleting(function ($employee) {
-            if ($employee->image_url !== null) {
-                Storage::delete($employee->image_url);
+            if (!is_null($employee->image)) {
+                $employee->image->delete();
             }
         });
+    }
+
+    public function image()
+    {
+        return $this->morphOne(Image::class, 'imageable');
     }
 }

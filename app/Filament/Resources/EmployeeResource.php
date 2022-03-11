@@ -11,10 +11,8 @@ use Filament\Resources\Resource;
 use Filament\Tables\Columns\IconColumn;
 use Filament\Tables\Columns\TextColumn;
 use Filament\Forms\Components\TextInput;
-use Filament\Tables\Columns\ImageColumn;
-use Filament\Forms\Components\FileUpload;
 use Filament\Forms\Components\RichEditor;
-use Filament\Tables\Columns\BooleanColumn;
+use Filament\Forms\Components\MultiSelect;
 use App\Filament\Resources\EmployeeResource\Pages;
 use App\Filament\Resources\EmployeeResource\RelationManagers;
 
@@ -28,19 +26,13 @@ class EmployeeResource extends Resource
     {
         return $form
             ->schema([
-                TextInput::make('name')->required(),
-                TextInput::make('title')->required(),
-                RichEditor::make('bio'),
-                FileUpload::make('image_url')
-                ->rules([
-                    'required',
-                    'file',
-                    'mimes:png,jpg'
-                ])
-                ->imageCropAspectRatio('1:1')
-                ->disk('s3')
-                ->directory('images/employees')
-                ->visibility('public')
+                TextInput::make('name')
+                    ->required(),
+                MultiSelect::make('qualifications')
+                    ->options(config('general.employees.quals')),
+                TextInput::make('title')
+                    ->required(),
+                RichEditor::make('bio')
             ]);
     }
 
@@ -49,6 +41,7 @@ class EmployeeResource extends Resource
         return $table
             ->columns([
                 TextColumn::make('name'),
+                TextColumn::make('qualifications'),
                 TextColumn::make('title')
                     ->limit(30),
                 IconColumn::make('bio')
@@ -59,17 +52,7 @@ class EmployeeResource extends Resource
                     ->colors([
                         'success',
                         'danger' => fn ($state): bool => $state === null,
-                    ]),
-                IconColumn::make('image_url')
-                    ->options([
-                        'heroicon-o-x-circle',
-                        'heroicon-o-check' => fn ($state): bool => $state !== null,
                     ])
-                    ->colors([
-                        'success',
-                        'danger' => fn ($state): bool => $state === null,
-                    ])
-                    ->label('Image Saved')
             ])
             ->filters([
                 //
@@ -79,7 +62,7 @@ class EmployeeResource extends Resource
     public static function getRelations(): array
     {
         return [
-            //
+            RelationManagers\EmployeeImageRelationManager::class,
         ];
     }
 

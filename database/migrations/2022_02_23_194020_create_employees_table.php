@@ -17,8 +17,8 @@ return new class extends Migration
             $table->id();
             $table->string('name');
             $table->string('title');
+            $table->json('qualifications')->nullable();
             $table->text('bio')->nullable();
-            $table->string('image_url')->nullable();
             $table->timestamps();
         });
     }

@@ -23,7 +23,6 @@ class SpecialFactory extends Factory
             'start_date' => $this->faker->date(),
             'end_date' => $this->faker->date(),
             'locations' => ['ontario'],
-            'image_url' => null
         ];
     }
 }

@@ -15,7 +15,9 @@ use Filament\Forms\Components\RichEditor;
 use App\Filament\Resources\ReviewResource\Pages;
 use App\Filament\Resources\ReviewResource\RelationManagers;
 use App\Models\Service;
+use Faker\Provider\ar_EG\Text;
 use Filament\Forms\Components\Select;
+use Filament\Tables\Columns\TextColumn;
 
 class ReviewResource extends Resource
 {
@@ -39,19 +41,10 @@ class ReviewResource extends Resource
                 RichEditor::make('comments')
                     ->required(),
                 Select::make('social_media')
-                    ->options(['facebook' => 'Facebook', 'twitter' => 'Twitter', 'instagram' => 'Instagram', 'web' => 'Website'])
+                    ->options(['facebook' => 'Facebook', 'google' => 'Google', 'instagram' => 'Instagram', 'vagaro' => 'Vagaro'])
                     ->required(),
                 TextInput::make('social_media_username')
-                    ->nullable(),
-                FileUpload::make('image_url')
-                    ->rules([
-                        'nullable',
-                        'file',
-                        'mimes:png,jpg'
-                    ])
-                    ->disk('s3')
-                    ->directory('images/reviews')
-                    ->visibility('public')
+                    ->nullable()
             ]);
     }
 
@@ -59,7 +52,13 @@ class ReviewResource extends Resource
     {
         return $table
             ->columns([
-                //
+                TextColumn::make('name'),
+                TextColumn::make('social_media'),
+                TextColumn::make('service_id')
+                    ->formatStateUsing(function ($state) {
+                        return \App\Models\Service::find($state)->name;
+                    })
+                    ->label('Service Reviewed')
             ])
             ->filters([
                 //

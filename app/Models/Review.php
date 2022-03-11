@@ -3,7 +3,6 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Support\Facades\Storage;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 
 class Review extends Model
@@ -11,24 +10,17 @@ class Review extends Model
     use HasFactory;
 
     protected $fillable = [
-        'service_id', 'date', 'name', 'comments', 'social_media', 'social_media_username', 'image_url'
+        'service_id', 'date', 'name', 'comments', 'social_media', 'social_media_username'
     ];
 
-    protected static function booted()
+    public function scopeGeneral($query)
     {
-        static::deleting(function ($review) {
-            if ($review->image_url !== null) {
-                Storage::delete($review->image_url);
-            }
-        });
+        $id = Service::where('name', 'general')->get()->first()->id;
+        return $query->where('service_id', $id);
     }
 
-    public function image()
+    public function service()
     {
-        if($this->image_url !== null) {
-            return Storage::url($this->image_url);
-        }
-
-        return "images/$this->social_media.svg";
+        return $this->belongsTo(Service::class);
     }
 }

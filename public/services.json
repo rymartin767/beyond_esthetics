@@ -1,0 +1,151 @@
+[
+    {
+        "id": 1,
+        "name": "Morpheus8 Body",
+        "type": "medical",
+        "locations": [
+            "ontario"
+        ],
+        "description": "Morpheus8 Body is the first and only FDA cleared technology to provide deep 8mm sub-dermal adipose tissue remodeling. Morpheus8 Body can quickly treat large tissue areas at the deepest levels of RF available.",
+        "bullets": "<ul><li>Delivers exceptional skin, tissue and collagen remodeling.</li><li>This fractional tissue treatment simulates the production of collagen in the underlying layers of the dermis.</li><li>Morpheus8 targets sub-dermal layers of the skin and tissue to remodel collagen on the face and body.</li><li>Morpheus8 delivers the deepest fractional treatments available, penetrating sub-dermal tissue up to 8mm (7mm + 1mm thermal profile).</li><li>Dual handpieces allow for increased treatment functionality: Morpheus8 for smaller treatment areas and Morpheus8 Body for larger and deeper tissue treatments.</li><li>Safe on skin types up to and including VI with little risk of post inflammatory hyperpigmentation.</li></ul>",
+        "msrp": "1000.00",
+        "image_urls": [
+            "images/services/EkFHMNQcZz1Y16H0TEM99nIvVinm2y-metabW9ycGhldXNib2R5MTY5LmpwZw==-.jpg",
+            "images/services/7KoowkYOL9PjR907o1OMR77NFeW4Y9-metaTW9ycGhldXNCb2R5QmlnLmpwZw==-.jpg",
+            "images/services/kzRZYb2eUMbDHMZqWaCMuL2CuYAOv0-metabW9ycGhldXM4YnVsbGV0LmpwZw==-.jpg"
+        ],
+        "video_urls": "xEI20x7spWk",
+        "created_at": "2022-03-03T18:43:18.000000Z",
+        "updated_at": "2022-03-05T04:48:09.000000Z"
+    },
+    {
+        "id": 2,
+        "name": "Morpheus8",
+        "type": "medical",
+        "locations": [
+            "ontario"
+        ],
+        "description": "Morpheus8 is a deep fractional, radiofrequency treatment that delivers exceptional skin, tissue and collagen remodeling to improve skin appearance and reduce irregularities.",
+        "bullets": "<ul><li>Delivers exceptional skin, tissue and collagen remodeling.</li><li>This fractional tissue treatment simulates the production of collagen in the underlying layers of the dermis.</li><li>Morpheus8 targets subdermal layers of the skin and tissue to remodel collagen on the face and body.</li><li>Morpheus8 delivers the deepest fractional treatments available, penetrating subdermal tissue up to 8mm (7mm + 1mm thermal profile).</li><li>Dual handpieces allow for increased treatment functionality: Morpheus8 for smaller treatment areas and Morpheus8 Body for larger and deeper tissue treatments.</li><li>Safe on skin types up to and including VI with little risk of post inflammatory hyperpigmentation.</li></ul>",
+        "msrp": "750.00",
+        "image_urls": [
+            "images/services/aa2ZVAMbhuQvkTxMjFAhWEW54lj5d4-metabW9ycGhldXMxNjktMi5qcGc=-.jpg",
+            "images/services/H46aXaYBU3Remn6RKfyOxB3um8oHnl-metaTW9ycGhldXM4QmlnLmpwZw==-.jpg",
+            "images/services/wZkEZ3PDpNJgf5jrkEU7NbVwH0eQod-metabW9ycGhldXNidWxsZXQuanBn-.jpg"
+        ],
+        "video_urls": "HQef5t1tvSw",
+        "created_at": "2022-03-03T18:47:42.000000Z",
+        "updated_at": "2022-03-03T18:47:42.000000Z"
+    },
+    {
+        "id": 3,
+        "name": "Dermaplane Facial",
+        "type": "spa",
+        "locations": [
+            "ontario",
+            "ashland"
+        ],
+        "description": "Dermaplane gently exfoliates your skin and removes the fine, vellous hair {aka peach fuzz}, leaving you with baby soft skin that you won’t be able to stop touching all day long.",
+        "bullets": "<ul><li>perfect for almost all skin types, including sensitive skin</li><li>painless procedure, no downtime</li><li>pairs perfectly with chemical peels</li><li>immediate results</li><li>removes the fine, vellous hair that traps dirt and oil</li><li>make-up goes on easier for a smoother, more flawless finish</li><li>products absorb more fully into skin</li><li>no chemicals, incisions or lasers</li><li>leaves you with that DERMAPLANE GLOW</li></ul>",
+        "msrp": "60.00",
+        "image_urls": [
+            "images/services/VqZxti25hoMraoAAii27uRBAviQgYh-metaZGVybWFwbGFuZTE2OS5qcGc=-.jpg",
+            "images/services/9Oj2SpDsuil6xwXUe4cWjmTOhgjuwz-metaZGVybWFwbGFuZXRpdGxlLTIuanBn-.jpg",
+            "images/services/TpICTRXYZEnca3BMfBmAc1JVUWNTWm-metaZGVybWFwbGFuZWJ1bGxldC5qcGc=-.jpg"
+        ],
+        "video_urls": "9Pxa0tS-LY",
+        "created_at": "2022-03-03T21:55:10.000000Z",
+        "updated_at": "2022-03-04T00:03:58.000000Z"
+    },
+    {
+        "id": 4,
+        "name": "Dermal Fillers",
+        "type": "injectables",
+        "locations": [
+            "ashland",
+            "ontario"
+        ],
+        "description": "Dermal fillers help to diminish facial lines and restore volume and fullness in the face. As we age, our faces naturally lose subcutaneous fat, dermal fillers help restore your natural balance.",
+        "bullets": "<ul><li>Plump and enhance thin lips</li><li>Diminish vertical lip lines</li><li>Soften facial creases and wrinkles</li><li>Smooth out marionette and smile lines</li><li>Enhance &amp; restore volume to sunken cheeks or temples</li><li>Smooth out a chin crease {butt chin}</li><li>Add projection to chin</li><li>Help create a stunning, well-defined jawline</li><li>Treating necklace lines {tech neck}</li></ul><p><br></p>",
+        "msrp": "500.00",
+        "image_urls": [
+            "images/services/JRSs2REBdP467kfikX5nmqJJTPNUup-metaZmlsbGVyMTY5LmpwZw==-.jpg"
+        ],
+        "video_urls": null,
+        "created_at": "2022-03-03T22:08:03.000000Z",
+        "updated_at": "2022-03-03T22:08:03.000000Z"
+    },
+    {
+        "id": 5,
+        "name": "General",
+        "type": "spa",
+        "locations": [
+            "ashland",
+            "ontario"
+        ],
+        "description": "Beyond Esthetics Med Spa.",
+        "bullets": "<ul><li>Ashland</li><li>Ontario</li><li>Since 2010</li></ul>",
+        "msrp": "0.00",
+        "image_urls": [],
+        "video_urls": null,
+        "created_at": "2022-03-04T23:22:15.000000Z",
+        "updated_at": "2022-03-04T23:22:15.000000Z"
+    },
+    {
+        "id": 6,
+        "name": "Lumecca IPL Photofacial",
+        "type": "medical",
+        "locations": [
+            "ontario"
+        ],
+        "description": "Lumecca is the most powerful intense pulsed light (IPL) to treat pigmented and vascular lesions. After just one use, patients notice significant improvements in the complexion and clarity of the skin. ",
+        "bullets": "<ul><li>Treats a variety of skin types by delivering 3 times higher power, treating vascular lesions and pigmentation in only 1-2 sessions compared to 4-6 as seen with other IPL devices.</li><li>Improves and brightens texture and reduces skin irregularities including sun damage, freckles, pigmentation, and superficial vessels.</li><li>The tip of the device is made of sapphire which causes a strong cooling sensation and gets rid of the need for topical numbing.</li><li>Reduced treatment time thanks to large spot size and high pulse repetition rate.</li><li>There is no recovery time: the IPL does not cause peeling or redness following treatment.</li></ul>",
+        "msrp": "450.00",
+        "image_urls": [
+            "images/services/o472zFzEKTDXswa5fO6zi2a5Dc06FC-metabHVtZWNjYTE2OS0yLmpwZw==-.jpg",
+            "images/services/tA63iwCyZUEhp9GS15rDyUDv6tn0ms-metabHVtZWNjYXRpdGxlLmpwZw==-.jpg",
+            "images/services/OXzpqjQJnLWOV7HpoXI3KG4UspO3LI-metabHVtZWNjYWJ1bGxldC0yLmpwZw==-.jpg"
+        ],
+        "video_urls": "YcwPzotyCWk",
+        "created_at": "2022-03-05T05:14:02.000000Z",
+        "updated_at": "2022-03-05T05:37:31.000000Z"
+    },
+    {
+        "id": 7,
+        "name": "DiolazeXL Laser Hair Removal",
+        "type": "medical",
+        "locations": [
+            "ontario"
+        ],
+        "description": "A hair removal solution offering peak power with optimal speed. Designed with state-of-the-art diode lasers, the DiolazeXL offers patients the most effective hair removal treatment.",
+        "bullets": "<ul><li>Reduction in clinician treatment time – powerful enough to target and treat even the most stubborn hair.</li><li>Virtually painless due to strong built in cooling.</li><li>Can treat up to skin type VI.</li><li>DiolazeXL is a safe and convenient solution for addressing unwanted facial hair such as sideburns, lip or chin hair.</li><li>The large treatment surface of the DiolazeXL handpiece enables an easy and fast process for the removal of unwanted hair from large areas such as the back, chest, stomach and legs.</li><li>The large treatment surface efficiently and effectively removes leg hair in four to six sessions.</li></ul>",
+        "msrp": "100.00",
+        "image_urls": [
+            "images/services/XJwS9aIQ6f5541ntxIMniebWv3npcB-metaZGlvbGF6ZTE2OS5qcGc=-.jpg",
+            "images/services/QxnajUx7RrcRvMrw5QvoBqIwvynUli-metaZGlvbGF6ZXRpdGxlLmpwZw==-.jpg",
+            "images/services/wOTDCOVCnr7X1291ENvSBmXTJYGqQr-metaZGlvbGF6ZXhsYnVsbGV0LmpwZw==-.jpg"
+        ],
+        "video_urls": "TtMf1ah_Jo",
+        "created_at": "2022-03-05T05:30:53.000000Z",
+        "updated_at": "2022-03-05T05:30:53.000000Z"
+    },
+    {
+        "id": 8,
+        "name": "Opus Plasma",
+        "type": "medical",
+        "locations": [
+            "ontario"
+        ],
+        "description": "Opus skin resurfacing creates new collagen and elastin, the building blocks of smooth, youthful-looking skin.",
+        "bullets": "<ul><li>Offer the results of an ablative treatment with significantly less downtime.</li><li>Full-face treatments can be completed in as little as 15-20 minutes.</li><li>Offer visible results after as few as one treatment, with optimal results after a completed series (2-3 treatments).</li><li>Reduced appearance of fine lines, wrinkles, and loose and saggy skin.</li><li>Overall skin rejuvenation.</li><li>Minimized acne scars and surgical scars.</li><li>Popular treatment areas include the face, neck and upper chest area.</li></ul>",
+        "msrp": "1000.00",
+        "image_urls": [
+            "images/services/1jDl4rxUdog4uaVt0CuBGR0P9yOGta-metab3B1c3BsYXNtYTE2OS5qcGc=-.jpg",
+            "images/services/HbYxoPjxDbKMkC8JV5bgHJhlsL7eLg-metab3B1c3BsYXNtYXRpdGxlLmpwZw==-.jpg",
+            "images/services/sOtYQXpww595qvPNCPp6bZtfFfkBcN-metab3B1c3BsYXNtYWJ1bGxldC5qcGc=-.jpg"
+        ],
+        "video_urls": "KTKVsEfq-sA",
+        "created_at": "2022-03-06T00:56:04.000000Z",
+        "updated_at": "2022-03-06T00:56:04.000000Z"
+    }
+]

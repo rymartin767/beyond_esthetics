@@ -20,7 +20,6 @@ return new class extends Migration
             $table->date('start_date');
             $table->date('end_date');
             $table->json('locations');
-            $table->string('image_url')->nullable();
             $table->timestamps();
         });
     }

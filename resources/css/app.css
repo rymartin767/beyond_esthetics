@@ -13,8 +13,6 @@
     font-family: 'Montserrat', sans-serif;
 }
 
-.service-bullets li {
-    list-style-type: disc;
-    margin-bottom: 2rem;
-    list-style-position: inside;
+.description-bulletins li {
+    @apply list-inside list-disc mb-3;
 }

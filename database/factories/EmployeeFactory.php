@@ -18,9 +18,9 @@ class EmployeeFactory extends Factory
     {
         return [
             'name' => $this->faker->firstName('female') . ' ' . $this->faker->lastName(),
-            'title' => 'License This-License That-Certified This-Certified That',
+            'title' => 'Office Title',
+            'qualifications' => ['RNS, CNS, STD'],
             'bio' => $this->faker->sentence(25, true),
-            'image_url' => null
         ];
     }
 }

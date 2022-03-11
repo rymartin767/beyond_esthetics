@@ -17,12 +17,12 @@ return new class extends Migration
             $table->id();
             $table->string('name')->unique();
             $table->string('type');
-            $table->json('locations');
+            $table->json('locations')->nullable();
+            $table->json('treatments');
             $table->string('description')->nullable();
             $table->text('bullets')->nullable();
-            $table->decimal('msrp', 9, 2, true);
-            $table->json('image_urls')->nullable();
-            $table->json('video_urls')->nullable();
+            $table->decimal('msrp', 9, 2, true)->nullable();
+            $table->string('video_url')->nullable();
             $table->timestamps();
         });
     }

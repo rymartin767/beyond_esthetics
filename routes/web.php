@@ -4,7 +4,9 @@ use App\Http\Livewire\Home;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ServiceController;
 use App\Http\Controllers\SpecialController;
-use App\Models\Special;
+use App\Models\Employee;
+use App\Models\Image;
+use App\Models\Service;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,17 +19,19 @@ use App\Models\Special;
 |
 */
 
-Route::view('/', 'mx')->middleware('web')->name('mx');
-
-Route::middleware(['auth'])->group(function () {
-
-    // HOMEPAGE
-    Route::get('/home', Home::class)->name('home');
-
-    // SERVICES
+Route::middleware('web')->group(function () {
+    Route::get('/', Home::class)->middleware('web')->name('home');
     Route::get('/services', [ServiceController::class, 'index'])->name('services');
     Route::get('/services/{service}', [ServiceController::class, 'show'])->name('services.show');
+    Route::view('/about', 'about', ['employees' => Employee::all()])->name('about');
+});
 
-    // SPECIALS
+
+Route::middleware(['auth'])->group(function () {
     Route::get('/specials', SpecialController::class)->name('specials');
+    Route::view('/lab', 'lab', [
+        'employees' => Employee::all(),
+        'services' => Service::all(),
+        'images' => Image::all()
+    ]);
 });
