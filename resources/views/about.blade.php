@@ -1,10 +1,4 @@
 <x-app-layout>
-
-    <!-- FAQs -->
-    <div class="py-10">
-        @include('layouts.elements.faq', compact('faqs'))
-    </div>
-    
     <!-- TEAM PHOTO -->
     <div class="bg-gray-100 h-96">
         TEAM PHOTO
@@ -38,28 +32,45 @@
         </div>
     </div>
 
-    <!-- MISC -->
-    <div class="h-96 bg-gray-300">
-        next
+    <!-- FAQs -->
+    <div class="py-10 bg-gray-50">
+        @include('layouts.elements.faq', compact('faqs'))
     </div>
-    
+
     <!-- OUR FOUNDERS/OWNERS -->
-    <div class="border-t-2 border-gray-400">
-        <div x-data="{ shown: false }" x-intersect="shown = true" class="max-w-6xl mx-auto py-24">
-            <div x-show="shown" x-transition.duration.3000ms class="grid grid-cols-3">
-                <div class="col-span-2">
-                    <div class="flex flex-col">
-                        <div class="text-4xl text-blue-500 font-semibold mb-4">Beyond Esthetics Founders</div>
-                        <div class="text-2xl font-bold mb-3">Tonya & Steve Goulding</div>
-                        <div class="text-lg font-semibold pr-8">Victoria and Eric are the husband-and-wife duo who are excited to welcome you to Fusion IV. Eric is a Scottsdale native, while Victoria grew up in the Bay Area. The two met in Coronado, California while Eric served in the Navy. Once Eric finished his service, the two moved back to Scottsdale where they started their family together. They have two daughters whom they hope to be role models for, especially in the health-and-wellness department, and they believe Fusion IV is a great steppingstone for achieving that. The Fitch’s enjoy spending time outside, going to the lake, and enjoying quality time with friends and family.</div>
-                    </div>
-                </div>
-                <div class="col-span-1">
-                    <div class="">   
-                        <div class="h-96 w-96 rounded-full bg-slate-500"></div>
+    <div class="py-20">
+        <x-section title="Get To Know Us">
+            <div>
+                <div x-data="{ shown: false }" x-intersect="shown = true" class="py-24">
+                    <div x-show="shown" x-transition.duration.3000ms class="grid grid-cols-3">
+                        <div class="col-span-2">
+                            <div class="flex flex-col">
+                                <div class="text-4xl text-spa-200 font-semibold mb-4">Beyond Esthetics Founders</div>
+                                <div class="text-2xl font-bold mb-3">Tonya & Steve Goulding</div>
+                                <div class="text-lg font-semibold pr-8">
+                                    Beyond Esthetics means <span class="text-spa-200">seeing beyond what the natural eye sees.</span> Sometimes the most effective way to help a client is simply listening to a need or giving someone a hug.
+                                    Knowing that the best treatment is sometimes good old-fashioned TLC, Tonya's husband Steve came up with the tagline, "Come get some TLC from TLG".
+                                    Beyond Esthetics has grown from Tonya to over 20 employees and now serves two locations. Come see us today!
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-span-1">
+                            <div class="">
+                                <div class="h-96 w-96 rounded-full bg-slate-500"></div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
+            <div>
+                <div class="grid grid-cols-4 gap-6">
+                    @foreach ($employees as $employee)
+                    <div class="col-span-4 sm:col-span-1 h-20 bg-gray-50">
+                        {{ $employee->name }} BIO HERE
+                    </div>
+                    @endforeach
+                </div>
+            </div>
+        </x-section>
     </div>
 </x-app-layout>
