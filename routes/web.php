@@ -1,12 +1,13 @@
 <?php
 
-use App\Http\Livewire\Home;
-use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\ServiceController;
-use App\Http\Controllers\SpecialController;
-use App\Models\Employee;
 use App\Models\Image;
 use App\Models\Service;
+use App\Models\Employee;
+use App\Http\Livewire\Home;
+use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\AboutController;
+use App\Http\Controllers\ServiceController;
+use App\Http\Controllers\SpecialController;
 
 /*
 |--------------------------------------------------------------------------
@@ -24,7 +25,7 @@ Route::middleware('web')->group(function () {
     Route::get('/services', [ServiceController::class, 'index'])->name('services');
     Route::get('/services/{service}', [ServiceController::class, 'show'])->name('services.show');
     Route::get('/specials', SpecialController::class)->name('specials');
-    Route::view('/about', 'about', ['employees' => Employee::all()])->name('about');
+    Route::get('/about', AboutController::class)->name('about');
 });
 
 

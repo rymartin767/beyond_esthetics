@@ -43,7 +43,7 @@
                 </div>
             </main>
 
-            @include('layouts.footer')
+            @include('layouts.elements.footer')
         </div>
 
         @stack('modals')

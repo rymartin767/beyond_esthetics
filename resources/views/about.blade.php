@@ -1,7 +1,16 @@
 <x-app-layout>
+
+    <!-- FAQs -->
+    <div class="py-10">
+        @include('layouts.elements.faq', compact('faqs'))
+    </div>
+    
+    <!-- TEAM PHOTO -->
     <div class="bg-gray-100 h-96">
         TEAM PHOTO
     </div>
+
+    <!-- MISSION STATEMENT -->
     <div class="max-w-7xl mx-auto my-16">
         <div class="text-center">
             <div class="text-5xl text-blue-500 font-semibold mb-6">We assist. We empower. We inspire.</div>
@@ -28,12 +37,16 @@
             </div>
         </div>
     </div>
+
+    <!-- MISC -->
     <div class="h-96 bg-gray-300">
         next
     </div>
+    
+    <!-- OUR FOUNDERS/OWNERS -->
     <div class="border-t-2 border-gray-400">
         <div x-data="{ shown: false }" x-intersect="shown = true" class="max-w-6xl mx-auto py-24">
-            <div x-show="shown" x-transition.duration.5000ms class="grid grid-cols-3">
+            <div x-show="shown" x-transition.duration.3000ms class="grid grid-cols-3">
                 <div class="col-span-2">
                     <div class="flex flex-col">
                         <div class="text-4xl text-blue-500 font-semibold mb-4">Beyond Esthetics Founders</div>
