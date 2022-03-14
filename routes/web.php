@@ -36,3 +36,5 @@ Route::middleware(['auth'])->group(function () {
         'images' => Image::all()
     ]);
 });
+
+Route::view('lab', 'lab');

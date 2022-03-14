@@ -4,23 +4,29 @@
 
         <!-- Product -->
         <div class="grid grid-cols-2">
-            <div class="col-span-2 sm:col-span-1 bg-slate-400">
+            <div class="col-span-2 sm:col-span-1">
                 <img src="{{ $service->images->where('tag', 'title')->isEmpty() ? '/images/services/title_missing.jpg' : Storage::url($service->images->where('tag', 'title')->first()->url) }}" alt="{{ $service->name }} Image">
             </div>
-            <div class="col-span-2 sm:col-span-1 bg-gray-200 px-6 md:px-24 py-8">
+            <div class="col-span-2 sm:col-span-1 px-6 md:px-24 py-8">
                 <div class="grid grid-cols-6 gap-3">
-                    <div class="col-span-6 text-center py-8 text-3xl text-spa-200">{{ $service->name }} targets:</div>
-                    <!-- temp image -->
+                    <div class="col-span-6 text-center py-8 text-3xl font-semibold">{{ $service->name }} targets:</div>
+                    <!-- temp images -->
                             <div class="col-span-2 bg-white p-4">
-                                <img src="/images/services/treatments/dry_skin.svg" alt="Dry Skin Image" loading="lazy">
+                                <img src="/images/services/treatments/dry_skin.svg" alt="Dry Skin Image" loading="lazy" class="">
                             </div>
-                        @forelse ($service->treatments as $treatment)
+                            <div class="col-span-2 bg-white p-4">
+                                <img src="/images/services/treatments/skin_brightening.svg" alt="Dry Skin Image" loading="lazy" class="">
+                            </div>
+                            <div class="col-span-2 bg-white p-4">
+                                <img src="/images/services/treatments/sun_damage.svg" alt="Dry Skin Image" loading="lazy" class="">
+                            </div>
+                        <!-- @forelse ($service->treatments as $treatment)
                             <div class="col-span-2 border-4 border-spa-200">
                                 <img src="/images/services/treatments/{{$treatment}}.jpg" alt="{{ str($treatment)->replace('_', ' ')->title() }} Image" loading="lazy">
                             </div>
                         @empty
                             <div class="col-span-6 text-center font-bold text-xl">Coming Soon!</div>
-                        @endforelse
+                        @endforelse -->
                 </div>
             </div>
         </div>
@@ -97,7 +103,7 @@
                 </div>
             </div>
             <div class="order-first sm:order-last col-span-2 sm:col-span-1 flex flex-wrap content-center">
-                <div class="w-full text-center text-5xl font-semibold py-8 px-6"><span class="text-spa-200">Watch</span> & Learn.</div>
+                <div class="w-full text-center text-4xl sm:text-5xl font-semibold py-8 px-6"><span class="text-spa-200">Watch</span> & Learn.</div>
             </div>
         </div>
 

@@ -3,8 +3,8 @@
     <div class="bg-white">
         <x-section>
             <div class="grid grid-cols-2">
-                <div class="col-span-3 md:col-span-1">
-                    <img src="images/cover.jpg" alt="Tonya Goulding, Owner">
+                <div class="col-span-3 md:col-span-1 bg-cover" style="background-image: url('/images/cover.jpg');">
+                    <div</div>
                 </div>
                 <div class="col-span-3 md:col-span-1 flex flex-col bg-black p-6 lg:p-20">
                     <div class="flex flex-col border-l-4 border-spa-200 text-white text-3xl lg:text-4xl">
@@ -77,8 +77,8 @@
 
             <!-- Employees -->
             <div class="grid grid-cols-12 gap-3 mt-12">
-                @forelse ($employees as $employee)
-                    <div class="col-span-12 sm:col-span-6 lg:col-span-4 xl:col-span-3 flex flex-col flex-wrap bg-white rounded-br-3xl overflow-hidden">
+                @forelse ($employees->take(4) as $employee)
+                    <div class="col-span-12 sm:col-span-6 lg:col-span-4 xl:col-span-3 flex flex-col flex-wrap bg-white">
                         <a href="/about#{{ $employee->name }}">
                             <div>
                                 @livewire('image', ['database_image_url' => is_null($employee->image) ? '/images/employees/coming_soon.png' : $employee->image->url, 'alt' => $employee->name])

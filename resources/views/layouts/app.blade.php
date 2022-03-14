@@ -18,11 +18,11 @@
 
         <!-- Scripts -->
         <!-- Intersect Plugin is for rendering when content enters viewport -->
-        <script defer src="https://unpkg.com/@alpinejs/intersect@3.x.x/dist/cdn.min.js"></script>
+        <!-- <script defer src="https://unpkg.com/@alpinejs/intersect@3.x.x/dist/cdn.min.js"></script> -->
         <script src="{{ mix('js/app.js') }}" defer></script>
     </head>
     <body>
-        <div class="min-h-screen flex flex-col font-mont">
+        <div class="min-h-screen flex flex-col font-mont overflow-x-hidden">
             @livewire('navigation-menu')
 
             <!-- Page Heading -->
