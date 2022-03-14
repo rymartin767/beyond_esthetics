@@ -1360,15 +1360,15 @@ Ensure the default browser behavior of the `hidden` attribute.
   background-color: rgb(229 231 235 / var(--tw-bg-opacity));
 }.bg-white\/50{
   background-color: rgb(255 255 255 / 0.5);
+}.bg-pink-200{
+  --tw-bg-opacity: 1;
+  background-color: rgb(251 207 232 / var(--tw-bg-opacity));
 }.bg-black{
   --tw-bg-opacity: 1;
   background-color: rgb(0 0 0 / var(--tw-bg-opacity));
 }.bg-yellow-200{
   --tw-bg-opacity: 1;
   background-color: rgb(254 240 138 / var(--tw-bg-opacity));
-}.bg-pink-200{
-  --tw-bg-opacity: 1;
-  background-color: rgb(251 207 232 / var(--tw-bg-opacity));
 }.bg-spa-100{
   --tw-bg-opacity: 1;
   background-color: rgb(178 179 214 / var(--tw-bg-opacity));
@@ -2243,8 +2243,8 @@ Ensure the default browser behavior of the `hidden` attribute.
     display: none;
   }.sm\:h-10{
     height: 2.5rem;
-  }.sm\:min-h-0{
-    min-height: 0px;
+  }.sm\:min-h-full{
+    min-height: 100%;
   }.sm\:w-10{
     width: 2.5rem;
   }.sm\:w-full{
