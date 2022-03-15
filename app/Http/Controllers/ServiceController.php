@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Faq;
 use App\Models\Service;
 
 class ServiceController extends Controller
@@ -17,7 +18,7 @@ class ServiceController extends Controller
     public function show(Service $service)
     {
         return view('services.show', [
-            'service' => $service->load('reviews')
+            'service' => $service->load('reviews', 'faqs'),
         ]);
     }
 }

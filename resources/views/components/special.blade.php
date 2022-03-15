@@ -4,7 +4,7 @@
         <div class="shadow-md px-6">
             <div class="mt-3 text-2xl text-center uppercase font-black">{{ $special->name }}</div>
             <div class="py-6 text-xl font-black">All The Details:</div>
-            <div class="description-bulletins">
+            <div class="filament-description">
                 {!! $special->description !!}
             </div>
             <div class="flex justify-between items-center border-t-2 border-spa-100 mt-3 p-3 text-xl text-spa-200 font-bold">

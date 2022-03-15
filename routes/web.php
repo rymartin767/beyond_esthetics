@@ -26,6 +26,8 @@ Route::middleware('web')->group(function () {
     Route::get('/services/{service}', [ServiceController::class, 'show'])->name('services.show');
     Route::get('/specials', SpecialController::class)->name('specials');
     Route::get('/about', AboutController::class)->name('about');
+    Route::view('/shop', 'shop')->name('shop');
+    Route::view('/newsletter', 'newsletter')->name('newsletter');
 });
 
 
@@ -35,6 +37,5 @@ Route::middleware(['auth'])->group(function () {
         'services' => Service::all(),
         'images' => Image::all()
     ]);
+    Route::view('lab', 'lab');
 });
-
-Route::view('lab', 'lab');

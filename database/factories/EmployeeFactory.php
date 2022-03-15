@@ -20,7 +20,7 @@ class EmployeeFactory extends Factory
             'name' => $this->faker->firstName('female') . ' ' . $this->faker->lastName(),
             'title' => 'Office Title',
             'qualifications' => ['RNS, CNS, STD'],
-            'bio' => $this->faker->sentence(25, true),
+            'bio' => $this->faker->paragraph(12, true),
         ];
     }
 }

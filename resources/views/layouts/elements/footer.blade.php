@@ -2,13 +2,27 @@
     <div class="max-w-7xl mx-auto flex flex-col space-y-10">
         <!-- LINKS -->
         <div class="grid grid-cols-8 xl:grid-cols-7">
-            <div class="col-span-8 sm:col-span-4 lg:col-span-2 xl:col-span-1 mb-3 text-center uppercase font-semibold text-spa-200">services</div>
-            <div class="col-span-8 sm:col-span-4 lg:col-span-2 xl:col-span-1 mb-3 text-center uppercase font-semibold text-spa-200">specials</div>
-            <div class="col-span-8 sm:col-span-4 lg:col-span-2 xl:col-span-1 mb-3 text-center uppercase font-semibold text-spa-200">about us</div>
-            <div class="col-span-8 sm:col-span-4 lg:col-span-2 xl:col-span-1 mb-3 text-center uppercase font-semibold text-spa-200">resources</div>
-            <div class="col-span-8 sm:col-span-4 lg:col-span-2 xl:col-span-1 mb-3 text-center uppercase font-semibold text-spa-200">shop</div>
-            <div class="col-span-8 sm:col-span-4 lg:col-span-2 xl:col-span-1 mb-3 text-center uppercase font-semibold text-spa-200">newsletter</div>
-            <div class="col-span-8 sm:col-span-4 lg:col-span-2 xl:col-span-1 mb-3 text-center uppercase font-semibold text-spa-200">training</div>
+            <a href="{{ route('services') }}" class="col-span-8 sm:col-span-4 lg:col-span-2 xl:col-span-1 mb-3">
+                <div class="text-center uppercase font-semibold text-spa-200 border-b-4 border-transparent hover:border-spa-200 transition-colors">services</div>
+            </a>
+            <a href="{{ route('specials') }}" class="col-span-8 sm:col-span-4 lg:col-span-2 xl:col-span-1 mb-3">
+                <div class="text-center uppercase font-semibold text-spa-200 border-b-4 border-transparent hover:border-spa-200 transition-colors">specials</div>
+            </a>
+            <a href="{{ route('about') }}" class="col-span-8 sm:col-span-4 lg:col-span-2 xl:col-span-1 mb-3">
+                <div class="text-center uppercase font-semibold text-spa-200 border-b-4 border-transparent hover:border-spa-200 transition-colors">about us</div>
+            </a>
+            <a href="{{ route('services') }}" class="col-span-8 sm:col-span-4 lg:col-span-2 xl:col-span-1 mb-3">
+                <div class="text-center uppercase font-semibold text-spa-200 border-b-4 border-transparent hover:border-spa-200 transition-colors">resources</div>
+            </a>
+            <a href="{{ route('shop') }}" class="col-span-8 sm:col-span-4 lg:col-span-2 xl:col-span-1 mb-3">
+                <div class="text-center uppercase font-semibold text-spa-200 border-b-4 border-transparent hover:border-spa-200 transition-colors">shop</div>
+            </a>
+            <a href="{{ route('services') }}" class="col-span-8 sm:col-span-4 lg:col-span-2 xl:col-span-1 mb-3">
+                <div class="text-center uppercase font-semibold text-spa-200 border-b-4 border-transparent hover:border-spa-200 transition-colors">newsletter</div>
+            </a>
+            <a href="{{ route('services') }}" class="col-span-8 sm:col-span-4 lg:col-span-2 xl:col-span-1 mb-3">
+                <div class="text-center uppercase font-semibold text-spa-200 border-b-4 border-transparent hover:border-spa-200 transition-colors">training</div>
+            </a>
         </div>
 
         <!-- SOCIAL MEDIA -->

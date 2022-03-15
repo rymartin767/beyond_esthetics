@@ -13,10 +13,16 @@
     font-family: 'Montserrat', sans-serif;
 }
 
-/*  */
-.description-bulletins li {
-    @apply list-inside list-disc mb-3;
-}
-
 /* X-CLOAK FOR ALPINE */
 [x-cloak] { display: none !important; }
+
+
+
+/* FILAMENT DESCRIPTIONS  */
+.filament-description 
+    li {
+        @apply list-inside list-disc mb-3;
+    }
+    p {
+        @apply mb-3;
+    }
