@@ -53,10 +53,10 @@
     </div>
 
     <!-- Tonya -->
-    <div class="bg-spa-100">
+    <div class="bg-spa-100 pt-16">
         <x-section>
             <div class="grid grid-cols-3">
-                <div class="col-span-3 sm:col-span-1 bg-white bg-contain" style="background-image: url('images/logo_bg.png');">
+                <div class="col-span-3 sm:col-span-1 bg-white bg-contain" style="background-image: url('images/marble_background.jpg');">
                     <img src="images/employees/tonya.png" alt="">
                 </div>
                 <div class="col-span-3 sm:col-span-2 flex flex-wrap content-center sm:justify-center order-last sm:order-first bg-black text-white">
@@ -74,7 +74,7 @@
                 </div>
             </div>
             <div class="flex mt-6 justify-center md:justify-end">
-                <button class="bg-black text-white rounded-md px-2 py-3 w-full sm:w-auto text-xl font-work tracking-wider font-bold">MEET OUR TEAM</button>
+                <button class="bg-black text-white rounded-md px-2 py-3 w-full sm:w-auto text-xl font-mont tracking-wider font-bold">Meet Our Team</button>
             </div>
         </x-section>
     </div>

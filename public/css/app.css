@@ -1517,6 +1517,8 @@ Ensure the default browser behavior of the `hidden` attribute.
   padding-bottom: 0.25rem;
 }.pl-4{
   padding-left: 1rem;
+}.pt-16{
+  padding-top: 4rem;
 }.pt-3{
   padding-top: 0.75rem;
 }.pr-2{
@@ -1811,6 +1813,9 @@ Ensure the default browser behavior of the `hidden` attribute.
   box-shadow: var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000);
 }.focus-within\:ring-inset:focus-within{
   --tw-ring-inset: inset;
+}.hover\:-translate-y-2:hover{
+  --tw-translate-y: -0.5rem;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }.hover\:scale-110:hover{
   --tw-scale-x: 1.1;
   --tw-scale-y: 1.1;
@@ -1873,6 +1878,9 @@ Ensure the default browser behavior of the `hidden` attribute.
 }.hover\:text-white:hover{
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
+}.hover\:text-black:hover{
+  --tw-text-opacity: 1;
+  color: rgb(0 0 0 / var(--tw-text-opacity));
 }.hover\:text-spa-200:hover{
   --tw-text-opacity: 1;
   color: rgb(126 125 180 / var(--tw-text-opacity));

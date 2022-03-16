@@ -57,6 +57,7 @@ return [
             'jawline_definition' => 'Jawline Definition',
             'marionette_lines' => 'Marionette Lines',
             'mild_exfoliation' => 'Mild Exfoliation',
+            'nasolabial_folds' => 'Nasolabial Folds',
             'necklace_lines' => 'Necklace Lines',
             'perioral_lines' => 'Perioral Lines',
             'red_spots' => 'Red Spots',
