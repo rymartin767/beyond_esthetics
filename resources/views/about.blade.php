@@ -21,7 +21,7 @@
     </x-section>
     
     <!-- FAQs -->
-    <x-section title="All The Details" class="bg-black text-white">
+    <x-section title="All The Details" class="bg-gray-100">
         <div x-data="{ shown: false }" x-intersect="shown = true">
             <div x-show="shown" x-transition.duration.5000ms>    
                 @include('layouts.elements.faq', [

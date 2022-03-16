@@ -3,10 +3,10 @@
     <div class="bg-white">
         <x-section>
             <div class="grid grid-cols-2">
-                <div class="col-span-3 md:col-span-1 bg-cover" style="background-image: url('/images/cover.jpg');">
-                    <div</div>
+                <div class="col-span-2 md:col-span-1 h-96 md:h-auto bg-cover" style="background-image: url('/images/cover.jpg');">
+                    <!-- bg image -->
                 </div>
-                <div class="col-span-3 md:col-span-1 flex flex-col bg-black p-6 lg:p-20">
+                <div class="col-span-2 md:col-span-1 flex flex-col bg-black p-6 lg:p-20">
                     <div class="flex flex-col border-l-4 border-spa-200 text-white text-3xl lg:text-4xl">
                         <div class="pl-4">Helping People Feel</div class="pl-4">
                         <div class="pl-4">Beautiful And Confident</div>
@@ -52,93 +52,82 @@
         </x-section>
     </div>
 
-    <!-- Tonya + Employees -->
-    <div class="bg-gradient-to-r from-spa-200 to-spa-100 py-6 sm:py-18">
-        <x-section title="Meet Our Team">
-            <!-- Tonya -->
-            <div class="grid grid-cols-3 font-mont" style="background-image: url('images/marble_background.jpg')">
-                <div class="col-span-3 lg:col-span-2">
-                    <div class="flex flex-col p-8">
-                        <div class="text-5xl">Tonya Goulding</div>
-                        <div class="flex flex-col space-y-1 mt-3 border-l-4 pl-3 border-spa-200">
-                            <div>Owner/Founder</div>
-                            <div>Licensed Esthetician</div>
-                            <div>AICC Master Permanent Makeup Artist</div>
-                            <div>Certified Permanent Makeup Trainer</div>
-                            <div>Certified Dermaplane Pro Trainer</div>
-                            <div>Skincare Specialist</div>
+    <!-- Tonya -->
+    <div class="bg-spa-100">
+        <x-section>
+            <div class="grid grid-cols-3">
+                <div class="col-span-3 sm:col-span-1 bg-white bg-contain" style="background-image: url('images/logo_bg.png');">
+                    <img src="images/employees/tonya.png" alt="">
+                </div>
+                <div class="col-span-3 sm:col-span-2 flex flex-wrap content-center sm:justify-center order-last sm:order-first bg-black text-white">
+                    <div class="p-2">
+                        <div class="text-4xl font-bold font-work">Owner/Founder</div>
+                        <div>
+                            <div class="lg:text-lg">Owner/Founder</div>
+                            <div class="lg:text-lg">Licensed Esthetician</div>
+                            <div class="lg:text-lg">AICC Master Permanent Makeup Artist</div>
+                            <div class="lg:text-lg">Certified Permanent Makeup Trainer</div>
+                            <div class="lg:text-lg">Certified Dermaplane Pro Trainer</div>
+                            <div class="lg:text-lg">Skincare Specialist</div>
                         </div>
                     </div>
                 </div>
-                <div class="col-span-3 lg:col-span-1 order-first lg:order-last">
-                    <img src="images/employees/tonya.png" alt="Tonya Goulding, Owner/Founder">
-                </div>
             </div>
-
-            <!-- Employees -->
-            <div class="grid grid-cols-12 gap-3 mt-12">
-                @forelse ($employees->take(4) as $employee)
-                    <div class="col-span-12 sm:col-span-6 lg:col-span-4 xl:col-span-3 flex flex-col flex-wrap bg-white">
-                        <a href="/about#{{ $employee->name }}">
-                            <div>
-                                @livewire('image', ['database_image_url' => is_null($employee->image) ? '/images/employees/coming_soon.png' : $employee->image->url, 'alt' => $employee->name])
-                                <!-- <img src="{{ is_null($employee->image) ? '/images/employees/coming_soon.png' : Storage::url($employee->image->url) }}" alt="{{ $employee->name }}"> -->
-                            </div>
-                            <div>
-                                <div class="p-4 font-mont">
-                                    <div class="text-xl font-bold mb-2">{{ $employee->name }}</div>
-                                    @foreach (explode('-', $employee->title) as $title)
-                                        <div class="text-xs tracking-wide mb-1">{{ $title }}</div>
-                                    @endforeach
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                @empty
-                <div>
-                    No Employees Found.
-                </div>
-                @endforelse
+            <div class="flex mt-6 justify-center md:justify-end">
+                <button class="bg-black text-white rounded-md px-2 py-3 w-full sm:w-auto text-xl font-work tracking-wider font-bold">MEET OUR TEAM</button>
             </div>
         </x-section>
     </div>
 
     <!-- Featured Specials * Alpine Intersect -->
-    <x-section title="Our Featured Specials" class="bg-gray-50">
-        <div x-data="{ shown: false }" x-intersect.margin.-200px="shown = true">
-            <div x-show="shown" x-transition.duration.2000ms>
-                <div class="grid grid-cols-3 gap-3">
-                    <div class="col-span-3 sm:col-span-1">
-                        <a href="/services#medical" class="cursor-pointer">
-                            <div class="overflow-hidden">
-                                <img src="images/med.png" alt="Service We Provide" class="transition opacity-70 duration-700 ease-in-out hover:scale-110 hover:opacity-100" loading="lazy">
-                            </div>
-                            <div class="mt-2 tracking-widest">MEDICAL</div>
-                        </a>
-                    </div>
-                    <div class="col-span-3 sm:col-span-1">
-                        <a href="/services#spa" class="cursor-pointer">
-                            <div class="overflow-hidden">
-                                <img src="images/spa.png" alt="Service We Provide" class="transition opacity-70 duration-700 ease-in-out hover:scale-110 hover:opacity-100" loading="lazy">
-                            </div>
-                            <div class="mt-2 tracking-widest">SPA</div>
-                        </a>
-                    </div>
-                    <div class="col-span-3 sm:col-span-1">
-                        <a href="/services#injectables" class="cursor-pointer">
-                            <div class="overflow-hidden">
-                                <img src="images/inject.png" alt="Service We Provide" class="transition opacity-70 duration-700 ease-in-out hover:scale-110 hover:opacity-100" loading="lazy">
-                            </div>
-                            <div class="mt-2 tracking-widest">INJECTABLES</div>
-                        </a>
+    <div>
+        <x-section title="Our Featured Specials">
+            <div x-data="{ shown: false }" x-intersect.margin.-200px="shown = true">
+                <div x-show="shown" x-transition.duration.2000ms>
+                    <div class="grid grid-cols-6 gap-3">
+                        <div class="col-span-6 sm:col-span-3 md:col-span-2">
+                            <a href="/services#injectables" class="cursor-pointer">
+                                <div class="relative">
+                                    <img src="images/inject_special.jpg" alt="">
+                                    <div class="absolute bottom-0 text-center py-8 text-3xl bg-spa-200 hover:bg-black transition-colors w-full text-white bg-opacity-50 font-work font-bold">INJECTABLES</div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-span-6 sm:col-span-3 md:col-span-2">
+                            <a href="/services#injectables" class="cursor-pointer">
+                                <div class="relative">
+                                    <img src="images/inject_special.jpg" alt="">
+                                    <div class="absolute bottom-0 text-center py-8 text-3xl bg-spa-200 w-full text-white tracking-wider bg-opacity-50 font-semibold">Injectables</div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-span-6 sm:col-span-3 md:col-span-2">
+                            <a href="/services#injectables" class="cursor-pointer">
+                                <div class="relative">
+                                    <img src="images/inject_special.jpg" alt="">
+                                    <div class="absolute bottom-0 text-center py-8 text-3xl bg-spa-200 w-full text-white bg-opacity-50 font-semibold">INJECTABLES</div>
+                                </div>
+                            </a>
+                        </div>
                     </div>
                 </div>
+            </div>
+        </x-section>
+    </div>
+
+    <!-- FAQs -->
+    <x-section title="All The Details" class="bg-gray-100">
+        <div x-data="{ shown: false }" x-intersect="shown = true">
+            <div x-show="shown" x-transition.duration.5000ms>    
+                @include('layouts.elements.faq', [
+                    'faqs' => $faqs->chunk(ceil($faqs->count() / 2))
+                ])
             </div>
         </div>
     </x-section>
 
     <!-- Reviews -->
-    <x-section title="Don't Take Our Word For It" class="py-24">
+    <x-section title="Don't Take Our Word For It">
         <div class="mb-12">
             <div class="text-center">Here’s what our patients have to say about their experience.</div>
         </div>

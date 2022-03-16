@@ -3,25 +3,25 @@
         <!-- LINKS -->
         <div class="grid grid-cols-8 xl:grid-cols-7">
             <a href="{{ route('services') }}" class="col-span-8 sm:col-span-4 lg:col-span-2 xl:col-span-1 mb-3">
-                <div class="text-center uppercase font-semibold text-spa-200 border-b-4 border-transparent hover:border-spa-200 transition-colors">services</div>
+                <div class="text-center uppercase font-semibold text-spa-200">services</div>
             </a>
             <a href="{{ route('specials') }}" class="col-span-8 sm:col-span-4 lg:col-span-2 xl:col-span-1 mb-3">
-                <div class="text-center uppercase font-semibold text-spa-200 border-b-4 border-transparent hover:border-spa-200 transition-colors">specials</div>
+                <div class="text-center uppercase font-semibold text-spa-200">specials</div>
             </a>
             <a href="{{ route('about') }}" class="col-span-8 sm:col-span-4 lg:col-span-2 xl:col-span-1 mb-3">
-                <div class="text-center uppercase font-semibold text-spa-200 border-b-4 border-transparent hover:border-spa-200 transition-colors">about us</div>
+                <div class="text-center uppercase font-semibold text-spa-200">about us</div>
             </a>
             <a href="{{ route('services') }}" class="col-span-8 sm:col-span-4 lg:col-span-2 xl:col-span-1 mb-3">
-                <div class="text-center uppercase font-semibold text-spa-200 border-b-4 border-transparent hover:border-spa-200 transition-colors">resources</div>
+                <div class="text-center uppercase font-semibold text-spa-200">resources</div>
             </a>
             <a href="{{ route('shop') }}" class="col-span-8 sm:col-span-4 lg:col-span-2 xl:col-span-1 mb-3">
-                <div class="text-center uppercase font-semibold text-spa-200 border-b-4 border-transparent hover:border-spa-200 transition-colors">shop</div>
+                <div class="text-center uppercase font-semibold text-spa-200">shop</div>
             </a>
             <a href="{{ route('services') }}" class="col-span-8 sm:col-span-4 lg:col-span-2 xl:col-span-1 mb-3">
-                <div class="text-center uppercase font-semibold text-spa-200 border-b-4 border-transparent hover:border-spa-200 transition-colors">newsletter</div>
+                <div class="text-center uppercase font-semibold text-spa-200">newsletter</div>
             </a>
             <a href="{{ route('services') }}" class="col-span-8 sm:col-span-4 lg:col-span-2 xl:col-span-1 mb-3">
-                <div class="text-center uppercase font-semibold text-spa-200 border-b-4 border-transparent hover:border-spa-200 transition-colors">training</div>
+                <div class="text-center uppercase font-semibold text-spa-200">training</div>
             </a>
         </div>
 
