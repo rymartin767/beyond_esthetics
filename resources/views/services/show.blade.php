@@ -50,7 +50,7 @@
 
     <!-- FAQs -->
     @if(!$service->faqs->isEmpty())
-        <x-section title="All The Details" class="bg-black text-white">
+        <x-section title="All The Details" class="bg-gray-100">
             <div x-data="{ shown: false }" x-intersect="shown = true">
                 <div x-show="shown" x-transition.duration.5000ms x-cloak>    
                     @include('layouts.elements.faq', [
@@ -115,7 +115,7 @@
     <!-- Book Now, Pay Later -->
     <x-section class="py-32">
         <div class="grid grid-cols-4 gap-3 pl-4 lg:pl-0">
-            <div class="col-span-4 lg:col-span-1 text-4xl font-black mb-4 sm:mb-0">
+            <div class="col-span-4 lg:col-span-1 text-4xl font-mont font-semibold mb-4 sm:mb-0">
                 <a href="https://carecredit.com/go/443shq/." target="_blank" class="hover:text-spa-200">
                     <div>Book Now.</div>
                     <div>Pay Later.</div>

@@ -8,6 +8,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AboutController;
 use App\Http\Controllers\ServiceController;
 use App\Http\Controllers\SpecialController;
+use App\Models\Faq;
 
 /*
 |--------------------------------------------------------------------------
@@ -26,7 +27,9 @@ Route::middleware('web')->group(function () {
     Route::get('/services/{service}', [ServiceController::class, 'show'])->name('services.show');
     Route::get('/specials', SpecialController::class)->name('specials');
     Route::get('/about', AboutController::class)->name('about');
-    Route::view('/shop', 'shop')->name('shop');
+    Route::view('/faq', 'faq', [
+        'services' => Service::where('name', '!=', 'General')->with('faqs')->get()
+    ])->name('faq');
     Route::view('/newsletter', 'newsletter')->name('newsletter');
 });
 

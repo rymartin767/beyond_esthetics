@@ -60,7 +60,7 @@
                     <img src="images/employees/tonya.png" alt="">
                 </div>
                 <div class="col-span-3 sm:col-span-2 flex flex-wrap content-center sm:justify-center order-last sm:order-first bg-black text-white">
-                    <div class="p-2">
+                    <div class="p-4">
                         <div class="text-4xl font-bold font-work">Owner/Founder</div>
                         <div>
                             <div class="lg:text-lg">Owner/Founder</div>
@@ -82,8 +82,8 @@
     <!-- Featured Specials * Alpine Intersect -->
     <div>
         <x-section title="Our Featured Specials">
-            <div x-data="{ shown: false }" x-intersect.margin.-200px="shown = true">
-                <div x-show="shown" x-transition.duration.2000ms>
+            <div x-data="{ shown: false }" x-intersect="shown = true">
+                <div x-show="shown" x-transition.duration.4000ms>
                     <div class="grid grid-cols-6 gap-3">
                         <div class="col-span-6 sm:col-span-3 md:col-span-2">
                             <a href="/services#injectables" class="cursor-pointer">
@@ -133,8 +133,8 @@
         </div>
         <div class="grid grid-cols-2 gap-8">
             @forelse ($reviews as $review)
-                <div x-data="{ shown: false }" x-intersect.margin.-200px="shown = true">
-                    <div x-show="shown" x-transition.duration.2000ms>
+                <div x-data="{ shown: false }" x-intersect="shown = true">
+                    <div x-show="shown" x-transition.duration.4000ms>
                         <x-review :review="$review"></x-review>
                     </div>
                 </div>
