@@ -85,30 +85,16 @@
             <div x-data="{ shown: false }" x-intersect="shown = true">
                 <div x-show="shown" x-transition.duration.4000ms>
                     <div class="grid grid-cols-6 gap-3">
-                        <div class="col-span-6 sm:col-span-3 md:col-span-2">
-                            <a href="/services#injectables" class="cursor-pointer">
-                                <div class="relative">
-                                    <img src="images/inject_special.jpg" alt="">
-                                    <div class="absolute bottom-0 text-center py-8 text-3xl bg-spa-200 hover:bg-black transition-colors w-full text-white bg-opacity-50 font-work font-bold">INJECTABLES</div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="col-span-6 sm:col-span-3 md:col-span-2">
-                            <a href="/services#injectables" class="cursor-pointer">
-                                <div class="relative">
-                                    <img src="images/inject_special.jpg" alt="">
-                                    <div class="absolute bottom-0 text-center py-8 text-3xl bg-spa-200 w-full text-white tracking-wider bg-opacity-50 font-semibold">Injectables</div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="col-span-6 sm:col-span-3 md:col-span-2">
-                            <a href="/services#injectables" class="cursor-pointer">
-                                <div class="relative">
-                                    <img src="images/inject_special.jpg" alt="">
-                                    <div class="absolute bottom-0 text-center py-8 text-3xl bg-spa-200 w-full text-white bg-opacity-50 font-semibold">INJECTABLES</div>
-                                </div>
-                            </a>
-                        </div>
+                        @foreach(range(1,3) as $r)
+                            <div class="col-span-6 sm:col-span-3 md:col-span-2">
+                                <a href="/services#injectables" class="cursor-pointer">
+                                    <div class="relative">
+                                        <img src="images/inject_special.jpg" alt="">
+                                        <div class="absolute bottom-0 text-center py-8 text-3xl bg-spa-200 w-full text-white tracking-wider bg-opacity-50 font-semibold">Injectables</div>
+                                    </div>
+                                </a>
+                            </div>
+                        @endforeach
                     </div>
                 </div>
             </div>

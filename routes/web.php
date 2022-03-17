@@ -1,14 +1,11 @@
 <?php
 
-use App\Models\Image;
 use App\Models\Service;
-use App\Models\Employee;
 use App\Http\Livewire\Home;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AboutController;
 use App\Http\Controllers\ServiceController;
 use App\Http\Controllers\SpecialController;
-use App\Models\Faq;
 
 /*
 |--------------------------------------------------------------------------
@@ -35,10 +32,5 @@ Route::middleware('web')->group(function () {
 
 
 Route::middleware(['auth'])->group(function () {
-    Route::view('/lab', 'lab', [
-        'employees' => Employee::all(),
-        'services' => Service::all(),
-        'images' => Image::all()
-    ]);
-    Route::view('lab', 'lab');
+    Route::view('lab', 'lab')->name('lab');
 });

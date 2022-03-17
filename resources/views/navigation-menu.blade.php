@@ -64,7 +64,7 @@
                             {{ __('SHOP') }}
                         </x-jet-nav-link>
 
-                        <x-jet-nav-link href="{{ route('home') }}" :active="request()->routeIs('contact')">
+                        <x-jet-nav-link href="{{ route('newsletter') }}" :active="request()->routeIs('newsletter')">
                             {{ __('NEWSLETTER') }}
                         </x-jet-nav-link>
 

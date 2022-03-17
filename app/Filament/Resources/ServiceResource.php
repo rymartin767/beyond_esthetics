@@ -57,7 +57,6 @@ class ServiceResource extends Resource
                         'string',
                         'min:5',
                         'max:50',
-                        'starts_with:https://youtu.be/'
                     ])
             ]);
     }
@@ -73,7 +72,11 @@ class ServiceResource extends Resource
                 IconColumn::make('video_url')
                     ->options([
                         'heroicon-o-check' => fn ($state): bool => $state !== null,
-                        'heroicon-o-chip' => fn ($state): bool => $state == null,
+                        'heroicon-o-x' => fn ($state): bool => $state == null,
+                    ])
+                    ->colors([
+                        'success',
+                        'danger' => fn($state): bool => $state == null
                     ]),
                 TextColumn::make('images_count')->counts('images')
             ])

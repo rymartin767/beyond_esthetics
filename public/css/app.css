@@ -1,4 +1,4 @@
-@import url(https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Work+Sans:wght@600;700&display=swap);
+@import url(https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;500;600&family=Sacramento&family=Work+Sans:wght@700;800;900&display=swap);
 
 /*
 ! tailwindcss v3.0.23 | MIT License | https://tailwindcss.com
@@ -734,6 +734,8 @@ Ensure the default browser behavior of the `hidden` attribute.
   top: 100%;
 }.top-0{
   top: 0px;
+}.left-1\/2{
+  left: 50%;
 }.z-0{
   z-index: 0;
 }.z-50{
@@ -858,6 +860,8 @@ Ensure the default browser behavior of the `hidden` attribute.
   margin-bottom: 0.75rem;
 }.ml-auto{
   margin-left: auto;
+}.mr-56{
+  margin-right: 14rem;
 }.mt-auto{
   margin-top: auto;
 }.mr-1{
@@ -922,6 +926,8 @@ Ensure the default browser behavior of the `hidden` attribute.
   height: 100%;
 }.h-36{
   height: 9rem;
+}.h-60{
+  height: 15rem;
 }.h-11{
   height: 2.75rem;
 }.h-7{
@@ -972,8 +978,6 @@ Ensure the default browser behavior of the `hidden` attribute.
   width: 0.75rem;
 }.w-52{
   width: 13rem;
-}.w-96{
-  width: 24rem;
 }.w-7{
   width: 1.75rem;
 }.w-64{
@@ -1041,11 +1045,14 @@ Ensure the default browser behavior of the `hidden` attribute.
 }.-translate-y-1{
   --tw-translate-y: -0.25rem;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-}.translate-y-8{
-  --tw-translate-y: 2rem;
+}.-translate-x-1\/2{
+  --tw-translate-x: -50%;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }.translate-x-0{
   --tw-translate-x: 0px;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}.translate-y-8{
+  --tw-translate-y: 2rem;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }.-translate-x-full{
   --tw-translate-x: -100%;
@@ -1060,6 +1067,16 @@ Ensure the default browser behavior of the `hidden` attribute.
 }.scale-100{
   --tw-scale-x: 1;
   --tw-scale-y: 1;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}.scale-50{
+  --tw-scale-x: .5;
+  --tw-scale-y: .5;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}.scale-x-0{
+  --tw-scale-x: 0;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}.scale-x-100{
+  --tw-scale-x: 1;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }.transform{
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
@@ -1211,6 +1228,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   --tw-space-x-reverse: 0;
   margin-right: calc(0.75rem * var(--tw-space-x-reverse));
   margin-left: calc(0.75rem * calc(1 - var(--tw-space-x-reverse)));
+}.space-y-5 > :not([hidden]) ~ :not([hidden]){
+  --tw-space-y-reverse: 0;
+  margin-top: calc(1.25rem * calc(1 - var(--tw-space-y-reverse)));
+  margin-bottom: calc(1.25rem * var(--tw-space-y-reverse));
 }.divide-y > :not([hidden]) ~ :not([hidden]){
   --tw-divide-y-reverse: 0;
   border-top-width: calc(1px * calc(1 - var(--tw-divide-y-reverse)));
@@ -1269,6 +1290,14 @@ Ensure the default browser behavior of the `hidden` attribute.
 }.rounded-t-xl{
   border-top-left-radius: 0.75rem;
   border-top-right-radius: 0.75rem;
+}.rounded-tr-full{
+  border-top-right-radius: 9999px;
+}.rounded-br-full{
+  border-bottom-right-radius: 9999px;
+}.rounded-tl-full{
+  border-top-left-radius: 9999px;
+}.rounded-bl-full{
+  border-bottom-left-radius: 9999px;
 }.border{
   border-width: 1px;
 }.border-2{
@@ -1375,9 +1404,12 @@ Ensure the default browser behavior of the `hidden` attribute.
 }.bg-pink-300{
   --tw-bg-opacity: 1;
   background-color: rgb(249 168 212 / var(--tw-bg-opacity));
-}.bg-slate-500{
+}.bg-gray-900{
   --tw-bg-opacity: 1;
-  background-color: rgb(100 116 139 / var(--tw-bg-opacity));
+  background-color: rgb(17 24 39 / var(--tw-bg-opacity));
+}.bg-blue-600{
+  --tw-bg-opacity: 1;
+  background-color: rgb(37 99 235 / var(--tw-bg-opacity));
 }.bg-black\/50{
   background-color: rgb(0 0 0 / 0.5);
 }.bg-gray-600{
@@ -1492,9 +1524,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 }.px-5{
   padding-left: 1.25rem;
   padding-right: 1.25rem;
-}.py-24{
-  padding-top: 6rem;
-  padding-bottom: 6rem;
 }.pt-6{
   padding-top: 1.5rem;
 }.pt-5{
@@ -1525,8 +1554,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   padding-right: 0.5rem;
 }.pr-9{
   padding-right: 2.25rem;
-}.pr-8{
-  padding-right: 2rem;
+}.pl-12{
+  padding-left: 3rem;
+}.pr-3{
+  padding-right: 0.75rem;
 }.pl-2{
   padding-left: 0.5rem;
 }.pr-10{
@@ -1535,6 +1566,8 @@ Ensure the default browser behavior of the `hidden` attribute.
   padding-left: 1.5rem;
 }.pr-1{
   padding-right: 0.25rem;
+}.pr-8{
+  padding-right: 2rem;
 }.pt-8{
   padding-top: 2rem;
 }.text-left{
@@ -1584,6 +1617,12 @@ Ensure the default browser behavior of the `hidden` attribute.
   font-weight: 700;
 }.font-normal{
   font-weight: 400;
+}.font-thin{
+  font-weight: 100;
+}.font-light{
+  font-weight: 300;
+}.font-extrabold{
+  font-weight: 800;
 }.uppercase{
   text-transform: uppercase;
 }.italic{
@@ -1672,6 +1711,9 @@ Ensure the default browser behavior of the `hidden` attribute.
 }.text-gray-300{
   --tw-text-opacity: 1;
   color: rgb(209 213 219 / var(--tw-text-opacity));
+}.text-blue-600{
+  --tw-text-opacity: 1;
+  color: rgb(37 99 235 / var(--tw-text-opacity));
 }.text-spa-100{
   --tw-text-opacity: 1;
   color: rgb(178 179 214 / var(--tw-text-opacity));
@@ -1788,6 +1830,8 @@ Ensure the default browser behavior of the `hidden` attribute.
   transition-duration: 300ms;
 }.duration-700{
   transition-duration: 700ms;
+}.duration-500{
+  transition-duration: 500ms;
 }.duration-100{
   transition-duration: 100ms;
 }.ease-in-out{
@@ -1800,6 +1844,8 @@ Ensure the default browser behavior of the `hidden` attribute.
     font-family: 'Work Sans', sans-serif;
 }.font-mont {
     font-family: 'Montserrat', sans-serif;
+}.font-sac {
+    font-family: 'Sacramento', cursive;
 }/* X-CLOAK FOR ALPINE */[x-cloak] { display: none !important; }/* FILAMENT DESCRIPTIONS  */.filament-description 
     li{
   margin-bottom: 0.75rem;
@@ -1848,18 +1894,23 @@ Ensure the default browser behavior of the `hidden` attribute.
 }.hover\:bg-gray-50:hover{
   --tw-bg-opacity: 1;
   background-color: rgb(249 250 251 / var(--tw-bg-opacity));
-}.hover\:bg-black:hover{
-  --tw-bg-opacity: 1;
-  background-color: rgb(0 0 0 / var(--tw-bg-opacity));
 }.hover\:bg-gray-500\/5:hover{
   background-color: rgb(107 114 128 / 0.05);
 }.hover\:bg-gray-300\/5:hover{
   background-color: rgb(209 213 219 / 0.05);
+}.hover\:bg-white:hover{
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+}.hover\:bg-blue-600:hover{
+  --tw-bg-opacity: 1;
+  background-color: rgb(37 99 235 / var(--tw-bg-opacity));
 }.hover\:bg-gray-600\/20:hover{
   background-color: rgb(75 85 99 / 0.2);
 }.hover\:bg-gray-500:hover{
   --tw-bg-opacity: 1;
   background-color: rgb(107 114 128 / var(--tw-bg-opacity));
+}.hover\:bg-opacity-5:hover{
+  --tw-bg-opacity: 0.05;
 }.hover\:text-gray-500:hover{
   --tw-text-opacity: 1;
   color: rgb(107 114 128 / var(--tw-text-opacity));
