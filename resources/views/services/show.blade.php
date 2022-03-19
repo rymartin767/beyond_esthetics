@@ -25,7 +25,7 @@
     </x-section>
     
     <!-- Description -->
-    <div class="grid grid-cols-2">
+    <div class="grid grid-cols-2 -mt-6">
         <div class="col-span-2 sm:col-span-1 bg-white h-96 flex flex-wrap content-center">
             <div class="px-6 xl:px-24 text-xl leading-8">
                 {!! $service->description !!}

@@ -16,7 +16,7 @@ class Home extends Component
 
         return view('livewire.home', [
             'employees' => Employee::with('image')->get(),
-            'reviews' => Review::general()->get(),
+            'reviews' => Review::general()->get()->random(7),
             'faqs' => Faq::where('service_id', $id)->get()
         ]);
     }

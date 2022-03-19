@@ -27,6 +27,7 @@ class FaqResource extends Resource
         return $form
             ->schema([
                 Select::make('service_id')
+                    ->required()
                     ->label('Service')
                     ->options(Service::all()->pluck('name', 'id'))
                     ->searchable(),
