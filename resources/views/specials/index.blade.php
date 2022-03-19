@@ -110,7 +110,7 @@
     </x-section>
 
     <!-- Specials -->
-    <x-section title="Our Featured Specials" class="bg-gray-">
+    <x-section title="Our Featured Specials" class="bg-gray-" id="featured">
         <div x-data="{ shown: false }" x-intersect="shown = true">
             <div x-show="shown" x-transition.duration.5000ms>
                 <div class="grid grid-cols-3 gap-6">

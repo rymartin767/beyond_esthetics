@@ -7,6 +7,7 @@ use App\Models\Review;
 use App\Models\Service;
 use Livewire\Component;
 use App\Models\Employee;
+use App\Models\Special;
 
 class Home extends Component
 {
@@ -17,7 +18,8 @@ class Home extends Component
         return view('livewire.home', [
             'employees' => Employee::with('image')->get(),
             'reviews' => Review::general()->get()->random(7),
-            'faqs' => Faq::where('service_id', $id)->get()
+            'faqs' => Faq::where('service_id', $id)->get(),
+            'specials' => Special::featured()->get()->take(3)
         ]);
     }
 }
