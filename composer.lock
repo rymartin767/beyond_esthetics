@@ -1001,16 +1001,16 @@
         },
         {
             "name": "filament/filament",
-            "version": "v2.10.29",
+            "version": "v2.10.31",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel-filament/admin.git",
-                "reference": "e053782265f922efb61c2bfd5b8546c3f98c674c"
+                "reference": "95c418a774f030d48142debc234ac2cc4a10b03d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel-filament/admin/zipball/e053782265f922efb61c2bfd5b8546c3f98c674c",
-                "reference": "e053782265f922efb61c2bfd5b8546c3f98c674c",
+                "url": "https://api.github.com/repos/laravel-filament/admin/zipball/95c418a774f030d48142debc234ac2cc4a10b03d",
+                "reference": "95c418a774f030d48142debc234ac2cc4a10b03d",
                 "shasum": ""
             },
             "require": {
@@ -1057,20 +1057,20 @@
                 "issues": "https://github.com/laravel-filament/filament/issues",
                 "source": "https://github.com/laravel-filament/filament"
             },
-            "time": "2022-03-15T21:16:08+00:00"
+            "time": "2022-03-20T18:30:53+00:00"
         },
         {
             "name": "filament/forms",
-            "version": "v2.10.29",
+            "version": "v2.10.31",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel-filament/forms.git",
-                "reference": "6c2fc517c16dcd3670b8ebd86386c3dac91b29d5"
+                "reference": "5189a1eb5f0cf0db3b16acd7d4db7aa1a31e22c4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel-filament/forms/zipball/6c2fc517c16dcd3670b8ebd86386c3dac91b29d5",
-                "reference": "6c2fc517c16dcd3670b8ebd86386c3dac91b29d5",
+                "url": "https://api.github.com/repos/laravel-filament/forms/zipball/5189a1eb5f0cf0db3b16acd7d4db7aa1a31e22c4",
+                "reference": "5189a1eb5f0cf0db3b16acd7d4db7aa1a31e22c4",
                 "shasum": ""
             },
             "require": {
@@ -1113,20 +1113,20 @@
                 "issues": "https://github.com/laravel-filament/filament/issues",
                 "source": "https://github.com/laravel-filament/filament"
             },
-            "time": "2022-03-16T09:35:28+00:00"
+            "time": "2022-03-20T13:03:24+00:00"
         },
         {
             "name": "filament/tables",
-            "version": "v2.10.29",
+            "version": "v2.10.31",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel-filament/tables.git",
-                "reference": "cce7a83277e33f149fffcbc02554a949a19d2a65"
+                "reference": "eff50518c117b0374ebc733c064f52b5a6e89dbf"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel-filament/tables/zipball/cce7a83277e33f149fffcbc02554a949a19d2a65",
-                "reference": "cce7a83277e33f149fffcbc02554a949a19d2a65",
+                "url": "https://api.github.com/repos/laravel-filament/tables/zipball/eff50518c117b0374ebc733c064f52b5a6e89dbf",
+                "reference": "eff50518c117b0374ebc733c064f52b5a6e89dbf",
                 "shasum": ""
             },
             "require": {
@@ -1166,7 +1166,7 @@
                 "issues": "https://github.com/laravel-filament/filament/issues",
                 "source": "https://github.com/laravel-filament/filament"
             },
-            "time": "2022-03-11T21:17:26+00:00"
+            "time": "2022-03-20T18:30:43+00:00"
         },
         {
             "name": "fruitcake/php-cors",
@@ -1303,16 +1303,16 @@
         },
         {
             "name": "guzzlehttp/guzzle",
-            "version": "7.4.1",
+            "version": "7.4.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/guzzle/guzzle.git",
-                "reference": "ee0a041b1760e6a53d2a39c8c34115adc2af2c79"
+                "reference": "ac1ec1cd9b5624694c3a40be801d94137afb12b4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/guzzle/guzzle/zipball/ee0a041b1760e6a53d2a39c8c34115adc2af2c79",
-                "reference": "ee0a041b1760e6a53d2a39c8c34115adc2af2c79",
+                "url": "https://api.github.com/repos/guzzle/guzzle/zipball/ac1ec1cd9b5624694c3a40be801d94137afb12b4",
+                "reference": "ac1ec1cd9b5624694c3a40be801d94137afb12b4",
                 "shasum": ""
             },
             "require": {
@@ -1407,7 +1407,7 @@
             ],
             "support": {
                 "issues": "https://github.com/guzzle/guzzle/issues",
-                "source": "https://github.com/guzzle/guzzle/tree/7.4.1"
+                "source": "https://github.com/guzzle/guzzle/tree/7.4.2"
             },
             "funding": [
                 {
@@ -1423,7 +1423,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2021-12-06T18:43:05+00:00"
+            "time": "2022-03-20T14:16:28+00:00"
         },
         {
             "name": "guzzlehttp/promises",
@@ -1511,16 +1511,16 @@
         },
         {
             "name": "guzzlehttp/psr7",
-            "version": "2.1.0",
+            "version": "2.2.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/guzzle/psr7.git",
-                "reference": "089edd38f5b8abba6cb01567c2a8aaa47cec4c72"
+                "reference": "6565c7e0db3231e92dd5ca3bed448b30fbc89eb1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/guzzle/psr7/zipball/089edd38f5b8abba6cb01567c2a8aaa47cec4c72",
-                "reference": "089edd38f5b8abba6cb01567c2a8aaa47cec4c72",
+                "url": "https://api.github.com/repos/guzzle/psr7/zipball/6565c7e0db3231e92dd5ca3bed448b30fbc89eb1",
+                "reference": "6565c7e0db3231e92dd5ca3bed448b30fbc89eb1",
                 "shasum": ""
             },
             "require": {
@@ -1544,7 +1544,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "2.1-dev"
+                    "dev-master": "2.2-dev"
                 }
             },
             "autoload": {
@@ -1606,7 +1606,7 @@
             ],
             "support": {
                 "issues": "https://github.com/guzzle/psr7/issues",
-                "source": "https://github.com/guzzle/psr7/tree/2.1.0"
+                "source": "https://github.com/guzzle/psr7/tree/2.2.0"
             },
             "funding": [
                 {
@@ -1622,7 +1622,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2021-10-06T17:43:30+00:00"
+            "time": "2022-03-20T13:51:08+00:00"
         },
         {
             "name": "jaybizzle/crawler-detect",
@@ -8943,16 +8943,16 @@
         },
         {
             "name": "spatie/ignition",
-            "version": "1.2.4",
+            "version": "1.2.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spatie/ignition.git",
-                "reference": "ec58c125c15eecaa20180f01ef9667d41a568ba8"
+                "reference": "982f69f3c2e525cef62fa23ada047d745e4bcda9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spatie/ignition/zipball/ec58c125c15eecaa20180f01ef9667d41a568ba8",
-                "reference": "ec58c125c15eecaa20180f01ef9667d41a568ba8",
+                "url": "https://api.github.com/repos/spatie/ignition/zipball/982f69f3c2e525cef62fa23ada047d745e4bcda9",
+                "reference": "982f69f3c2e525cef62fa23ada047d745e4bcda9",
                 "shasum": ""
             },
             "require": {
@@ -9009,20 +9009,20 @@
                     "type": "github"
                 }
             ],
-            "time": "2022-03-11T13:28:02+00:00"
+            "time": "2022-03-19T14:07:30+00:00"
         },
         {
             "name": "spatie/laravel-ignition",
-            "version": "1.0.10",
+            "version": "1.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spatie/laravel-ignition.git",
-                "reference": "71df77cad94aae4db904aaef1cc2f06950daed76"
+                "reference": "5b8c360d1f6bcba339a6d593efa02816c06d17c3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spatie/laravel-ignition/zipball/71df77cad94aae4db904aaef1cc2f06950daed76",
-                "reference": "71df77cad94aae4db904aaef1cc2f06950daed76",
+                "url": "https://api.github.com/repos/spatie/laravel-ignition/zipball/5b8c360d1f6bcba339a6d593efa02816c06d17c3",
+                "reference": "5b8c360d1f6bcba339a6d593efa02816c06d17c3",
                 "shasum": ""
             },
             "require": {
@@ -9096,7 +9096,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2022-03-17T11:01:36+00:00"
+            "time": "2022-03-19T17:03:56+00:00"
         },
         {
             "name": "theseer/tokenizer",

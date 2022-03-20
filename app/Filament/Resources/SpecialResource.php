@@ -29,7 +29,8 @@ class SpecialResource extends Resource
     {
         return $form
             ->schema([
-                TextInput::make('name'),
+                TextInput::make('name')
+                    ->maxLength(20),
                 MultiSelect::make('locations')->options(['ashland' => 'Ashland', 'ontario' => 'Ontario'])->rules('required'),
                 DatePicker::make('start_date')->rules(['required', 'date']),
                 DatePicker::make('end_date')->rules(['required', 'date']),
