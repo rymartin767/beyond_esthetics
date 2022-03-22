@@ -16,7 +16,6 @@ class Home extends Component
         $id = Service::where('name', 'General')->sole()->id;
 
         return view('livewire.home', [
-            'employees' => Employee::with('image')->get(),
             'reviews' => Review::general()->get()->random(7),
             'faqs' => Faq::where('service_id', $id)->get(),
             'specials' => Special::featured()->get()->take(3)

@@ -11,9 +11,11 @@ class AboutController extends Controller
     public function __invoke()
     {
         $id = Service::where('name', 'General')->sole()->id;
+        $employees = Employee::with('image')->get();
 
         return view('about', [
-            'employees' => Employee::with('image')->get(),
+            'tonya' => $employees->where('name', '==', 'Tonya Goulding')->first(),
+            'employees' => $employees->where('name', '!=', 'Tonya Goulding'),
             'faqs' => Faq::where('service_id', $id)->get()
         ]);
     }

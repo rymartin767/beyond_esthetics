@@ -53,7 +53,7 @@
     </div>
 
     <!-- Tonya -->
-    <div class="bg-spa-100 pt-16">
+    <div class="bg-spa-200 pt-16">
         <x-section>
             <div class="grid grid-cols-3">
                 <div class="col-span-3 sm:col-span-1 bg-white bg-contain" style="background-image: url('images/marble_background.jpg');">
@@ -61,7 +61,7 @@
                 </div>
                 <div class="col-span-3 sm:col-span-2 flex flex-wrap content-center sm:justify-center order-last sm:order-first bg-black text-white">
                     <div class="p-4">
-                        <div class="text-4xl font-bold font-work mb-2">Owner/Founder</div>
+                        <div class="text-4xl font-bold font-mont mb-2">Owner/Founder</div>
                         <div>
                             <div class="lg:text-lg">Owner/Founder</div>
                             <div class="lg:text-lg">Licensed Esthetician</div>
