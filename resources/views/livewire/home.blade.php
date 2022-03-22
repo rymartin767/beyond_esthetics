@@ -53,7 +53,7 @@
     </div>
 
     <!-- Tonya -->
-    <div class="bg-spa-200 pt-16">
+    <div class="pt-16 bg-contain" style="background-image: url('images/logo-bg-purple.jpg');">
         <x-section>
             <div class="grid grid-cols-3">
                 <div class="col-span-3 sm:col-span-1 bg-white bg-contain" style="background-image: url('images/marble_background.jpg');">

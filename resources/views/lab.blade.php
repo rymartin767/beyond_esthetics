@@ -28,6 +28,14 @@
         </div>
     </x-section>
 
+    <x-section title="Backgrounds">
+        <div class="grid grid-cols-4 gap-3">
+            <div class="col-span-1 h-44 bg-contain shadow-md" style="background-image: url('images/logo_bg.png');"></div>
+            <div class="col-span-1 h-44 bg-contain shadow-md" style="background-image: url('images/logo-bg-purple.jpg');"></div>
+            <div class="col-span-1 h-44 bg-contain shadow-md" style="background-image: url('images/marble_background.jpg');"></div>
+        </div>
+    </x-section>
+
     <x-section title="Mobile">
         <div class="flex items-center justify-center bg-gray-900 py-6">
             <div x-data="{ isMenuOpen: false }" class="relative mr-56">

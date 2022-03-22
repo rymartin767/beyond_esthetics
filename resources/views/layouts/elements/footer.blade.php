@@ -1,4 +1,4 @@
-<footer class="border-t border-gray-200 py-20 bg-gray-50">
+<footer class="border-t border-gray-200 pt-20 bg-gray-50">
     <div class="max-w-7xl mx-auto flex flex-col space-y-10">
         <!-- LINKS -->
         <div class="grid grid-cols-8 xl:grid-cols-7">
@@ -47,7 +47,44 @@
             </a>
         </div>
 
-        <div class="py-3">
+        <!-- LOCATION + HOURS -->
+        <div class="grid grid-cols-2">
+            <div class="col-span-2 lg:col-span-1 text-center py-6">
+                <div class="flex flex-col space-y-3">
+                    <div class="text-2xl font-bold text-spa-200">ONTARIO</div>
+                    <div class="text-xl">
+                        <div>2021 Park Ave West</div>
+                        <div>Ontario, OH 44906</div>
+                    </div>
+                    <div>
+                        <ul>
+                            @foreach (config('general.hours.ontario') as $day => $hours)
+                                <li>{{ $day }}: {{ $hours }}</li>
+                            @endforeach
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-span-2 lg:col-span-1 text-center py-6">
+                <div class="flex flex-col space-y-3">
+                    <div class="text-2xl font-bold text-spa-200">ASHLAND</div>
+                    <div class="text-xl">
+                        <div>2021 Some Address</div>
+                        <div>Ashland, OH 44805</div>
+                    </div>
+                    <div>
+                        <ul>
+                            @foreach (config('general.hours.ashland') as $day => $hours)
+                                <li>{{ $day }}: {{ $hours }}</li>
+                            @endforeach
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- COPYRIGHT -->
+        <div class="pt-3 pb-16 sm:pb-3 border-t border-slate-200">
             <div class="max-w-3xl mx-auto">
                 <div class="text-sm text-gray-600 text-center">
                     &copy; {{ now()->format('Y') }} Beyond Esthetics
@@ -74,7 +111,7 @@
     </div>
 
     <!-- Mobile Contact Bar -->
-    <div class="flex flex-row fixed inset-x-0 bottom-0 sm:hidden bg-pink-200">
+    <div class="flex flex-row fixed inset-x-0 bottom-0 sm:hidden">
         <div class="flex-1">
             <a href="tel:1+5675605558">
                 <button class="flex items-center justify-center bg-black text-white w-full py-4 space-x-3">
