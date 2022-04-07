@@ -45,7 +45,7 @@
                             </x-slot>
 
                             <x-slot name="content">
-                                <x-jet-dropdown-link href="{{ route('home') }}">
+                                <x-jet-dropdown-link href="{{ route('ppt') }}">
                                     {{ __('Pre/Post Treatment') }}
                                 </x-jet-dropdown-link>
                                 <x-jet-dropdown-link href="{{ route('faq') }}">

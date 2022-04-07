@@ -1,5 +1,5 @@
 <x-app-layout>
-    
+
     <!-- Product -->
     <x-section title="{{ $service->name }}">
         <div class="grid grid-cols-2">
@@ -7,7 +7,7 @@
                 <img src="{{ $service->images->where('tag', 'title')->isEmpty() ? '/images/services/title_missing.jpg' : Storage::url($service->images->where('tag', 'title')->first()->url) }}" alt="{{ $service->name }} Image">
             </div>
             <div class="col-span-2 sm:col-span-1 px-6 md:px-24 py-8">
-                <div class="grid grid-cols-6 gap-3">
+                <div class="hidden lg:grid lg:grid-cols-6 lg:gap-3">
                     <div class="col-span-6 text-center py-8 text-3xl font-semibold">{{ $service->name }} targets:</div>
                     @forelse ($service->treatments as $treatment)
                         <div class="col-span-2">
@@ -23,7 +23,7 @@
             </div>
         </div>
     </x-section>
-    
+
     <!-- Description -->
     <div class="grid grid-cols-2 -mt-6">
         <div class="col-span-2 sm:col-span-1 bg-white h-96 flex flex-wrap content-center">
@@ -41,7 +41,7 @@
         <div class="col-span-2 sm:col-span-1 bg-gray-200">
             <img src="{{ $service->images->where('tag', 'bulletin')->isEmpty() ? '/images/services/bulletin_missing.jpg' : Storage::url($service->images->where('tag', 'bulletin')->first()->url) }}" alt="">
         </div>
-        
+
         <div class="col-span-2 sm:col-span-1 flex flex-wrap content-center">
             <div class="p-8">
                 <div class="filament-description">
@@ -55,9 +55,9 @@
     @if(!$service->faqs->isEmpty())
         <x-section title="All The Details" class="bg-gray-100">
             <div x-data="{ shown: false }" x-intersect="shown = true">
-                <div x-show="shown" x-transition.duration.5000ms x-cloak>    
+                <div x-show="shown" x-transition.duration.5000ms x-cloak>
                     @include('layouts.elements.faq', [
-                        'faqs' => $service->faqs->chunk(ceil($service->faqs->count() / 2))
+                    'faqs' => $service->faqs->chunk(ceil($service->faqs->count() / 2))
                     ])
                 </div>
             </div>
@@ -74,26 +74,26 @@
                     </div>
                     <div class="grid grid-cols-2 gap-8">
                         @forelse ($service->reviews as $review)
-                            <x-review :review="$review"></x-review>
+                        <x-review :review="$review"></x-review>
                         @empty
-                            <div class="col-span-2 lg:col-span-1 bg-yellow-200">
-                                <div class="flex flex-row">
-                                    <div class="bg-pink-200">
-                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="fill-current h-24 w-24">
-                                            <!--! Font Awesome Pro 6.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. -->
-                                            <path d="M256 31.1c-141.4 0-255.1 93.12-255.1 208c0 49.62 21.35 94.98 56.97 130.7c-12.5 50.37-54.27 95.27-54.77 95.77c-2.25 2.25-2.875 5.734-1.5 8.734c1.249 3 4.021 4.766 7.271 4.766c66.25 0 115.1-31.76 140.6-51.39c32.63 12.25 69.02 19.39 107.4 19.39c141.4 0 255.1-93.13 255.1-207.1S397.4 31.1 256 31.1zM127.1 271.1c-17.75 0-32-14.25-32-31.1s14.25-32 32-32s32 14.25 32 32S145.7 271.1 127.1 271.1zM256 271.1c-17.75 0-31.1-14.25-31.1-31.1s14.25-32 31.1-32s31.1 14.25 31.1 32S273.8 271.1 256 271.1zM383.1 271.1c-17.75 0-32-14.25-32-31.1s14.25-32 32-32s32 14.25 32 32S401.7 271.1 383.1 271.1z" />
-                                        </svg>
+                        <div class="col-span-2 lg:col-span-1 bg-yellow-200">
+                            <div class="flex flex-row">
+                                <div class="bg-pink-200">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="fill-current h-24 w-24">
+                                        <!--! Font Awesome Pro 6.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. -->
+                                        <path d="M256 31.1c-141.4 0-255.1 93.12-255.1 208c0 49.62 21.35 94.98 56.97 130.7c-12.5 50.37-54.27 95.27-54.77 95.77c-2.25 2.25-2.875 5.734-1.5 8.734c1.249 3 4.021 4.766 7.271 4.766c66.25 0 115.1-31.76 140.6-51.39c32.63 12.25 69.02 19.39 107.4 19.39c141.4 0 255.1-93.13 255.1-207.1S397.4 31.1 256 31.1zM127.1 271.1c-17.75 0-32-14.25-32-31.1s14.25-32 32-32s32 14.25 32 32S145.7 271.1 127.1 271.1zM256 271.1c-17.75 0-31.1-14.25-31.1-31.1s14.25-32 31.1-32s31.1 14.25 31.1 32S273.8 271.1 256 271.1zM383.1 271.1c-17.75 0-32-14.25-32-31.1s14.25-32 32-32s32 14.25 32 32S401.7 271.1 383.1 271.1z" />
+                                    </svg>
+                                </div>
+                                <div class="flex flex-col space-y-6 px-6">
+                                    <div>
+                                        No reviews for this service yet...
                                     </div>
-                                    <div class="flex flex-col space-y-6 px-6">
-                                        <div>
-                                            No reviews for this service yet...
-                                        </div>
-                                        <div class="text-xl">
-                                            - No Reviews
-                                        </div>
+                                    <div class="text-xl">
+                                        - No Reviews
                                     </div>
                                 </div>
                             </div>
+                        </div>
                         @endforelse
                     </div>
                 </div>
@@ -140,5 +140,5 @@
             </div>
         </div>
     </x-section>
-    
 </x-app-layout>
+

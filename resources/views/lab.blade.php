@@ -63,5 +63,32 @@
                 </button>
             </div>
         </div>
+
+        <div class="py-24">
+            <div class="text-center">Horizontal Scroll</div>
+            <div class="flex overflow-x-auto flex-nowrap bg-pink-300 scroll-smooth snap-x snap-center">
+                <div class="min-w-full bg-yellow-100">
+                    <h2>Card</h2>
+                </div>
+                <div class="min-w-full bg-yellow-200">
+                    <h2>Card</h2>
+                </div>
+                <div class="min-w-full bg-yellow-300">
+                    <h2>Card</h2>
+                </div>
+                <div class="min-w-full bg-yellow-400">
+                    <h2>Card</h2>
+                </div>
+                <div class="min-w-full bg-yellow-500">
+                    <h2>Card</h2>
+                </div>
+                <div class="min-w-full bg-yellow-100">
+                    <h2>Card</h2>
+                </div>
+                <div class="min-w-full bg-yellow-100">
+                    <h2>Card</h2>
+                </div>
+            </div>
+        </div>
     </x-section>
 </x-app-layout>

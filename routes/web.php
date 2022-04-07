@@ -27,6 +27,9 @@ Route::middleware('web')->group(function () {
     Route::view('/faq', 'faq', [
         'services' => Service::where('name', '!=', 'General')->with('faqs')->get()
     ])->name('faq');
+    Route::view('/ppt', 'ppt', [
+        'services' => Service::select('id', 'name')->where('name', '!=', 'General')->with('images')->get()
+    ])->name('ppt');
     Route::view('/newsletter', 'newsletter')->name('newsletter');
 });
 
