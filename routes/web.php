@@ -30,6 +30,7 @@ Route::middleware('web')->group(function () {
     Route::view('/ppt', 'ppt', [
         'services' => Service::select('id', 'name')->where('name', '!=', 'General')->with('images')->get()
     ])->name('ppt');
+    Route::view('/tos', 'tos')->name('tos');
     Route::view('/newsletter', 'newsletter')->name('newsletter');
 });
 

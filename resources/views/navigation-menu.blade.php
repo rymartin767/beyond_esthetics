@@ -51,7 +51,7 @@
                                 <x-jet-dropdown-link href="{{ route('faq') }}">
                                     {{ __('FAQs') }}
                                 </x-jet-dropdown-link>
-                                <x-jet-dropdown-link href="{{ route('home') }}">
+                                <x-jet-dropdown-link href="{{ route('tos') }}">
                                     {{ __('Terms of Service') }}
                                 </x-jet-dropdown-link>
                                 <x-jet-dropdown-link href="{{ route('home') }}">

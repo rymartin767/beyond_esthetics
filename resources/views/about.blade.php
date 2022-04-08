@@ -1,16 +1,21 @@
 <x-app-layout>
 
     <!-- TEAM PHOTO -->
-    <x-section class="bg-gradient-to-r from-gray-50 to-gray-400">
-        <div class="text-center text-2xl font-semibold">TEAM PHOTO HERE</div>
-    </x-section>
+    <div class="bg-cover" style="background-image: url('images/logo-bg-purple.jpg');">
+        <div class="grid grid-cols-2 h-96">
+            <div class="col-span-1"></div>
+            <div class="col-span-1 h-full bg-white">
 
-    <!-- MISSION STATEMENT -->
-    <x-section>
+            </div>
+        </div>
+    </div>
+
+    <!-- WE EMPOWER -->
+    <x-section class="bg-black">
         <div x-data="{ shown: false }" x-intersect="shown = true">
             <div x-show="shown" x-transition.duration.4000ms class="max-w-7xl mx-auto">
-                <div class="text-5xl text-blue-500 font-semibold text-center">
-                    <div class="flex flex-col space-y-2 sm:space-y-0 sm:space-x-2 sm:flex-row">
+                <div class="text-5xl text-white font-semibold">
+                    <div class="flex flex-col space-y-2 sm:space-y-0 sm:space-x-2 sm:flex-row justify-center">
                         <div>We Assist.</div>
                         <div>We Empower.</div>
                         <div>We Inspire.</div>
@@ -20,16 +25,22 @@
         </div>
     </x-section>
     
-    <!-- FAQs -->
-    <x-section title="All The Details" class="bg-gray-100">
-        <div x-data="{ shown: false }" x-intersect="shown = true">
-            <div x-show="shown" x-transition.duration.5000ms>    
-                @include('layouts.elements.faq', [
-                    'faqs' => $faqs->chunk(ceil($faqs->count() / 2))
-                ])
+    <!-- MISSION STATEMENT -->
+    <div class="bg-white py-6">
+        <div class="bg-gray-100 py-6">
+            <div class="flex flex-col max-w-5xl mx-auto text-center text-lg font-semibold">
+                <div>
+                    Beyond Esthetics means 'seeing beyond with what the natural eye sees'. Sometimes the most effective way to help a client is simply listening to a need or giving someone a hug. 
+                </div>
+                <div class="mt-4">
+                    Knowing that the best treatment is sometimes good old-fashioned TLC, Tonya's husband Steve came up with the tagline, "Come get some TLC from TLG".
+                </div>
+                <div class="mt-4">
+                    Beyond Esthetics started with just Tonya and has grown to over 20 employees and two locations. Come see us today!
+                </div>
             </div>
         </div>
-    </x-section>
+    </div>
 
     <!-- BIOs -->
     <x-section title="Get To Know Us" class="bg-spa-100">
@@ -81,6 +92,17 @@
                     </div>
                 </div>
             @endforeach
+        </div>
+    </x-section>
+
+    <!-- FAQs -->
+    <x-section title="All The Details" class="bg-gray-100">
+        <div x-data="{ shown: false }" x-intersect="shown = true">
+            <div x-show="shown" x-transition.duration.5000ms>    
+                @include('layouts.elements.faq', [
+                    'faqs' => $faqs->chunk(ceil($faqs->count() / 2))
+                ])
+            </div>
         </div>
     </x-section>
     
