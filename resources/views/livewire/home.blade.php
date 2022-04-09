@@ -53,7 +53,7 @@
     </div>
 
     <!-- Tonya -->
-    <div class="pt-16 bg-cover" style="background-image: url('images/logo-bg-purple.jpg');">
+    <div class="pt-16 bg-contain" style="background-image: url('images/logo-bg-purple.jpg');">
         <x-section>
             <div class="grid grid-cols-3">
                 <div class="col-span-3 sm:col-span-1 bg-white bg-contain" style="background-image: url('images/marble_background.jpg');">
@@ -61,7 +61,7 @@
                 </div>
                 <div class="col-span-3 sm:col-span-2 flex flex-wrap content-center sm:justify-center order-last sm:order-first bg-black text-white">
                     <div class="p-4">
-                        <div class="text-4xl font-bold font-mont mb-2">Owner/Founder</div>
+                        <div class="text-4xl font-bold font-mont mb-2">Tonya Goulding</div>
                         <ul>
                             <li class="lg:text-lg font-light list-inside list-disc">Owner/Founder</li>
                             <li class="lg:text-lg font-light list-inside list-disc">Licensed Esthetician</li>
