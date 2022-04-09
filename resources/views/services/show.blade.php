@@ -32,7 +32,9 @@
             </div>
         </div>
         <div class="order-first sm:order-last col-span-2 sm:col-span-1 bg-black h-96 flex flex-wrap content-center">
-            <div class="w-full text-center text-4xl text-white">What is {{ $service->name }}?</div>
+            <div class="w-full text-center text-4xl text-white">
+                {{ str($service->name)->endswith('s') ? "What are $service->name?" : "What is $service->name?" }}
+            </div>
         </div>
     </div>
 
