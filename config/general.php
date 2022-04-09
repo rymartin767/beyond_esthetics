@@ -39,7 +39,8 @@ return [
         'portrait' => 'Employee Portrait | JPG | 1080x1080px',
         'landscape' => 'Service Landscape | JPG | 1690x1080px',
         'title' => 'Service Title | JPG | 500x500px',
-        'bulletin' => 'Service Bulletin | JPG | 1200x1500px'
+        'bulletin' => 'Service Bulletin | JPG | 1200x1500px',
+        'ppt' => 'Pre/Post Treatment | JPG | 300x300px'
     ],
 
     'services' => [
