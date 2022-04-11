@@ -9,11 +9,11 @@
             <div class="col-span-2 sm:col-span-1 px-6 md:px-24 py-4">
                 <div class="hidden lg:grid lg:grid-cols-6 lg:gap-3">
                     <div class="col-span-6 text-center py-8 text-3xl font-semibold">{{ $service->name }} targets:</div>
-                    @forelse ($service->treatments as $treatment)
+                    @forelse ($service->treats as $treatment)
                         <div class="col-span-2">
                             <div class="relative cursor-pointer hover:-translate-y-2 text-white hover:text-black transition duration-150 text-center py-1">
-                                <img src="/images/services/treatments/{{$treatment}}_250.png" alt="{{ str($treatment)->replace('_', ' ')->title() }} Image" loading="lazy" class="">
-                                <div class="absolute bottom-0 bg-spa-200 w-full py-1 text-sm">{{ str($treatment)->replace('_', ' ') }}</div>
+                                <img src="{{ is_null($treatment->image) ? Storage::url('images/treatments/null.png') : Storage::url($treatment->image->url) }}" alt="{{ str($treatment)->replace('_', ' ')->title() }} Image" loading="lazy" class="">
+                                <div class="absolute bottom-0 bg-spa-200 w-full py-1 text-sm">{{ $treatment->name }}</div>
                             </div>
                         </div>
                     @empty

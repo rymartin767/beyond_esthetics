@@ -1,11 +1,13 @@
 <x-app-layout>
 
     <!-- TEAM PHOTO -->
-    <div class="bg-cover" style="background-image: url('images/logo-bg-purple.jpg');">
-        <div class="grid grid-cols-2 h-96">
-            <div class="col-span-1"></div>
-            <div class="col-span-1 h-full bg-white">
+    <div class="pt-3">
+        <div class="bg-cover" style="background-image: url('images/logo-bg-purple.jpg');">
+            <div class="grid grid-cols-2 h-96">
+                <div class="col-span-1"></div>
+                <div class="col-span-1 h-full bg-white">
 
+                </div>
             </div>
         </div>
     </div>

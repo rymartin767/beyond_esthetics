@@ -16,6 +16,7 @@ use Filament\Forms\Components\RichEditor;
 use Filament\Forms\Components\MultiSelect;
 use App\Filament\Resources\ServiceResource\Pages;
 use App\Filament\Resources\ServiceResource\RelationManagers;
+use App\Models\Treatment;
 
 class ServiceResource extends Resource
 {
@@ -38,7 +39,7 @@ class ServiceResource extends Resource
                     ->required()
                     ->options(['ashland' => 'Ashland', 'ontario' => 'Ontario']),
                 MultiSelect::make('treatments')
-                    ->options(config('general.services.treatments')),
+                    ->options(Treatment::pluck('name')),
                 TextInput::make('description')
                     ->required()
                     ->minValue(5)
