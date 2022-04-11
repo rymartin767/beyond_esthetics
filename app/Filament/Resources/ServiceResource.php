@@ -78,7 +78,12 @@ class ServiceResource extends Resource
                         'success',
                         'danger' => fn($state): bool => $state == null
                     ]),
-                TextColumn::make('images_count')->counts('images')
+                TextColumn::make('images_count')
+                    ->counts('images')
+                    ->label('Image #'),
+                TextColumn::make('treats_count')
+                    ->counts('treats')
+                    ->label('Treatment #')
             ])
             ->filters([
                 //

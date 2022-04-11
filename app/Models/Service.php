@@ -54,4 +54,9 @@ class Service extends Model
     {
         return $this->hasMany(Faq::class);
     }
+
+    public function treats()
+    {
+        return $this->belongsToMany(Treatment::class);
+    }
 }

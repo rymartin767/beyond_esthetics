@@ -46,6 +46,7 @@ return [
     'services' => [
         'treatments' => [
             'acne' => 'Acne',
+            'acne_correction' => 'Acne Correction',
             'acne_scar_correction' => 'Acne Scar Correction',
             'adds_volume' => 'Adds Volume',
             'aggressive_resurfacing' => 'Aggressive Resurfacing',
