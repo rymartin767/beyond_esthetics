@@ -13,11 +13,11 @@
     </div>
 
     <!-- WE EMPOWER -->
-    <x-section class="bg-black">
+    <div class="bg-black py-8">
         <div x-data="{ shown: false }" x-intersect="shown = true">
             <div x-show="shown" x-transition.duration.4000ms class="max-w-7xl mx-auto">
                 <div class="text-5xl text-white font-semibold">
-                    <div class="flex flex-col space-y-2 sm:space-y-0 sm:space-x-2 sm:flex-row justify-center">
+                    <div class="flex flex-col space-y-2 sm:space-y-0 sm:space-x-2 sm:flex-row justify-center text-center">
                         <div>We Assist.</div>
                         <div>We Empower.</div>
                         <div>We Inspire.</div>
@@ -25,11 +25,11 @@
                 </div>
             </div>
         </div>
-    </x-section>
+    </div>
     
     <!-- MISSION STATEMENT -->
     <div class="bg-white py-6">
-        <div class="bg-gray-100 py-6">
+        <div class="bg-gray-100 p-6">
             <div class="flex flex-col max-w-5xl mx-auto text-center text-lg font-semibold">
                 <div>
                     Beyond Esthetics means 'seeing beyond with what the natural eye sees'. Sometimes the most effective way to help a client is simply listening to a need or giving someone a hug. 

@@ -3,20 +3,20 @@
 return [
     'hours' => [
         'ontario' => [
-            'Monday' => '7AM to 5PM',
-            'Tuesday' => '7AM to 5PM',
-            'Wednesday' => '7AM to 5PM',
-            'Thursday' => '7AM to 5PM',
-            'Friday' => '7AM to 5PM',
-            'Saturday' => '7AM to 5PM',
-            'Sunday' => '7AM to 5PM',
+            'Monday' => '8AM to 7PM',
+            'Tuesday' => '8AM to 5PM',
+            'Wednesday' => '8AM to 5PM',
+            'Thursday' => '8AM to 7PM',
+            'Friday' => '8AM to 5PM',
+            'Saturday' => 'Closed',
+            'Sunday' => 'Closed',
         ],
         'ashland' => [
             'Monday' => 'Closed',
-            'Tuesday' => '9AM to 5PM',
+            'Tuesday' => 'Closed',
             'Wednesday' => 'Closed',
             'Thursday' => 'Closed',
-            'Friday' => '9AM to 5PM',
+            'Friday' => '1PM to 5PM',
             'Saturday' => 'Closed',
             'Sunday' => 'Closed',
         ]

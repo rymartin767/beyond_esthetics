@@ -6,9 +6,9 @@
             <div class="col-span-2 sm:col-span-1">
                 <img src="{{ $service->images->where('tag', 'title')->isEmpty() ? '/images/services/title_missing.jpg' : Storage::url($service->images->where('tag', 'title')->first()->url) }}" alt="{{ $service->name }} Image">
             </div>
-            <div class="col-span-2 sm:col-span-1 px-6 md:px-24 py-4">
-                <div class="hidden lg:grid lg:grid-cols-6 lg:gap-3">
-                    <div class="col-span-6 text-center py-8 text-3xl font-semibold">{{ $service->name }} targets:</div>
+            <div class="col-span-2 sm:col-span-1 bg-pink-200 flex flex-wrap content-center">
+                <div class="grid grid-cols-6 gap-3 p-8 bg-yellow-200">
+                    <div class="col-span-6 text-center text-3xl font-semibold">{{ $service->name }} targets:</div>
                     @forelse ($service->treats as $treatment)
                         <div class="col-span-2">
                             <div class="relative cursor-pointer hover:-translate-y-2 text-white hover:text-black transition duration-150 text-center py-1">

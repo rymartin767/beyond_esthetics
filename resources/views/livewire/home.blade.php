@@ -74,7 +74,9 @@
                 </div>
             </div>
             <div class="flex mt-6 justify-center md:justify-end">
-                <button class="bg-black text-white px-2 py-3 w-full sm:w-auto text-xl font-mont tracking-wider">Meet Our Team</button>
+                <a href="{{ route('about') }}">
+                    <button class="bg-black text-white px-2 py-3 w-full sm:w-auto text-xl font-mont tracking-wider">Meet Our Team</button>
+                </a>
             </div>
         </x-section>
     </div>

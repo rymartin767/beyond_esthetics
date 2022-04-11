@@ -11,9 +11,6 @@
             <a href="{{ route('about') }}" class="col-span-8 sm:col-span-4 lg:col-span-2 xl:col-span-1 mb-3">
                 <div class="text-center uppercase font-semibold text-spa-200">about us</div>
             </a>
-            <a href="{{ route('services') }}" class="col-span-8 sm:col-span-4 lg:col-span-2 xl:col-span-1 mb-3">
-                <div class="text-center uppercase font-semibold text-spa-200">resources</div>
-            </a>
             <a href="{{ route('home') }}" class="col-span-8 sm:col-span-4 lg:col-span-2 xl:col-span-1 mb-3">
                 <div class="text-center uppercase font-semibold text-spa-200">shop</div>
             </a>
@@ -69,7 +66,7 @@
                 <div class="flex flex-col space-y-3">
                     <div class="text-2xl font-bold text-spa-200">ASHLAND</div>
                     <div class="text-xl">
-                        <div>2021 Some Address</div>
+                        <div>27 W. Main St.</div>
                         <div>Ashland, OH 44805</div>
                     </div>
                     <div>
