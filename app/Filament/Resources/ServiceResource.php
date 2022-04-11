@@ -39,7 +39,7 @@ class ServiceResource extends Resource
                     ->required()
                     ->options(['ashland' => 'Ashland', 'ontario' => 'Ontario']),
                 MultiSelect::make('treatments')
-                    ->options(Treatment::pluck('name')),
+                    ->options(Treatment::pluck('name', 'name')->sort()),
                 TextInput::make('description')
                     ->required()
                     ->minValue(5)
