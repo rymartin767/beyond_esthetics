@@ -37,7 +37,7 @@
                         </ul>
                         <div class="flex justify-between items-center border-t-2 border-spa-100 mt-3 p-3 text-xl text-spa-200 font-bold">
                             <div>$125/Monthly</div>
-                            <div class=""><a href="https://www.vagaro.com/beyondestheticsspa/memberships" target="_blank">Get Enrolled!</a></div>
+                            <div class=""><a href="https://www.vagaro.com/beyondestheticsspa/memberships" target="_blank" class="hover:text-black">Get Enrolled!</a></div>
                         </div>
                     </div>
                 </div>
@@ -71,7 +71,7 @@
                         </ul>
                         <div class="flex justify-between items-center border-t-2 border-spa-100 mt-3 p-3 text-xl text-spa-200 font-bold">
                             <div>$75/Monthly</div>
-                            <div class=""><a href="https://www.vagaro.com/beyondestheticsspa/memberships" target="_blank">Get Enrolled!</a></div>
+                            <div class=""><a href="https://www.vagaro.com/beyondestheticsspa/memberships" target="_blank" class="hover:text-black">Get Enrolled!</a></div>
                         </div>
                     </div>
                 </div>
@@ -101,7 +101,7 @@
                         </ul>
                         <div class="flex justify-between items-center border-t-2 border-spa-100 mt-3 p-3 text-xl text-spa-200 font-bold">
                             <div>$100/Monthly</div>
-                            <div class=""><a href="https://www.vagaro.com/beyondestheticsspa/memberships" target="_blank">Get Enrolled!</a></div>
+                            <div class=""><a href="https://www.vagaro.com/beyondestheticsspa/memberships" target="_blank" class="hover:text-black">Get Enrolled!</a></div>
                         </div>
                     </div>
                 </div>

@@ -1,13 +1,11 @@
 <x-app-layout>
 
     <!-- TEAM PHOTO -->
-    <div class="pt-3">
-        <div class="bg-cover" style="background-image: url('images/logo-bg-purple.jpg');">
-            <div class="grid grid-cols-2 h-96">
+    <div class="border-t border-white">
+        <div class="bg-contain bg-spa-100" style="background-image: url('images/logo_bg.png');">
+            <div class="grid grid-cols-3 h-40 sm:h-96">
                 <div class="col-span-1"></div>
-                <div class="col-span-1 h-full bg-white">
-
-                </div>
+                <div class="col-span-2 h-full bg-white bg-cover" style="background-image: url('images/about.png');"></div>
             </div>
         </div>
     </div>
@@ -17,7 +15,7 @@
         <div x-data="{ shown: false }" x-intersect="shown = true">
             <div x-show="shown" x-transition.duration.4000ms class="max-w-7xl mx-auto">
                 <div class="text-5xl text-white font-semibold">
-                    <div class="flex flex-col space-y-2 sm:space-y-0 sm:space-x-2 sm:flex-row justify-center text-center">
+                    <div class="flex flex-col space-y-2 lg:space-y-0 lg:space-x-2 lg:flex-row justify-center text-center">
                         <div>We Assist.</div>
                         <div>We Empower.</div>
                         <div>We Inspire.</div>
@@ -28,17 +26,58 @@
     </div>
     
     <!-- MISSION STATEMENT -->
-    <div class="bg-white py-6">
+
+    <!-- Mobile -->
+    <div class="block lg:hidden bg-white py-6">
         <div class="bg-gray-100 p-6">
-            <div class="flex flex-col max-w-5xl mx-auto text-center text-lg font-semibold">
+            <div class="flex flex-col space-y-6 max-w-5xl mx-auto text-center text-lg font-semibold">
                 <div>
-                    Beyond Esthetics means 'seeing beyond with what the natural eye sees'. Sometimes the most effective way to help a client is simply listening to a need or giving someone a hug. 
+                    <div>
+                        Beyond Esthetics means 
+                    </div>
+                    <div class="bg-spa-200 text-white text-sm py-1 px-3">"seeing beyond with what the natural eye sees".</div>
                 </div>
-                <div class="mt-4">
-                    Knowing that the best treatment is sometimes good old-fashioned TLC, Tonya's husband Steve came up with the tagline, "Come get some TLC from TLG".
+
+                <div>    
+                    Sometimes the most effective way to help a client is simply listening to a need or giving someone a hug. 
                 </div>
-                <div class="mt-4">
-                    Beyond Esthetics started with just Tonya and has grown to over 20 employees and two locations. Come see us today!
+
+                <div>
+                    <div>Knowing that the best treatment is sometimes good old-fashioned TLC, Tonya's husband Steve came up with the tagline</div>
+                    <div class="bg-black text-white text-lg py-1 px-3">"Come get some TLC from TLG".</div>
+                </div>
+
+                <div>
+                    Beyond Esthetics started with just Tonya and has grown to over 20 employees and two locations. 
+                </div>
+
+                <div>    
+                    Come see us today!
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Desktop -->
+    <div class="hidden lg:block bg-white py-6">
+        <div class="bg-gray-100 p-6">
+            <div class="flex flex-col space-y-4 max-w-5xl mx-auto text-center text-lg font-semibold">
+                <div>
+                    Beyond Esthetics means 
+                    <span class="bg-spa-200 text-white text-lg py-1 px-3">"seeing beyond with what the natural eye sees".</span>
+                </div>
+                <div>    
+                    Sometimes the most effective way to help a client is simply listening to a need or giving someone a hug. 
+                </div>
+                <div>
+                    <div>Knowing that the best treatment is sometimes good old-fashioned TLC, </div>
+                    <div>Tonya's husband Steve came up with the tagline <span class="bg-black text-white text-lg py-1 px-3">"Come get some TLC from TLG".</span></div>
+                </div>
+                <div>
+                    Beyond Esthetics started with just Tonya and has grown to over 20 employees and two locations. 
+                </div>
+                <div>    
+                    Come see us today!
                 </div>
             </div>
         </div>

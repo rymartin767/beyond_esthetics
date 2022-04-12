@@ -3,17 +3,19 @@
     <!-- Product -->
     <x-section title="{{ $service->name }}">
         <div class="grid grid-cols-2">
-            <div class="col-span-2 sm:col-span-1">
+            <div class="col-span-2 lg:col-span-1">
                 <img src="{{ $service->images->where('tag', 'title')->isEmpty() ? '/images/services/title_missing.jpg' : Storage::url($service->images->where('tag', 'title')->first()->url) }}" alt="{{ $service->name }} Image">
             </div>
-            <div class="col-span-2 sm:col-span-1 bg-pink-200 flex flex-wrap content-center">
-                <div class="grid grid-cols-6 gap-3 p-8 bg-yellow-200">
+            <div class="col-span-2 lg:col-span-1 flex flex-wrap content-center mx-auto">
+                <div class="grid grid-cols-6 gap-3 p-8">
                     <div class="col-span-6 text-center text-3xl font-semibold">{{ $service->name }} targets:</div>
                     @forelse ($service->treats as $treatment)
                         <div class="col-span-2">
-                            <div class="relative cursor-pointer hover:-translate-y-2 text-white hover:text-black transition duration-150 text-center py-1">
+                            <div class="relative cursor-pointer hover:-translate-y-2 text-white hover:text-black transition duration-150 py-1">
                                 <img src="{{ is_null($treatment->image) ? Storage::url('images/treatments/null.png') : Storage::url($treatment->image->url) }}" alt="{{ str($treatment)->replace('_', ' ')->title() }} Image" loading="lazy" class="">
-                                <div class="absolute bottom-0 bg-spa-200 w-full py-1 text-sm">{{ $treatment->name }}</div>
+                                <div class="lg:absolute lg:bottom-0 h-12 flex flex-wrap content-center mx-auto bg-spa-200 w-full p-1 text-xs md:text-sm">
+                                    <div class="w-full text-center">{{ $treatment->name }}</div>
+                                </div>
                             </div>
                         </div>
                     @empty
@@ -104,18 +106,20 @@
     @endif
 
     <!-- Youtube -->
-    <x-section class="bg-gray-100 min-h-auto">
-        <div class="grid grid-cols-2">
-            <div class="col-span-2 lg:col-span-1">
-                <div class="flex justify-center">
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/{{ $service->video_url }}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+    @isset($service->video_url)
+        <x-section class="bg-gray-100 min-h-auto">
+            <div class="grid grid-cols-2">
+                <div class="col-span-2 lg:col-span-1">
+                    <div class="flex justify-center">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/{{ $service->video_url }}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+                    </div>
+                </div>
+                <div class="order-first lg:order-last col-span-2 lg:col-span-1 flex flex-wrap content-center">
+                    <div class="w-full text-center text-4xl sm:text-5xl font-semibold py-8 px-6"><span class="text-spa-200">Watch</span> & Learn.</div>
                 </div>
             </div>
-            <div class="order-first lg:order-last col-span-2 lg:col-span-1 flex flex-wrap content-center">
-                <div class="w-full text-center text-4xl sm:text-5xl font-semibold py-8 px-6"><span class="text-spa-200">Watch</span> & Learn.</div>
-            </div>
-        </div>
-    </x-section>
+        </x-section>
+    @endisset
 
     <!-- Book Now, Pay Later -->
     <x-section class="py-32">

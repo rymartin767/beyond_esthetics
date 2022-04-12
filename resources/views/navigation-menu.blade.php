@@ -158,6 +158,18 @@
             <x-jet-responsive-nav-link href="{{ route('about') }}" :active="request()->routeIs('about')">
                 {{ __('ABOUT US') }}
             </x-jet-responsive-nav-link>
+            <x-jet-responsive-nav-link href="{{ route('ppt') }}" :active="request()->routeIs('ppt')">
+                {{ __('PRE/POST CARE') }}
+            </x-jet-responsive-nav-link>
+            <x-jet-responsive-nav-link href="{{ route('home') }}" :active="request()->routeIs('shop')">
+                {{ __('SHOP') }}
+            </x-jet-responsive-nav-link>
+            <x-jet-responsive-nav-link href="{{ route('newsletter') }}" :active="request()->routeIs('specials')">
+                {{ __('NEWSLETTER') }}
+            </x-jet-responsive-nav-link>
+            <x-jet-responsive-nav-link href="{{ route('home') }}" :active="request()->routeIs('training')">
+                {{ __('TRAINING') }}
+            </x-jet-responsive-nav-link>
         </div>
 
         @auth
