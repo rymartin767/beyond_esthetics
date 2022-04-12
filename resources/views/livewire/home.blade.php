@@ -64,18 +64,18 @@
                         <div class="text-4xl font-bold font-mont mb-2">Tonya Goulding</div>
                         <ul>
                             <li class="lg:text-lg font-light list-inside list-disc">Owner/Founder</li>
-                            <li class="lg:text-lg font-light list-inside list-disc">Licensed Esthetician</li>
-                            <li class="lg:text-lg font-light list-inside list-disc">AICC Master Permanent Makeup Artist</li>
-                            <li class="lg:text-lg font-light list-inside list-disc">Certified Permanent Makeup Trainer</li>
-                            <li class="lg:text-lg font-light list-inside list-disc">Certified Dermaplane Pro Trainer</li>
                             <li class="lg:text-lg font-light list-inside list-disc">Skincare Specialist</li>
+                            <li class="lg:text-lg font-light list-inside list-disc">Licensed Esthetician</li>
+                            <li class="lg:text-lg font-light list-inside list-disc">Certified Dermaplane Pro Trainer</li>
+                            <li class="lg:text-lg font-light list-inside list-disc">Certified Permanent Makeup Trainer</li>
+                            <li class="lg:text-lg font-light list-inside list-disc">AICC Master Permanent Makeup Artist</li>
                         </ul>
                     </div>
                 </div>
             </div>
-            <div class="flex mt-6 justify-center md:justify-end">
-                <a href="{{ route('about') }}">
-                    <button class="bg-black text-white px-2 py-3 w-full sm:w-auto text-xl font-mont tracking-wider">Meet Our Team</button>
+            <div class="mt-6">
+                <a href="{{ route('about') }}" class="flex justify-center md:justify-end">
+                    <button class="bg-black text-white px-2 py-3 w-full md:w-auto text-xl font-mont tracking-wider">Meet Our Team</button>
                 </a>
             </div>
         </x-section>
@@ -127,7 +127,7 @@
                     @forelse ($reviews as $review)
                         <x-review :review="$review"></x-review>
                     @empty
-                        <div class="col-span-2 lg:col-span-1 bg-yellow-200">
+                        <div class="col-span-2 lg:col-span-1">
                             <div class="flex flex-row">
                                 <div>
                                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="fill-current h-24 w-24">
