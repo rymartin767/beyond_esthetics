@@ -124,7 +124,7 @@
             </a>
         </div>
         <div class="flex-1">
-            <a href="">
+            <a href="https://www.vagaro.com/beyondestheticsspa/book-now">
                 <button class="flex items-center justify-center bg-spa-200 text-white w-full py-4">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="fill-current text-white h-4 w-auto">
                         <!--! Font Awesome Pro 6.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. -->
