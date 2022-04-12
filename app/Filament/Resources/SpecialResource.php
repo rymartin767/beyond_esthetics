@@ -8,14 +8,16 @@ use App\Models\Special;
 use Filament\Resources\Form;
 use Filament\Resources\Table;
 use Filament\Resources\Resource;
+use Filament\Forms\Components\Checkbox;
+use Filament\Tables\Columns\TextColumn;
 use Filament\Forms\Components\TextInput;
 use Filament\Forms\Components\DatePicker;
 use Filament\Forms\Components\FileUpload;
 use Filament\Forms\Components\RichEditor;
 use Filament\Forms\Components\MultiSelect;
+use Filament\Tables\Columns\BooleanColumn;
 use App\Filament\Resources\SpecialResource\Pages;
 use App\Filament\Resources\SpecialResource\RelationManagers;
-use Filament\Tables\Columns\TextColumn;
 
 class SpecialResource extends Resource
 {
@@ -27,7 +29,8 @@ class SpecialResource extends Resource
     {
         return $form
             ->schema([
-                TextInput::make('name'),
+                TextInput::make('name')
+                    ->maxLength(20),
                 MultiSelect::make('locations')->options(['ashland' => 'Ashland', 'ontario' => 'Ontario'])->rules('required'),
                 DatePicker::make('start_date')->rules(['required', 'date']),
                 DatePicker::make('end_date')->rules(['required', 'date']),
@@ -38,7 +41,10 @@ class SpecialResource extends Resource
                     ->mask(fn (TextInput\Mask $mask) => $mask->money('$', ',', 2))
                     ->rules('required')
                     ->label('Sale Price'),
-                RichEditor::make('description')->rules(['required', 'string'])
+                RichEditor::make('description')->rules(['required', 'string']),
+                Checkbox::make('is_featured')
+                    ->inline()
+                    ->label('Featured!'),
             ]);
     }
 
@@ -47,6 +53,9 @@ class SpecialResource extends Resource
         return $table
             ->columns([
                 TextColumn::make('name'),
+                BooleanColumn::make('is_featured')
+                    ->trueIcon('heroicon-o-badge-check')
+                    ->falseIcon('heroicon-o-x-circle'),
                 TextColumn::make('sale_price'),
                 TextColumn::make('start_date'),
                 TextColumn::make('end_date'),
@@ -61,7 +70,6 @@ class SpecialResource extends Resource
     {
         return [
             RelationManagers\SpecialImageRelationManager::class,
-            
         ];
     }
 

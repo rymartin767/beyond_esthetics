@@ -3,20 +3,20 @@
 return [
     'hours' => [
         'ontario' => [
-            'Monday' => '7AM to 5PM',
-            'Tuesday' => '7AM to 5PM',
-            'Wednesday' => '7AM to 5PM',
-            'Thursday' => '7AM to 5PM',
-            'Friday' => '7AM to 5PM',
-            'Saturday' => '7AM to 5PM',
-            'Sunday' => '7AM to 5PM',
+            'Monday' => '8AM to 7PM',
+            'Tuesday' => '8AM to 5PM',
+            'Wednesday' => '8AM to 5PM',
+            'Thursday' => '8AM to 7PM',
+            'Friday' => '8AM to 5PM',
+            'Saturday' => 'Closed',
+            'Sunday' => 'Closed',
         ],
         'ashland' => [
             'Monday' => 'Closed',
-            'Tuesday' => '9AM to 5PM',
+            'Tuesday' => 'Closed',
             'Wednesday' => 'Closed',
             'Thursday' => 'Closed',
-            'Friday' => '9AM to 5PM',
+            'Friday' => '1PM to 5PM',
             'Saturday' => 'Closed',
             'Sunday' => 'Closed',
         ]
@@ -39,35 +39,7 @@ return [
         'portrait' => 'Employee Portrait | JPG | 1080x1080px',
         'landscape' => 'Service Landscape | JPG | 1690x1080px',
         'title' => 'Service Title | JPG | 500x500px',
-        'bulletin' => 'Service Bulletin | JPG | 1200x1500px'
-    ],
-
-    'services' => [
-        'treatments' => [
-            'acne_correction' => 'Acne Correction',
-            'brown_spots' => 'Brown Spots',
-            'brighten_skin' => 'Brighten Skin',
-            'cellular_turnover' => 'Cellular Turnover',
-            'chin_definition' => 'Chin Definition',
-            'collagen_inducing' => 'Collagen Inducing',
-            'eyelid_hoodlings' => 'Eyelid Hoodlings',
-            'fat_ablation' => 'Fat Ablation',
-            'fine_lines' => 'Fine Lines',
-            'hollow_temples' => 'Hollow Temples',
-            'jawline_definition' => 'Jawline Definition',
-            'marionette_lines' => 'Marionette Lines',
-            'mild_exfoliation' => 'Mild Exfoliation',
-            'necklace_lines' => 'Necklace Lines',
-            'perioral_lines' => 'Perioral Lines',
-            'red_spots' => 'Red Spots',
-            'restore_cheek_volume' => 'Restore Cheek Volume',
-            'restore_hand_volume' => 'Restore Hand Volume',
-            'pore_size' => 'Pore Size',
-            'semi_aggressive' => 'Semi Aggressive',
-            'stretch_marks_and_scars' => 'Stretch Marks and Scars',
-            'tighten_skin' => 'Tighten Skin',
-            'undereye_hollows' => 'Undereye Hollows',
-            'wrinkles_around_eyes' => 'Wrinkles Around Eyes'
-        ]
-    ],
+        'bulletin' => 'Service Bulletin | JPG | 1200x1500px',
+        'ppt' => 'Pre/Post Treatment | JPG | 300x300px'
+    ]
 ];

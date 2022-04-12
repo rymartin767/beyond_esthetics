@@ -35,6 +35,14 @@ class Service extends Model
 
     protected static function booted()
     {
+        static::saved(function ($service) {
+            $treatments = $service->treatments;
+            foreach($treatments as $treatment) {
+                $id = Treatment::where('name', $treatment)->get()->first()->id;
+                $service->treats()->attach($id);
+            }
+        });
+
         static::deleting(function ($service) {
             $service->images->each(fn($image) => $image->delete());
         });
@@ -48,5 +56,15 @@ class Service extends Model
     public function reviews()
     {
         return $this->hasMany(Review::class);
+    }
+
+    public function faqs()
+    {
+        return $this->hasMany(Faq::class);
+    }
+
+    public function treats()
+    {
+        return $this->belongsToMany(Treatment::class);
     }
 }

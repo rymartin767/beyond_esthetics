@@ -45,13 +45,13 @@
                             </x-slot>
 
                             <x-slot name="content">
-                                <x-jet-dropdown-link href="{{ route('home') }}">
+                                <x-jet-dropdown-link href="{{ route('ppt') }}">
                                     {{ __('Pre/Post Treatment') }}
                                 </x-jet-dropdown-link>
-                                <x-jet-dropdown-link href="{{ route('home') }}">
+                                <x-jet-dropdown-link href="{{ route('faq') }}">
                                     {{ __('FAQs') }}
                                 </x-jet-dropdown-link>
-                                <x-jet-dropdown-link href="{{ route('home') }}">
+                                <x-jet-dropdown-link href="{{ route('tos') }}">
                                     {{ __('Terms of Service') }}
                                 </x-jet-dropdown-link>
                                 <x-jet-dropdown-link href="{{ route('home') }}">
@@ -60,11 +60,11 @@
                             </x-slot>
                         </x-jet-dropdown>
 
-                        <x-jet-nav-link href="{{ route('home') }}" :active="request()->routeIs('about')">
+                        <x-jet-nav-link href="{{ route('home') }}" :active="request()->routeIs('shop')">
                             {{ __('SHOP') }}
                         </x-jet-nav-link>
 
-                        <x-jet-nav-link href="{{ route('home') }}" :active="request()->routeIs('contact')">
+                        <x-jet-nav-link href="{{ route('newsletter') }}" :active="request()->routeIs('newsletter')">
                             {{ __('NEWSLETTER') }}
                         </x-jet-nav-link>
 
@@ -131,8 +131,8 @@
 
                     <!-- Hamburger -->
                     <div class="flex items-center lg:hidden pt-3">
-                        <button @click="open = ! open" class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 focus:text-gray-500 transition-all">
-                            <svg class="h-6 w-6" stroke="currentColor" fill="none" viewBox="0 0 24 24">
+                        <button @click="open = ! open" class="inline-flex items-center justify-center p-2 rounded-md focus:outline-none transition-all text-white">
+                            <svg class="h-6 w-6 fill-current text-white" stroke="currentColor" fill="none" viewBox="0 0 24 24">
                                 <path :class="{'hidden': open, 'inline-flex': ! open }" class="inline-flex" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
                                 <path :class="{'hidden': ! open, 'inline-flex': open }" class="hidden" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
                             </svg>
@@ -144,8 +144,8 @@
     </div>
 
     <!-- Mobile Navigation Menu -->
-    <div :class="{'block': open, 'hidden': ! open}" class="hidden lg:hidden bg-white">
-        <div class="pt-2 pb-3 space-y-1">
+    <div :class="{'block': open, 'hidden': ! open}" class="bg-white">
+        <div class="pt-2 pb-3 space-y-1" x-show="open" x-transition.duration.500ms x-cloak>
             <x-jet-responsive-nav-link href="{{ route('home') }}" :active="request()->routeIs('home')">
                 {{ __('HOME') }}
             </x-jet-responsive-nav-link>
@@ -154,6 +154,21 @@
             </x-jet-responsive-nav-link>
             <x-jet-responsive-nav-link href="{{ route('specials') }}" :active="request()->routeIs('specials')">
                 {{ __('SPECIALS') }}
+            </x-jet-responsive-nav-link>
+            <x-jet-responsive-nav-link href="{{ route('about') }}" :active="request()->routeIs('about')">
+                {{ __('ABOUT US') }}
+            </x-jet-responsive-nav-link>
+            <x-jet-responsive-nav-link href="{{ route('ppt') }}" :active="request()->routeIs('ppt')">
+                {{ __('PRE/POST CARE') }}
+            </x-jet-responsive-nav-link>
+            <x-jet-responsive-nav-link href="{{ route('home') }}" :active="request()->routeIs('shop')">
+                {{ __('SHOP') }}
+            </x-jet-responsive-nav-link>
+            <x-jet-responsive-nav-link href="{{ route('newsletter') }}" :active="request()->routeIs('specials')">
+                {{ __('NEWSLETTER') }}
+            </x-jet-responsive-nav-link>
+            <x-jet-responsive-nav-link href="{{ route('home') }}" :active="request()->routeIs('training')">
+                {{ __('TRAINING') }}
             </x-jet-responsive-nav-link>
         </div>
 

@@ -1,11 +1,14 @@
 <x-app-layout>
-    <div class="max-w-7xl mx-auto my-12">
-        <!-- Memberships -->
+
+    <!-- Memberships -->
+    <x-section title="Our Memberships" class="">
         <div class="grid grid-cols-3 gap-6">
             <!-- Medical -->
-            <div class="col-span-3 sm:col-span-1">
+            <div class="col-span-3 lg:col-span-1">
                 <div class="flex flex-col">
-                    <img src="/images/specials/medical_membership.jpg" alt="Medical Membership">
+                    <div class="overflow-hidden">
+                        <img src="/images/specials/medical_membership.jpg" alt="Medical Membership" class="transition duration-700 ease-in-out hover:scale-110" loading="lazy">
+                    </div>
                     <div class="shadow-md px-6">
                         <div class="py-6 text-xl font-black">Included Free Every Month:</div>
                         <div class="">
@@ -32,26 +35,28 @@
                             <li>$9 Per Unit Botox/Jeuveau</li>
                             <li>$3 Per Unit Dysport</li>
                         </ul>
-                        <div class="flex justify-between items-center border-t-2 border-spa-100 mt-3 p-3 text-xl text-spa-200 font-bold">
+                        <div class="flex justify-between items-center border-t-2 border-spa-100 mt-3 py-3 text-lg lg:text-xl text-spa-200 font-bold">
                             <div>$125/Monthly</div>
-                            <div class=""><a href="https://www.vagaro.com/beyondestheticsspa/memberships" target="_blank">Get Enrolled</a></div>
+                            <div class=""><a href="https://www.vagaro.com/beyondestheticsspa/memberships" target="_blank" class="hover:text-black">Get Enrolled!</a></div>
                         </div>
                     </div>
                 </div>
             </div>
             <!-- Spa -->
-            <div class="col-span-3 sm:col-span-1">
+            <div class="col-span-3 lg:col-span-1">
                 <div class="flex flex-col">
-                    <img src="/images/specials/spa_membership.jpg" alt="Spa Membership">
+                    <div class="overflow-hidden">
+                        <img src="/images/specials/spa_membership.jpg" alt="Spa Membership" class="transition duration-700 ease-in-out hover:scale-110" loading="lazy">
+                    </div>
                     <div class="shadow-md px-6">
-                        <div class="py-6 text-xl font-black">Included Free Every Month:</div>
+                        <div class="py-6 text-lg lg:text-xl font-black">Included Free Every Month:</div>
                         <div class="">
                             <ul class="space-y-2 list-disc list-inside">
                                 <li>Free 30 Minute Dermaplane Facial</li>
                                 <li>Free Product Of The Month</li>
                             </ul>
                         </div>
-                        <div class="py-6 text-xl font-black">Available To Purchase Services:</div>
+                        <div class="py-6 text-lg lg:text-xl font-black">Available To Purchase Services:</div>
                         <ul class="space-y-2 list-disc list-inside">
                             <li>$15 Injectable Supplements</li>
                             <li>$35 Cryo Chamber</li>
@@ -64,17 +69,19 @@
                             <li>10% Off Any Brand Filler {full syringe}</li>
                             <li>20% Off Skincare Products</li>
                         </ul>
-                        <div class="flex justify-between items-center border-t-2 border-spa-100 mt-3 p-3 text-xl text-spa-200 font-bold">
+                        <div class="flex justify-between items-center border-t-2 border-spa-100 mt-3 py-3 text-xl text-spa-200 font-bold">
                             <div>$75/Monthly</div>
-                            <div class=""><a href="https://www.vagaro.com/beyondestheticsspa/memberships" target="_blank">Get Enrolled</a></div>
+                            <div class=""><a href="https://www.vagaro.com/beyondestheticsspa/memberships" target="_blank" class="hover:text-black">Get Enrolled!</a></div>
                         </div>
                     </div>
                 </div>
             </div>
             <!-- Injects -->
-            <div class="col-span-3 sm:col-span-1">
+            <div class="col-span-3 lg:col-span-1">
                 <div class="flex flex-col">
-                    <img src="/images/specials/tox_membership.jpg" alt="Injectables Membership">
+                    <div class="overflow-hidden">
+                        <img src="/images/specials/tox_membership.jpg" alt="Injectables Membership" class="transition duration-700 ease-in-out hover:scale-110" loading="lazy">
+                    </div>
                     <div class="shadow-md px-6">
                         <div class="py-6 text-xl font-black">Included Free Every Month:</div>
                         <div class="">
@@ -92,24 +99,31 @@
                             <li>Units Never Expire</li>
                             <li>$10 Per Unit Pricing On Additional Units Needed</li>
                         </ul>
-                        <div class="flex justify-between items-center border-t-2 border-spa-100 mt-3 p-3 text-xl text-spa-200 font-bold">
+                        <div class="flex justify-between items-center border-t-2 border-spa-100 mt-3 py-3 text-xl text-spa-200 font-bold">
                             <div>$100/Monthly</div>
-                            <div class=""><a href="https://www.vagaro.com/beyondestheticsspa/memberships" target="_blank">Get Enrolled</a></div>
+                            <div class=""><a href="https://www.vagaro.com/beyondestheticsspa/memberships" target="_blank" class="hover:text-black">Get Enrolled!</a></div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        
-        <!-- Specials -->
-        <div class="grid grid-cols-3 gap-6 mt-12">
-            @forelse ($specials as $special)
-                <x-special :special="$special"></x-special>
-            @empty
-                <div class="col-span-2 text-center text-3xl">
-                    New Specials Coming! Check back soon!
+    </x-section>
+
+    <!-- Specials -->
+    <x-section title="Our Featured Specials" class="bg-gray-" id="featured">
+        <div x-data="{ shown: false }" x-intersect="shown = true">
+            <div x-show="shown" x-transition.duration.5000ms>
+                <div class="grid grid-cols-3 gap-6">
+                    @forelse ($specials as $special)
+                        <x-special :special="$special"></x-special>
+                    @empty
+                        <div class="col-span-2 text-center text-3xl">
+                            New Specials Coming! Check back soon!
+                        </div>
+                    @endforelse
                 </div>
-            @endforelse
+            </div>
         </div>
-    </div>
+    </x-section>
+
 </x-app-layout>

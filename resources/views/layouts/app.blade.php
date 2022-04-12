@@ -11,19 +11,18 @@
             <title>BEMS Development</title>
         @endproduction
 
-        <!-- Fonts -->
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap">
-
         <!-- Styles -->
         <link rel="stylesheet" href="{{ mix('css/app.css') }}">
 
         @livewireStyles
 
         <!-- Scripts -->
+        <!-- Intersect Plugin is for rendering when content enters viewport -->
+        <!-- <script defer src="https://unpkg.com/@alpinejs/intersect@3.x.x/dist/cdn.min.js"></script> -->
         <script src="{{ mix('js/app.js') }}" defer></script>
     </head>
     <body>
-        <div class="min-h-screen flex flex-col">
+        <div class="min-h-screen flex flex-col font-mont overflow-x-hidden">
             @livewire('navigation-menu')
 
             <!-- Page Heading -->
@@ -44,7 +43,7 @@
                 </div>
             </main>
 
-            @include('layouts.footer')
+            @include('layouts.elements.footer')
         </div>
 
         @stack('modals')

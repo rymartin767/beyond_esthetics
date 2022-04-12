@@ -16,6 +16,7 @@ use Filament\Forms\Components\RichEditor;
 use Filament\Forms\Components\MultiSelect;
 use App\Filament\Resources\ServiceResource\Pages;
 use App\Filament\Resources\ServiceResource\RelationManagers;
+use App\Models\Treatment;
 
 class ServiceResource extends Resource
 {
@@ -38,7 +39,7 @@ class ServiceResource extends Resource
                     ->required()
                     ->options(['ashland' => 'Ashland', 'ontario' => 'Ontario']),
                 MultiSelect::make('treatments')
-                    ->options(config('general.services.treatments')),
+                    ->options(Treatment::pluck('name', 'name')->sort()),
                 TextInput::make('description')
                     ->required()
                     ->minValue(5)
@@ -57,7 +58,6 @@ class ServiceResource extends Resource
                         'string',
                         'min:5',
                         'max:50',
-                        'starts_with:https://youtu.be/'
                     ])
             ]);
     }
@@ -73,12 +73,26 @@ class ServiceResource extends Resource
                 IconColumn::make('video_url')
                     ->options([
                         'heroicon-o-check' => fn ($state): bool => $state !== null,
-                        'heroicon-o-chip' => fn ($state): bool => $state == null,
+                        'heroicon-o-x' => fn ($state): bool => $state == null,
+                    ])
+                    ->colors([
+                        'success',
+                        'danger' => fn($state): bool => $state == null
                     ]),
-                TextColumn::make('images_count')->counts('images')
+                TextColumn::make('images_count')
+                    ->counts('images')
+                    ->label('Image #'),
+                TextColumn::make('treats_count')
+                    ->counts('treats')
+                    ->label('Treatment #')
             ])
             ->filters([
                 //
+            ])
+            ->pushActions([
+                Tables\Actions\LinkAction::make('view')
+                    ->action(fn (Service $record) => redirect('/services/' . $record->id))
+                    ->color('success'),
             ]);
     }
 

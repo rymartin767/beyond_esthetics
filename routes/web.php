@@ -1,12 +1,11 @@
 <?php
 
+use App\Models\Service;
 use App\Http\Livewire\Home;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\AboutController;
 use App\Http\Controllers\ServiceController;
 use App\Http\Controllers\SpecialController;
-use App\Models\Employee;
-use App\Models\Image;
-use App\Models\Service;
 
 /*
 |--------------------------------------------------------------------------
@@ -23,15 +22,19 @@ Route::middleware('web')->group(function () {
     Route::get('/', Home::class)->middleware('web')->name('home');
     Route::get('/services', [ServiceController::class, 'index'])->name('services');
     Route::get('/services/{service}', [ServiceController::class, 'show'])->name('services.show');
-    Route::view('/about', 'about', ['employees' => Employee::all()])->name('about');
+    Route::get('/specials', SpecialController::class)->name('specials');
+    Route::get('/about', AboutController::class)->name('about');
+    Route::view('/faq', 'faq', [
+        'services' => Service::where('name', '!=', 'General')->with('faqs')->get()
+    ])->name('faq');
+    Route::view('/ppt', 'ppt', [
+        'services' => Service::select('id', 'name')->where('name', '!=', 'General')->with('images')->get()
+    ])->name('ppt');
+    Route::view('/tos', 'tos')->name('tos');
+    Route::view('/newsletter', 'newsletter')->name('newsletter');
 });
 
 
 Route::middleware(['auth'])->group(function () {
-    Route::get('/specials', SpecialController::class)->name('specials');
-    Route::view('/lab', 'lab', [
-        'employees' => Employee::all(),
-        'services' => Service::all(),
-        'images' => Image::all()
-    ]);
+    Route::view('lab', 'lab')->name('lab');
 });

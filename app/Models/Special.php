@@ -16,6 +16,7 @@ class Special extends Model
         'start_date',
         'end_date',
         'locations',
+        'is_featured',
     ];
 
     protected $casts = [
@@ -25,8 +26,15 @@ class Special extends Model
     protected static function booted()
     {
         static::deleting(function ($special) {
-            $special->image->delete();
+            if (!is_null($special->image)) {
+                $special->image->delete();
+            }
         });
+    }
+
+    public function scopeFeatured($query)
+    {
+        return $query->where('is_featured', true);
     }
 
     public function image()
