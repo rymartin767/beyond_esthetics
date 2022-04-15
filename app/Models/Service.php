@@ -67,4 +67,9 @@ class Service extends Model
     {
         return $this->belongsToMany(Treatment::class);
     }
+
+    public function ppt()
+    {
+        return $this->hasOne(Ppt::class);
+    }
 }

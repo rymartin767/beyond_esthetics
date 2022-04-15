@@ -161,7 +161,7 @@
             <x-jet-responsive-nav-link href="{{ route('ppt') }}" :active="request()->routeIs('ppt')">
                 {{ __('PRE/POST CARE') }}
             </x-jet-responsive-nav-link>
-            <x-jet-responsive-nav-link href="{{ route('home') }}" :active="request()->routeIs('shop')">
+            <x-jet-responsive-nav-link href="https://alastin.com/collections/welcome?designate-location=12206" target="_blank">
                 {{ __('SHOP') }}
             </x-jet-responsive-nav-link>
             <x-jet-responsive-nav-link href="{{ route('newsletter') }}" :active="request()->routeIs('specials')">
