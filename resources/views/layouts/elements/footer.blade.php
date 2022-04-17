@@ -14,13 +14,13 @@
             <a href="{{ route('faq') }}" class="col-span-8 sm:col-span-4 lg:col-span-2 xl:col-span-1 mb-3">
                 <div class="text-center uppercase font-semibold text-spa-200">faq</div>
             </a>
-            <a href="{{ route('home') }}" class="col-span-8 sm:col-span-4 lg:col-span-2 xl:col-span-1 mb-3">
+            <a href="https://alastin.com/BeyondEsthetics" target="_blank" class="col-span-8 sm:col-span-4 lg:col-span-2 xl:col-span-1 mb-3">
                 <div class="text-center uppercase font-semibold text-spa-200">shop</div>
             </a>
-            <a href="{{ route('services') }}" class="col-span-8 sm:col-span-4 lg:col-span-2 xl:col-span-1 mb-3">
+            <a href="{{ route('newsletter') }}" class="col-span-8 sm:col-span-4 lg:col-span-2 xl:col-span-1 mb-3">
                 <div class="text-center uppercase font-semibold text-spa-200">newsletter</div>
             </a>
-            <a href="{{ route('services') }}" class="col-span-8 sm:col-span-4 lg:col-span-2 xl:col-span-1 mb-3">
+            <a href="{{ route('training') }}" class="col-span-8 sm:col-span-4 lg:col-span-2 xl:col-span-1 mb-3">
                 <div class="text-center uppercase font-semibold text-spa-200">training</div>
             </a>
         </div>

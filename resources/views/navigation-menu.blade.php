@@ -51,16 +51,16 @@
                                 <x-jet-dropdown-link href="{{ route('faq') }}">
                                     {{ __('FAQs') }}
                                 </x-jet-dropdown-link>
-                                <x-jet-dropdown-link href="{{ route('tos') }}">
+                                <x-jet-dropdown-link href="{{ route('terms-of-service') }}">
                                     {{ __('Terms of Service') }}
                                 </x-jet-dropdown-link>
-                                <x-jet-dropdown-link href="{{ route('home') }}">
+                                <x-jet-dropdown-link href="{{ route('before-after-photos') }}">
                                     {{ __('Before/After Photos') }}
                                 </x-jet-dropdown-link>
                             </x-slot>
                         </x-jet-dropdown>
 
-                        <x-jet-nav-link href="{{ route('home') }}" :active="request()->routeIs('shop')">
+                        <x-jet-nav-link href="https://alastin.com/BeyondEsthetics" target="_blank">
                             {{ __('SHOP') }}
                         </x-jet-nav-link>
 
@@ -68,7 +68,7 @@
                             {{ __('NEWSLETTER') }}
                         </x-jet-nav-link>
 
-                        <x-jet-nav-link href="{{ route('home') }}" :active="request()->routeIs('contact')">
+                        <x-jet-nav-link href="{{ route('training') }}" :active="request()->routeIs('training')">
                             {{ __('TRAINING') }}
                         </x-jet-nav-link>
                     </div>
@@ -161,13 +161,13 @@
             <x-jet-responsive-nav-link href="{{ route('ppt') }}" :active="request()->routeIs('ppt')">
                 {{ __('PRE/POST CARE') }}
             </x-jet-responsive-nav-link>
-            <x-jet-responsive-nav-link href="https://alastin.com/collections/welcome?designate-location=12206" target="_blank">
+            <x-jet-responsive-nav-link href="https://alastin.com/BeyondEsthetics" target="_blank">
                 {{ __('SHOP') }}
             </x-jet-responsive-nav-link>
             <x-jet-responsive-nav-link href="{{ route('newsletter') }}" :active="request()->routeIs('specials')">
                 {{ __('NEWSLETTER') }}
             </x-jet-responsive-nav-link>
-            <x-jet-responsive-nav-link href="{{ route('home') }}" :active="request()->routeIs('training')">
+            <x-jet-responsive-nav-link href="{{ route('training') }}" :active="request()->routeIs('training')">
                 {{ __('TRAINING') }}
             </x-jet-responsive-nav-link>
         </div>
