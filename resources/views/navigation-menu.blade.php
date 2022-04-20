@@ -164,7 +164,7 @@
             <x-jet-responsive-nav-link href="https://alastin.com/BeyondEsthetics" target="_blank">
                 {{ __('SHOP') }}
             </x-jet-responsive-nav-link>
-            <x-jet-responsive-nav-link href="{{ route('newsletter') }}" :active="request()->routeIs('specials')">
+            <x-jet-responsive-nav-link href="{{ route('newsletter') }}" :active="request()->routeIs('newsletter')">
                 {{ __('NEWSLETTER') }}
             </x-jet-responsive-nav-link>
             <x-jet-responsive-nav-link href="{{ route('training') }}" :active="request()->routeIs('training')">
