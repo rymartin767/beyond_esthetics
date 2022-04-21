@@ -6,6 +6,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AboutController;
 use App\Http\Controllers\ServiceController;
 use App\Http\Controllers\SpecialController;
+use App\Http\Livewire\Newsletter;
 
 /*
 |--------------------------------------------------------------------------
@@ -30,8 +31,10 @@ Route::middleware('web')->group(function () {
     Route::view('/ppt', 'ppt', [
         'services' => Service::select('id', 'name')->where('name', '!=', 'General')->with('images')->get()
     ])->name('ppt');
-    Route::view('/tos', 'tos')->name('tos');
-    Route::view('/newsletter', 'newsletter')->name('newsletter');
+    Route::view('/before-after-photos', 'before-after-photos')->name('before-after-photos');
+    Route::view('/terms-of-service', 'terms-of-service')->name('terms-of-service');
+    Route::get('/newsletter', Newsletter::class)->name('newsletter');
+    Route::view('/training', 'training')->name('training');
 });
 
 

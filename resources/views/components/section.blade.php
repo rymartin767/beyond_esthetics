@@ -1,4 +1,4 @@
-<div {{ $attributes->merge(['class' => 'py-6 min-h-screen sm:min-h-full']) }}>
+<div {{ $attributes->merge(['class' => 'py-6']) }}>
     <div class="max-w-7xl mx-auto px-3">
         
         @isset($title)
