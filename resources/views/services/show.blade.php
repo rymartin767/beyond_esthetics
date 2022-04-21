@@ -122,23 +122,22 @@
     @endisset
 
     <!-- Schedule Now -->
-    <x-section class="bg-spa-200">
-        <div>
-            <div class="bg-contain bg-spa-100" style="background-image: url('/images/logo_bg.png');">
-                <div class="grid grid-cols-3 h-40 sm:h-96">
-                    <div class="col-span-2 h-full bg-white bg-cover" style="background-image: url('/images/wait.png');"></div>
-                    <div class="col-span-1"></div>
-                </div>
+    <div class="border-t border-white">
+        <div class="bg-contain bg-spa-100" style="background-image: url('/images/logo_bg.png');">
+            <div class="grid grid-cols-3 h-40 sm:h-96">
+                <div class="col-span-2 h-full bg-white bg-cover" style="background-image: url('/images/wait.png');"></div>
+                <div class="col-span-1"></div>
             </div>
-            <div class="flex flex-col space-y-3 py-3">
-                <div class="text-center text-2xl lg:text-3xl text-white">wait one second, beauty!</div>
-                <div class="text-center lg:text-lg">Are you ready to schedule?</div>
-                <div class="text-center lg:text-lg">Click the link below to schedule via Vagaro</div>
-                <div class="text-center lg:text-lg">Or... send us a message on Facebook or Instagram!</div>
+        </div>
+        <div class="flex flex-col space-y-3 py-3 bg-black">
+                <div class="text-center text-2xl lg:text-4xl text-spa-200">wait one second, beauty!</div>
+                <div class="text-white text-center lg:text-lg">Are you ready to schedule?</div>
+                <div class="text-white text-center lg:text-lg">Click the link below to schedule via Vagaro</div>
+                <div class="text-white text-center lg:text-lg">Or... send us a message on Facebook or Instagram!</div>
                 <div class="flex flex-row space-x-12 justify-center">
                     <div>
                         <a href="https://www.facebook.com/BeyondEstheticsMansfield">
-                            <img src="/images/vagaro-logo.png" alt="" class="h-16 w-auto">
+                            <img src="/images/fb-logo.png" alt="" class="h-16 w-auto">
                         </a>
                     </div>
                     <div>
@@ -148,13 +147,12 @@
                     </div>
                     <div>
                         <a href="https://www.instagram.com/beyondesthetics/">
-                            <img src="/images/vagaro-logo.png" alt="" class="h-16 w-auto">
+                            <img src="/images/insta-logo.png" alt="" class="h-16 w-auto">
                         </a>
                     </div>
                 </div>
             </div>
-        </div>
-    </x-section>
+    </div>
 
     <!-- Book Now, Pay Later -->
     <x-section class="py-32">
