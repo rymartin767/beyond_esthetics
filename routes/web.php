@@ -41,3 +41,15 @@ Route::middleware('web')->group(function () {
 Route::middleware(['auth'])->group(function () {
     Route::view('lab', 'lab')->name('lab');
 });
+
+Route::get('ping-chimp', function() {
+    $mailchimp = new \MailchimpMarketing\ApiClient();
+
+    $mailchimp->setConfig([
+        'apiKey' => config('services.mailchimp.key'),
+        'server' => 'us8'
+    ]);
+
+    $response = $mailchimp->lists->getListMembersInfo('8e90228839');
+    dd($response);
+});

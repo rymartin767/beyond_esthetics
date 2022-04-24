@@ -48,7 +48,7 @@
 
         <div class="col-span-2 sm:col-span-1 flex flex-wrap content-center">
             <div class="p-8">
-                <div class="filament-description">
+                <div class="rich-editor">
                     {!! $service->bullets !!}
                 </div>
             </div>
@@ -61,7 +61,7 @@
             <div x-data="{ shown: false }" x-intersect="shown = true">
                 <div x-show="shown" x-transition.duration.5000ms x-cloak>
                     @include('layouts.elements.faq', [
-                    'faqs' => $service->faqs->chunk(ceil($service->faqs->count() / 2))
+                        'faqs' => $service->faqs->chunk(ceil($service->faqs->count() / 2))
                     ])
                 </div>
             </div>
