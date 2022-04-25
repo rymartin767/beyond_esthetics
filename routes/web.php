@@ -7,6 +7,8 @@ use App\Http\Controllers\AboutController;
 use App\Http\Controllers\ServiceController;
 use App\Http\Controllers\SpecialController;
 use App\Http\Livewire\Newsletter;
+use App\Mail\NewSubscriber;
+use App\Models\Subscriber;
 
 /*
 |--------------------------------------------------------------------------
@@ -42,14 +44,6 @@ Route::middleware(['auth'])->group(function () {
     Route::view('lab', 'lab')->name('lab');
 });
 
-Route::get('ping-chimp', function() {
-    $mailchimp = new \MailchimpMarketing\ApiClient();
-
-    $mailchimp->setConfig([
-        'apiKey' => config('services.mailchimp.key'),
-        'server' => 'us8'
-    ]);
-
-    $response = $mailchimp->lists->getListMembersInfo('8e90228839');
-    dd($response);
+Route::get('/mailable', function () {
+    return new NewSubscriber(Subscriber::find(1));
 });

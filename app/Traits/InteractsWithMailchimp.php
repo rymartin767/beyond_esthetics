@@ -3,8 +3,10 @@
 namespace App\Traits;
 
 use App\Models\Subscriber;
-use Illuminate\Support\Facades\Log;
+use App\Mail\NewSubscriber;
 use MailchimpMarketing\ApiClient;
+use Illuminate\Support\Facades\Log;
+use Illuminate\Support\Facades\Mail;
 use MailchimpMarketing\ApiException;
 
 trait InteractsWithMailchimp
@@ -30,7 +32,7 @@ trait InteractsWithMailchimp
                 ]
             ]);
 
-            // Mailer here
+            Mail::to('sandyjmartin4@gmail.com')->send(new NewSubscriber($subscriber));
             return true;
         } catch (ApiException $e) {
             Log::channel('single')->info($e);

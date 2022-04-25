@@ -5,9 +5,8 @@ namespace App\Http\Livewire;
 use App\Models\Faq;
 use App\Models\Review;
 use App\Models\Service;
-use Livewire\Component;
-use App\Models\Employee;
 use App\Models\Special;
+use Livewire\Component;
 
 class Home extends Component
 {
