@@ -34,7 +34,7 @@
                 <h2 class="text-3xl font-medium" :id="$id('modal-title')">{{ $title }}</h2>
                 <!-- Content -->
                 <p class="my-3 text-gray-500 bg-gray-200 rounded p-2 text-center">{{ $subtitle }}</p>
-                <!-- Form Slot -->
+                <!-- Information Slot -->
                 <div>
                     {{ $info }}
                     <!-- Buttons -->

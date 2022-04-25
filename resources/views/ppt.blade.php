@@ -13,8 +13,8 @@
                         <div class="flex justify-center py-3">
                             <img src="{{ $service->images->where('tag', 'ppt')->isEmpty() ? Storage::url('images/treatments/null.png') : Storage::url($service->images->where('tag', 'ppt')->first()->url) }}" alt="" class="h-36 w-36 rounded-full">
                         </div>
-                        <div class="flex flex-col text-center space-y-2">
-                            <div class="font-bold text-xl">{{ $service->name }}</div>
+                        <div class="flex flex-col space-y-2">
+                            <div class="font-bold text-xl text-center">{{ $service->name }}</div>
 
                             <x-info-modal title="{{ $service->name }}" subtitle="Here are your pre care tips! Questions? Give us a call.">
                                 <x-slot:trigger>
@@ -24,7 +24,15 @@
                                     </div>
                                 </x-slot>
                                 <x-slot:info>
-                                    {{ $service->name }} information coming soon!
+                                    @if (is_null($service->ppt))
+                                        <div>
+                                            {{ $service->name }} information coming soon!
+                                        </div>
+                                    @else
+                                        <div class="rich-editor">
+                                            {!! $service->ppt->pre_treatment !!}
+                                        </div>
+                                    @endif
                                 </x-slot>
                             </x-info-modal>
                             
@@ -37,7 +45,15 @@
                                     </div>
                                 </x-slot>
                                 <x-slot:info>
-                                    {{ $service->name }} information coming soon!
+                                    @if (is_null($service->ppt))
+                                        <div>
+                                            {{ $service->name }} information coming soon!
+                                        </div>
+                                    @else
+                                        <div class="rich-editor">
+                                            {!! $service->ppt->post_treatment !!}
+                                        </div>
+                                    @endif
                                 </x-slot>
                             </x-info-modal>
 
