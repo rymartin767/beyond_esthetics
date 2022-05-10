@@ -934,8 +934,6 @@ Ensure the default browser behavior of the `hidden` attribute.
   height: 6rem;
 }.h-3{
   height: 0.75rem;
-}.h-80{
-  height: 20rem;
 }.h-36{
   height: 9rem;
 }.h-14{
@@ -1474,13 +1472,6 @@ Ensure the default browser behavior of the `hidden` attribute.
   --tw-bg-opacity: 0.5;
 }.bg-opacity-75{
   --tw-bg-opacity: 0.75;
-}.bg-gradient-to-r{
-  background-image: linear-gradient(to right, var(--tw-gradient-stops));
-}.from-gray-300{
-  --tw-gradient-from: #d1d5db;
-  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgb(209 213 219 / 0));
-}.to-purple-300{
-  --tw-gradient-to: #d8b4fe;
 }.bg-cover{
   background-size: cover;
 }.bg-contain{
@@ -1562,15 +1553,15 @@ Ensure the default browser behavior of the `hidden` attribute.
 }.py-32{
   padding-top: 8rem;
   padding-bottom: 8rem;
-}.py-24{
-  padding-top: 6rem;
-  padding-bottom: 6rem;
 }.py-0\.5{
   padding-top: 0.125rem;
   padding-bottom: 0.125rem;
 }.py-0{
   padding-top: 0px;
   padding-bottom: 0px;
+}.py-24{
+  padding-top: 6rem;
+  padding-bottom: 6rem;
 }.pt-6{
   padding-top: 1.5rem;
 }.pt-5{
