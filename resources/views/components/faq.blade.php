@@ -6,7 +6,7 @@
                 <span x-show="showAnswer">-</span>
                 {{ $faq->question }}
             </div>
-            <div x-show="showAnswer" x-cloak x-transition class="text-sm p-6 mb-3">{!! $faq->answer !!}</div>
+            <div x-show="showAnswer" x-cloak x-transition class="rich-editor text-sm p-6 mb-3">{!! $faq->answer !!}</div>
         </div>
     </div>
 </div>

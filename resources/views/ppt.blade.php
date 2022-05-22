@@ -1,10 +1,26 @@
 <x-app-layout>
-    <div class="py-24 bg-gradient-to-r from-gray-300 to-purple-300 text-center text-5xl">
-        <div class="h-80 text-white">COVER IMAGE HERE....</div>
+    <!-- MATT PHOTO -->
+    <div class="border-t border-white">
+        <div class="bg-contain bg-spa-100" style="background-image: url('images/logo_bg.png');">
+            <div class="grid grid-cols-3 h-40 sm:h-96">
+                <div class="col-span-1"></div>
+                <div class="col-span-2 h-full bg-white bg-cover" style="background-image: url('images/matt.png');"></div>
+            </div>
+        </div>
     </div>
-    <div class="py-8 bg-black">
-        <div class="text-center text-white text-5xl">Pre/Post Care Treatment Instructions</div>
+
+    <div class="bg-black py-8">
+        <div x-data="{ shown: false }" x-intersect="shown = true">
+            <div x-show="shown" x-transition.duration.4000ms class="max-w-7xl mx-auto">
+                <div class="text-5xl text-white font-semibold">
+                    <div class="flex flex-row justify-center text-center">
+                        <div>Pre/Post Care Instructions.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
+
     <x-section>
         <div class="grid grid-cols-3 gap-20 py-8">
             @foreach ($services as $service)
@@ -13,8 +29,8 @@
                         <div class="flex justify-center py-3">
                             <img src="{{ $service->images->where('tag', 'ppt')->isEmpty() ? Storage::url('images/treatments/null.png') : Storage::url($service->images->where('tag', 'ppt')->first()->url) }}" alt="" class="h-36 w-36 rounded-full">
                         </div>
-                        <div class="flex flex-col text-center space-y-2">
-                            <div class="font-bold text-xl">{{ $service->name }}</div>
+                        <div class="flex flex-col space-y-2">
+                            <div class="font-bold text-xl text-center">{{ $service->name }}</div>
 
                             <x-info-modal title="{{ $service->name }}" subtitle="Here are your pre care tips! Questions? Give us a call.">
                                 <x-slot:trigger>
@@ -24,7 +40,15 @@
                                     </div>
                                 </x-slot>
                                 <x-slot:info>
-                                    {{ $service->name }} information coming soon!
+                                    @if (is_null($service->ppt))
+                                        <div>
+                                            {{ $service->name }} information coming soon!
+                                        </div>
+                                    @else
+                                        <div class="rich-editor">
+                                            {!! $service->ppt->pre_treatment !!}
+                                        </div>
+                                    @endif
                                 </x-slot>
                             </x-info-modal>
                             
@@ -37,7 +61,15 @@
                                     </div>
                                 </x-slot>
                                 <x-slot:info>
-                                    {{ $service->name }} information coming soon!
+                                    @if (is_null($service->ppt))
+                                        <div>
+                                            {{ $service->name }} information coming soon!
+                                        </div>
+                                    @else
+                                        <div class="rich-editor">
+                                            {!! $service->ppt->post_treatment !!}
+                                        </div>
+                                    @endif
                                 </x-slot>
                             </x-info-modal>
 
@@ -47,4 +79,8 @@
             @endforeach
         </div>
     </x-section>
+
+    @push('scripts')
+        <script defer src="https://unpkg.com/@alpinejs/focus@3.x.x/dist/cdn.min.js"></script>
+    @endpush
 </x-app-layout>

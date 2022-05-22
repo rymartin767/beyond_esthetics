@@ -52,13 +52,16 @@ class ReviewResource extends Resource
     {
         return $table
             ->columns([
-                TextColumn::make('name'),
-                TextColumn::make('social_media'),
+                TextColumn::make('name')
+                    ->sortable(),
+                TextColumn::make('social_media')
+                    ->sortable(),
                 TextColumn::make('service_id')
                     ->formatStateUsing(function ($state) {
                         return \App\Models\Service::find($state)->name;
                     })
                     ->label('Service Reviewed')
+                    ->sortable()
             ])
             ->filters([
                 //

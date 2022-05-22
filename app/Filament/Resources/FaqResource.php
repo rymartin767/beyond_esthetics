@@ -37,7 +37,7 @@ class FaqResource extends Resource
                     ->maxLength(255),
                 RichEditor::make('answer')
                     ->required()
-                    ->toolbarButtons(['bold']),
+                    ->toolbarButtons(['bold', 'bulletList', 'orderedList']),
             ]);
     }
 

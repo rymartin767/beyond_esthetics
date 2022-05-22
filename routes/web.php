@@ -7,6 +7,8 @@ use App\Http\Controllers\AboutController;
 use App\Http\Controllers\ServiceController;
 use App\Http\Controllers\SpecialController;
 use App\Http\Livewire\Newsletter;
+use App\Mail\NewSubscriber;
+use App\Models\Subscriber;
 
 /*
 |--------------------------------------------------------------------------
@@ -29,7 +31,7 @@ Route::middleware('web')->group(function () {
         'services' => Service::where('name', '!=', 'General')->with('faqs')->get()
     ])->name('faq');
     Route::view('/ppt', 'ppt', [
-        'services' => Service::select('id', 'name')->where('name', '!=', 'General')->with('images')->get()
+        'services' => Service::select('id', 'name')->where('name', '!=', 'General')->with(['images', 'ppt'])->get()
     ])->name('ppt');
     Route::view('/before-after-photos', 'before-after-photos')->name('before-after-photos');
     Route::view('/terms-of-service', 'terms-of-service')->name('terms-of-service');
@@ -40,4 +42,8 @@ Route::middleware('web')->group(function () {
 
 Route::middleware(['auth'])->group(function () {
     Route::view('lab', 'lab')->name('lab');
+});
+
+Route::get('/mailable', function () {
+    return new NewSubscriber(Subscriber::find(1));
 });

@@ -14,11 +14,12 @@
         <!-- Styles -->
         <link rel="stylesheet" href="{{ mix('css/app.css') }}">
 
+        @include('layouts.elements.favicons')
+
         @livewireStyles
 
         <!-- Scripts -->
-        <!-- Intersect Plugin is for rendering when content enters viewport -->
-        <!-- <script defer src="https://unpkg.com/@alpinejs/intersect@3.x.x/dist/cdn.min.js"></script> -->
+        @stack('scripts')
         <script src="{{ mix('js/app.js') }}" defer></script>
     </head>
     <body>

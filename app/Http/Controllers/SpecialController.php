@@ -8,7 +8,7 @@ class SpecialController extends Controller
 {
     public function __invoke()
     {
-        $specials = Special::all();
+        $specials = Special::current()->get()->take(3);
         return view('specials.index', compact('specials'));
     }
 }

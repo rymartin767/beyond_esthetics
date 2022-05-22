@@ -30,7 +30,8 @@ class SubscriberResource extends Resource
     {
         return $table
             ->columns([
-                TextColumn::make('name'),
+                TextColumn::make('first_name'),
+                TextColumn::make('last_name'),
                 TextColumn::make('email'),
                 TextColumn::make('created_at')
                     ->label('Date Joined')

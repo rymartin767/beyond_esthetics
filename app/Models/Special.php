@@ -37,6 +37,11 @@ class Special extends Model
         return $query->where('is_featured', true);
     }
 
+    public function scopeCurrent($query)
+    {
+        return $query->where('end_date', '>=', now());
+    }
+
     public function image()
     {
         return $this->morphOne(Image::class, 'imageable');
