@@ -26,7 +26,11 @@ class TreatmentResource extends Resource
             ->schema([
                 TextInput::make('name')
                     ->required(),
-                RichEditor::make('description'),
+                RichEditor::make('description')
+                    ->disableToolbarButtons([
+                        'attachFiles',
+                        'codeBlock',
+                    ]),
             ]);
     }
 

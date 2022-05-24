@@ -35,10 +35,10 @@ class PptResource extends Resource
                     ->searchable(),
                 RichEditor::make('pre_treatment')
                     ->required()
-                    ->toolbarButtons(['bold', 'bulletList', 'h2', 'h3', 'orderedList']),
+                    ->toolbarButtons(['bold', 'bulletList', 'h2', 'h3', 'orderedList', 'link']),
                 RichEditor::make('post_treatment')
                     ->required()
-                    ->toolbarButtons(['bold', 'bulletList', 'h2', 'h3', 'orderedList']),
+                    ->toolbarButtons(['bold', 'bulletList', 'h2', 'h3', 'orderedList', 'link']),
             ]);
     }
 
