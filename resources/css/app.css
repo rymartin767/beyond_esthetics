@@ -23,7 +23,7 @@
 
 
 /* FILAMENT DESCRIPTIONS  */
-.rich-editor > li {
+.rich-editor > ul > li {
     @apply list-inside list-disc mb-3;
 }
 

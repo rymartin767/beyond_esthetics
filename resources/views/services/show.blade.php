@@ -19,7 +19,7 @@
     @endif
 
     @if(!$service->reviews->isEmpty())
-        @include('layouts.elements.reviews', compact('reviews'))
+        @include('layouts.elements.reviews', ['reviews' => $service->reviews])
     @endif
 
     <!-- Youtube -->

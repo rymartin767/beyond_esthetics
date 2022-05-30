@@ -26,7 +26,7 @@ Route::middleware('web')->group(function () {
     Route::get('/services', [ServiceController::class, 'index'])->name('services');
     Route::get('/services/{service}', [ServiceController::class, 'show'])->name('services.show');
     Route::get('/specials', SpecialController::class)->name('specials');
-    Route::get('/about', AboutController::class)->name('about');
+    Route::get('/about-us', AboutController::class)->name('about');
     Route::view('/faq', 'faq', [
         'services' => Service::where('name', '!=', 'General')->with('faqs')->get()
     ])->name('faq');
