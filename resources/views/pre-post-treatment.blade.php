@@ -27,7 +27,7 @@
                 <div class="col-span-3 lg:col-span-1">
                     <div class="flex flex-col">
                         <div class="flex justify-center py-3">
-                            <img src="{{ $service->images->where('tag', 'ppt')->isEmpty() ? Storage::url('images/treatments/null.png') : Storage::url($service->images->where('tag', 'ppt')->first()->url) }}" alt="" class="h-36 w-36 rounded-full">
+                            <img src="{{ $service->images->where('tag', 'ppt')->isEmpty() ? Storage::url('images/treatments/null.png') : Storage::url($service->images->where('tag', 'ppt')->first()->url) }}" alt="{{ $service->name }} Treatment" class="h-36 w-36 rounded-full shadow-md shadow-black" loading="lazy">
                         </div>
                         <div class="flex flex-col space-y-2">
                             <div class="font-bold text-xl text-center">{{ $service->name }}</div>

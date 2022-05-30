@@ -30,7 +30,7 @@ Route::middleware('web')->group(function () {
     Route::view('/faq', 'faq', [
         'services' => Service::where('name', '!=', 'General')->with('faqs')->get()
     ])->name('faq');
-    Route::view('/ppt', 'ppt', [
+    Route::view('/pre-post-treatment', 'pre-post-treatment', [
         'services' => Service::select('id', 'name')->where('name', '!=', 'General')->with(['images', 'ppt'])->get()
     ])->name('ppt');
     Route::view('/before-after-photos', 'before-after-photos')->name('before-after-photos');

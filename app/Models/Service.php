@@ -5,6 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Casts\Attribute;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Support\Facades\Storage;
 
 class Service extends Model
 {
@@ -43,6 +44,20 @@ class Service extends Model
     public function images()
     {
         return $this->morphMany(Image::class, 'imageable');
+    }
+
+    public function landscapeImage()
+    {
+        return $this->images->where('tag', 'landscape')->isEmpty() ? 
+            '/images/services/landscape_missing.jpg' : 
+            Storage::url($this->images->where('tag', 'landscape')->first()->url);
+    }
+
+    public function bulletinImage()
+    {
+        return $this->images->where('tag', 'bulletin')->isEmpty() ? 
+            '/images/services/bulletin_missing.jpg' : 
+            Storage::url($this->images->where('tag', 'bulletin')->first()->url);
     }
 
     public function reviews()
