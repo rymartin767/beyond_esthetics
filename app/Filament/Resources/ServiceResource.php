@@ -16,7 +16,7 @@ use Filament\Forms\Components\RichEditor;
 use Filament\Forms\Components\MultiSelect;
 use App\Filament\Resources\ServiceResource\Pages;
 use App\Filament\Resources\ServiceResource\RelationManagers;
-use App\Models\Treatment;
+use Filament\Forms\Components\Hidden;
 
 class ServiceResource extends Resource
 {
@@ -38,8 +38,8 @@ class ServiceResource extends Resource
                 MultiSelect::make('locations')
                     ->required()
                     ->options(['ashland' => 'Ashland', 'ontario' => 'Ontario']),
-                MultiSelect::make('treatments')
-                    ->options(Treatment::pluck('name', 'name')->sort()),
+                Hidden::make('treatments')
+                    ->default('null'),
                 TextInput::make('description')
                     ->required()
                     ->minValue(5)

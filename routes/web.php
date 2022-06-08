@@ -26,11 +26,11 @@ Route::middleware('web')->group(function () {
     Route::get('/services', [ServiceController::class, 'index'])->name('services');
     Route::get('/services/{service}', [ServiceController::class, 'show'])->name('services.show');
     Route::get('/specials', SpecialController::class)->name('specials');
-    Route::get('/about', AboutController::class)->name('about');
+    Route::get('/about-us', AboutController::class)->name('about');
     Route::view('/faq', 'faq', [
         'services' => Service::where('name', '!=', 'General')->with('faqs')->get()
     ])->name('faq');
-    Route::view('/ppt', 'ppt', [
+    Route::view('/pre-post-treatment', 'pre-post-treatment', [
         'services' => Service::select('id', 'name')->where('name', '!=', 'General')->with(['images', 'ppt'])->get()
     ])->name('ppt');
     Route::view('/before-after-photos', 'before-after-photos')->name('before-after-photos');

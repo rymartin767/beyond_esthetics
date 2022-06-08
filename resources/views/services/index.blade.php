@@ -7,7 +7,7 @@
                         <div x-show="shown" x-transition>
                             <a href="{{ route('services.show', ['service' => $service->id]) }}">
                                 <div class="overflow-hidden">
-                                    <img src="{{ $service->images->where('tag', 'landscape')->isEmpty() ? '/images/services/landscape_missing.jpg' : Storage::url($service->images->where('tag', 'landscape')->first()->url) }}" alt="{{ $service->name }} Image" class="transition opacity-70 duration-700 ease-in-out hover:scale-110 hover:opacity-100" loading="lazy">
+                                    <img src="{{ $service->landscapeImage() }}" alt="{{ $service->name }} Image" class="transition opacity-70 duration-700 ease-in-out hover:scale-110 hover:opacity-100" loading="lazy">
                                 </div>
                             </a>
                         </div>

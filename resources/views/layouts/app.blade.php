@@ -14,7 +14,7 @@
         <!-- Styles -->
         <link rel="stylesheet" href="{{ mix('css/app.css') }}">
 
-        @include('layouts.elements.favicons')
+        @include('layouts.favicons')
 
         @livewireStyles
 

@@ -23,10 +23,14 @@
 
 
 /* FILAMENT DESCRIPTIONS  */
-.rich-editor 
-    li {
-        @apply list-inside list-disc mb-3;
-    }
-    p {
-        @apply mb-3;
-    }
+.rich-editor > ul > li {
+    @apply list-inside list-disc mb-3;
+}
+
+.rich-editor > p {
+    @apply mb-3;
+}
+    
+.rich-editor > a {
+    @apply bg-pink-200;
+}
