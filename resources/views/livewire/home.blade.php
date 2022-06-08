@@ -1,12 +1,12 @@
 <div>
     
-    @include('home.jumbotron')
+    @include('home._jumbotron')
         
-    @include('home.services')
+    @include('home._services')
         
-    @include('home.tonya')
+    @include('home._tonya')
         
-    @include('home.featured-specials', compact('specials'))
+    @include('home._featured-specials', compact('specials'))
 
     @include('layouts.elements.schedule-now')
 
