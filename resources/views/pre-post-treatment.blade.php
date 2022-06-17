@@ -4,7 +4,7 @@
         <div class="bg-contain bg-spa-100" style="background-image: url('images/logo_bg.png');">
             <div class="grid grid-cols-3 h-40 sm:h-96">
                 <div class="col-span-1"></div>
-                <div class="col-span-2 h-full bg-white bg-cover" style="background-image: url('images/matt.png');"></div>
+                <div class="col-span-2 h-full bg-white bg-cover" style="background-image: url('images/matt.webp');"></div>
             </div>
         </div>
     </div>

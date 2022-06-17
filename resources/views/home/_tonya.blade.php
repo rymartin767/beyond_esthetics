@@ -2,7 +2,7 @@
     <x-section>
         <div class="grid grid-cols-3">
             <div class="col-span-3 sm:col-span-1 bg-white bg-contain" style="background-image: url('images/marble_background.jpg');">
-                <img src="images/employees/tonya.png" alt="" loading="lazy">
+                <img src="images/employees/tonya.webp" alt="" loading="lazy">
             </div>
             <div class="col-span-3 sm:col-span-2 flex flex-wrap content-center sm:justify-center order-last sm:order-first bg-black text-white">
                 <div class="p-4">
