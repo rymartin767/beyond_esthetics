@@ -11,16 +11,14 @@
             <title>BEMS Development</title>
         @endproduction
 
-        <!-- Styles -->
-        <link rel="stylesheet" href="{{ mix('css/app.css') }}">
-
         @include('layouts.favicons')
-
+        
+        <!-- Styles -->
         @livewireStyles
 
         <!-- Scripts -->
+        @vite(['resources/css/app.css', 'resources/js/app.js'])
         @stack('scripts')
-        <script src="{{ mix('js/app.js') }}" defer></script>
     </head>
     <body>
         <div class="min-h-screen flex flex-col font-mont overflow-x-hidden">
