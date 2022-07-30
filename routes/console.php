@@ -1,5 +1,7 @@
 <?php
 
+use App\Models\Service;
+use App\Models\Treatment;
 use Illuminate\Foundation\Inspiring;
 use Illuminate\Support\Facades\Artisan;
 
@@ -17,3 +19,15 @@ use Illuminate\Support\Facades\Artisan;
 Artisan::command('inspire', function () {
     $this->comment(Inspiring::quote());
 })->purpose('Display an inspiring quote');
+
+Artisan::command('treat', function() {
+    $services = Service::all();
+    foreach($services as $service) {
+        foreach($service->treatments as $treatment) {
+            $t = Treatment::firstOrCreate(['name' => $treatment]);
+            $service->treats()->attach($t);
+        }
+    }
+
+    $this->info('Yum! Those treats were tasty.');
+});

@@ -37,9 +37,9 @@ return [
 
     'image_tags' => [
         'portrait' => 'Employee Portrait | JPG | 1080x1080px',
-        'landscape' => 'Service Landscape | JPG | 1690x1080px',
-        'title' => 'Service Title | JPG | 500x500px',
-        'bulletin' => 'Service Bulletin | JPG | 1200x1500px',
+        '169' => 'Service List Photo | JPG | 608x1080px',
+        'bullet' => 'Service Second Photo | JPG | 500x500px',
+        'title' => 'Service Main Photo | JPG | 1200x1500px',
         'ppt' => 'Pre/Post Treatment | JPG | 300x300px'
     ]
 ];

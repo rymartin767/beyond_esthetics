@@ -17,6 +17,7 @@
         @livewireStyles
 
         <!-- Scripts -->
+        @stack('alpine-intersect-plugin')
         @vite(['resources/css/app.css', 'resources/js/app.js'])
         @stack('scripts')
     </head>

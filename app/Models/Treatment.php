@@ -18,4 +18,9 @@ class Treatment extends Model
     {
         return $this->morphOne(Image::class, 'imageable');
     }
+
+    public function services()
+    {
+        return $this->belongsToMany(Service::class);
+    }
 }
