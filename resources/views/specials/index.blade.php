@@ -1,4 +1,5 @@
 <x-app-layout>
+    @section('title', 'Beyond Esthetics Med Spa | Our Featured Specials & Memberships')
 
     <!-- Memberships -->
     <x-section title="Our Memberships" class="">

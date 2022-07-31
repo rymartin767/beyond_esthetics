@@ -16,20 +16,4 @@ class EditService extends EditRecord
     
         return $data;
     }
-
-    protected function getFormActions(): array
-    {
-        return array_merge(parent::getFormActions(), [
-            ButtonAction::make('Clear Treatments')
-                ->action('clearServiceTreatments')
-                ->color('danger')
-        ]);
-    }
- 
-    public function clearServiceTreatments(): void
-    {
-        $this->record->treats()->detach();
-        $this->record->treatments = [];
-        $this->record->save();
-    }
 }

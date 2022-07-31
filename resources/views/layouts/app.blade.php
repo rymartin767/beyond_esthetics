@@ -5,11 +5,9 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="csrf-token" content="{{ csrf_token() }}">
 
-        @production
-            <title>{{ config('app.name') }}</title>
-        @else
-            <title>BEMS Development</title>
-        @endproduction
+            <title>
+                @yield('title', 'Full Service Med Spa in Ontario & Ashland | Beyond Esthetics Med Spa')
+            </title>
 
         @include('layouts.favicons')
         

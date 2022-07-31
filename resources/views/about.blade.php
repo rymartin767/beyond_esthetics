@@ -1,4 +1,5 @@
 <x-app-layout>
+    @section('title', 'Beyond Esthetics Med Spa | Our Team, Our Mission')
 
     @include('about._team-photo')
     

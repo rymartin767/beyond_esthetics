@@ -1,4 +1,5 @@
 <x-app-layout>
+    @section('title', 'Beyond Esthetics Med Spa | Pre & Post Treatment Care')
     <!-- MATT PHOTO -->
     <div class="border-t border-white">
         <div class="bg-contain bg-spa-100" style="background-image: url('images/logo_bg.png');">
