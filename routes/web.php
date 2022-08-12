@@ -38,6 +38,7 @@ Route::middleware('web')->group(function () {
     Route::get('/newsletter', Newsletter::class)->name('newsletter');
     Route::view('/training', 'training')->name('training');
     Route::view('/link-tree', 'link-tree')->name('link-tree');
+    Route::view('/payment-plans', 'payment-plans')->name('payment-plans');
 });
 
 

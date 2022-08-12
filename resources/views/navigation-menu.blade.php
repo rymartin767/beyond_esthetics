@@ -57,6 +57,9 @@
                                 <x-jet-dropdown-link href="{{ route('before-after-photos') }}">
                                     {{ __('Before/After Photos') }}
                                 </x-jet-dropdown-link>
+                                <x-jet-dropdown-link href="{{ route('newsletter') }}">
+                                    {{ __('Newsletter') }}
+                                </x-jet-dropdown-link>
                             </x-slot>
                         </x-jet-dropdown>
 
@@ -64,8 +67,8 @@
                             {{ __('SHOP') }}
                         </x-jet-nav-link>
 
-                        <x-jet-nav-link href="{{ route('newsletter') }}" :active="request()->routeIs('newsletter')">
-                            {{ __('NEWSLETTER') }}
+                        <x-jet-nav-link href="{{ route('payment-plans') }}" :active="request()->routeIs('payment-plans')">
+                            {{ __('PAYMENT PLANS') }}
                         </x-jet-nav-link>
 
                         <x-jet-nav-link href="{{ route('training') }}" :active="request()->routeIs('training')">
