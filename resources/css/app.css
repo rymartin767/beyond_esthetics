@@ -31,6 +31,6 @@
     @apply mb-3;
 }
     
-.rich-editor > a {
-    @apply bg-pink-200;
+.rich-editor > ul > li > a {
+    @apply font-bold text-spa-200;
 }

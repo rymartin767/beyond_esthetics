@@ -1,4 +1,5 @@
 <x-app-layout>
+    @section('title', "Beyond Esthetics Med Spa | $service->name")
 
     @include('services._show-product')
 

@@ -1,4 +1,5 @@
 <x-app-layout>
+    @section('title', 'Beyond Esthetics Med Spa | Frequently Asked Questions')
     @foreach ($services as $service)
         <x-section title="{{ $service->name }}" class="{{ $loop->odd ? 'bg-gray-200' : 'bg-gray-100' }}">
             @include('layouts.elements.faq', [

@@ -8,6 +8,7 @@ use App\Models\Service;
 use Filament\Resources\Form;
 use Filament\Resources\Table;
 use Filament\Resources\Resource;
+use Filament\Forms\Components\Hidden;
 use Filament\Forms\Components\Select;
 use Filament\Tables\Columns\IconColumn;
 use Filament\Tables\Columns\TextColumn;
@@ -16,7 +17,6 @@ use Filament\Forms\Components\RichEditor;
 use Filament\Forms\Components\MultiSelect;
 use App\Filament\Resources\ServiceResource\Pages;
 use App\Filament\Resources\ServiceResource\RelationManagers;
-use Filament\Forms\Components\Hidden;
 
 class ServiceResource extends Resource
 {
@@ -35,6 +35,8 @@ class ServiceResource extends Resource
                     ->unique(ignorable: fn (?Service $record): ?Service => $record),
                 Select::make('type')
                     ->options(['medical' => 'Medical', 'spa' => 'Spa', 'injectables' => 'Injectables']),
+                MultiSelect::make('treats')
+                    ->relationship('treats', 'name'),
                 MultiSelect::make('locations')
                     ->required()
                     ->options(['ashland' => 'Ashland', 'ontario' => 'Ontario']),
@@ -88,11 +90,6 @@ class ServiceResource extends Resource
             ])
             ->filters([
                 //
-            ])
-            ->pushActions([
-                Tables\Actions\LinkAction::make('view')
-                    ->action(fn (Service $record) => redirect('/services/' . $record->id))
-                    ->color('success'),
             ]);
     }
 

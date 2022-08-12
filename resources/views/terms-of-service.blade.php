@@ -1,4 +1,6 @@
 <x-app-layout>
+    @section('title', "Beyond Esthetics Med Spa | Terms of Service")
+
     <x-section title="Cancellation Fee Policy">
         <div class="flex flex-col space-y-3">
             <p>Beyond Esthetics has a 48-hour cancellation policy. Failure to show up for/or reschedule an appointment within that time frame will result in a 20% charge of service booked. Neurotoxin appointments will be charged $50. In the event that a patient has a history of two or more no-shows or cancellations, patient may be subject to full service price to schedule. Notification given with at least 48 hours prior to your appointment will NOT receive a charge.</p>

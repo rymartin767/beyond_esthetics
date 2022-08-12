@@ -5,22 +5,19 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="csrf-token" content="{{ csrf_token() }}">
 
-        @production
-            <title>{{ config('app.name') }}</title>
-        @else
-            <title>BEMS Development</title>
-        @endproduction
-
-        <!-- Styles -->
-        <link rel="stylesheet" href="{{ mix('css/app.css') }}">
+            <title>
+                @yield('title', 'Full Service Med Spa in Ontario & Ashland | Beyond Esthetics Med Spa')
+            </title>
 
         @include('layouts.favicons')
-
+        
+        <!-- Styles -->
         @livewireStyles
 
         <!-- Scripts -->
+        @stack('alpine-intersect-plugin')
+        @vite(['resources/css/app.css', 'resources/js/app.js'])
         @stack('scripts')
-        <script src="{{ mix('js/app.js') }}" defer></script>
     </head>
     <body>
         <div class="min-h-screen flex flex-col font-mont overflow-x-hidden">

@@ -37,6 +37,7 @@ Route::middleware('web')->group(function () {
     Route::view('/terms-of-service', 'terms-of-service')->name('terms-of-service');
     Route::get('/newsletter', Newsletter::class)->name('newsletter');
     Route::view('/training', 'training')->name('training');
+    Route::view('/link-tree', 'link-tree')->name('link-tree');
 });
 
 
