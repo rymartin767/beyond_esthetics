@@ -16,4 +16,6 @@
 
     @include('layouts.elements.reviews', compact('reviews'))
 
+    @include('layouts.elements.cherry')
+
 </div>

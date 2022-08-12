@@ -17,7 +17,7 @@
     </head>
 
     <body>
-        <div class="min-h-screen flex flex-col font-mont">
+        <div class="min-h-screen flex flex-col font-mont overflow-x-hidden">
             <main class="bg-spa-200 pt-12 flex-1">
                 <div class="max-w-sm mx-auto flex flex-col space-y-6">
                     <img src="/images/logo.svg" alt="">
@@ -38,6 +38,9 @@
                     </a>
                     <a href="/about-us">
                         <div class="cursor-pointer bg-spa-200 border border-white text-white rounded-full px-2 py-6 text-center">ABOUT US</div>
+                    </a>
+                    <a href="/payment-plans">
+                        <div class="cursor-pointer bg-spa-200 border border-white text-white rounded-full px-2 py-6 text-center">PAYMENT PLANS</div>
                     </a>
                 </div>
             </main>
