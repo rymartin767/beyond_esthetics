@@ -1,6 +1,10 @@
 <?php
 
 return [
+    'admin' => [
+        'version' => '1.1.1'
+    ],
+
     'hours' => [
         'ontario' => [
             'Monday' => '8AM to 7PM',

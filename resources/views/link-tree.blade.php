@@ -17,10 +17,11 @@
     </head>
 
     <body>
-        <div class="min-h-screen flex flex-col font-mont overflow-x-hidden">
+        <div class="min-h-screen flex flex-col font-mont">
             <main class="bg-spa-200 pt-12 flex-1">
                 <div class="max-w-sm mx-auto flex flex-col space-y-6">
-                    <a href="">
+                    <img src="/images/logo.svg" alt="">
+                    <a href="/">
                         <div class="cursor-pointer bg-black text-white rounded-full px-2 py-6 text-center">@beyondestheticsmedspa</div>
                     </a>
                     <a href="https://www.facebook.com/BeyondEstheticsMansfield">
