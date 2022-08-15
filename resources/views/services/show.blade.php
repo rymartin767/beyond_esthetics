@@ -26,13 +26,16 @@
     <!-- Youtube -->
     @isset($service->video_url)
         <x-section class="bg-gray-100 min-h-auto">
-            <div class="grid grid-cols-2">
-                <div class="col-span-2 lg:col-span-1">
-                    <div class="flex justify-center">
-                        <iframe class="w-full aspect-video" src="https://www.youtube.com/embed/{{ $service->video_url }}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+            <div class="grid grid-cols-2 gap-3">
+                @foreach ($service->video_urls() as $url)
+                    <div class="col-span-2 lg:col-span-1">
+                        <div class="flex justify-center">
+                            <iframe class="w-full aspect-video" src="https://www.youtube.com/embed/{{ $url }}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+                        </div>
                     </div>
-                </div>
-                <div class="order-first lg:order-last col-span-2 lg:col-span-1 flex flex-wrap content-center">
+                @endforeach
+                
+                <div class="order-first {{ $service->video_urls()->count() > 1 ? 'lg:order-first' : 'lg:order-last' }} col-span-2 lg:col-span-1 flex flex-wrap content-center">
                     <div class="w-full text-center text-4xl sm:text-5xl font-semibold py-8 px-6"><span class="text-spa-200">Watch</span> & Learn.</div>
                 </div>
             </div>

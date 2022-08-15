@@ -60,6 +60,11 @@ class Service extends Model
             Storage::url($this->images->where('tag', 'bulletin')->first()->url);
     }
 
+    public function video_urls()
+    {
+        return str($this->video_url)->explode('++++');
+    }
+
     public function reviews()
     {
         return $this->hasMany(Review::class);

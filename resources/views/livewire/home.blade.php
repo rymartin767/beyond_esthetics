@@ -16,6 +16,6 @@
 
     @include('layouts.elements.reviews', compact('reviews'))
 
-    @include('layouts.elements.cherry')
+    @include('layouts.elements.book-now-pay-later')
 
 </div>
