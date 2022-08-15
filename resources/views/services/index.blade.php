@@ -1,5 +1,6 @@
 <x-app-layout>
     @section('title', 'Beyond Esthetics Med Spa | Our Services')
+    
     @forelse ($services->groupBy('type') as $k => $v)
         <x-section title="{{ str($k)->upper() }} SERVICES">
             <div class="grid grid-cols-3 gap-12">
