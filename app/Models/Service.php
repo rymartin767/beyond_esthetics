@@ -3,9 +3,9 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Facades\Storage;
 use Illuminate\Database\Eloquent\Casts\Attribute;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
-use Illuminate\Support\Facades\Storage;
 
 class Service extends Model
 {
@@ -46,18 +46,11 @@ class Service extends Model
         return $this->morphMany(Image::class, 'imageable');
     }
 
-    public function landscapeImage()
+    public function image($tag) : string
     {
-        return $this->images->where('tag', 'landscape')->isEmpty() ? 
-            '/images/services/landscape_missing.jpg' : 
-            Storage::url($this->images->where('tag', 'landscape')->first()->url);
-    }
-
-    public function bulletinImage()
-    {
-        return $this->images->where('tag', 'bulletin')->isEmpty() ? 
-            '/images/services/bulletin_missing.jpg' : 
-            Storage::url($this->images->where('tag', 'bulletin')->first()->url);
+        return $this->images->where('tag', $tag)->isEmpty() ? 
+        '/images/services/' . $tag . '_missing.jpg' : 
+        Storage::url($this->images->where('tag', $tag)->first()->url);
     }
 
     public function video_urls()
