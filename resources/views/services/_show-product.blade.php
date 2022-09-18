@@ -7,7 +7,7 @@
             <div class="grid grid-cols-6 gap-x-3 p-8">
                 <div class="col-span-6 text-center text-3xl font-semibold mb-6">{{ $service->name }} targets:</div>
                 @forelse ($service->treats as $treatment)
-                    <div class="col-span-6 lg:col-span-3 mb-1 border-b border-spa-200">
+                    <div class="col-span-6 lg:col-span-3 mb-1 border-b-2 border-spa-200">
                         <div class="flex flex-row items-center space-x-2">
                             <img src="{{ is_null($treatment->image) ? Storage::url('images/treatments/null.png') : Storage::url($treatment->image->url) }}" alt="{{ str($treatment)->replace('_', ' ')->title() }} Image" class="h-20 w-20" loading="lazy">
                             <div class="text-xl font-bold text-spa-200">{{ $treatment->name }}</div>
