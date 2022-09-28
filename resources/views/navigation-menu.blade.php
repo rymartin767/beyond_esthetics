@@ -71,9 +71,22 @@
                             {{ __('PAYMENT PLANS') }}
                         </x-jet-nav-link>
 
-                        <x-jet-nav-link href="{{ route('training') }}" :active="request()->routeIs('training')">
-                            {{ __('TRAINING') }}
-                        </x-jet-nav-link>
+                        <x-jet-dropdown align="right" width="48">
+                            <x-slot name="trigger">
+                                <x-jet-nav-link class="cursor-pointer">
+                                    {{ __('TRAINING') }}
+                                </x-jet-nav-link>
+                            </x-slot>
+
+                            <x-slot name="content">
+                                <x-jet-dropdown-link href="{{ route('training.dermaplane') }}">
+                                    {{ __('Dermaplane') }}
+                                </x-jet-dropdown-link>
+                                <x-jet-dropdown-link href="{{ route('training.permanent-makeup') }}">
+                                    {{ __('Permanent Makeup') }}
+                                </x-jet-dropdown-link>
+                            </x-slot>
+                        </x-jet-dropdown>
                     </div>
 
                     <!-- Settings Dropdown -->
@@ -169,9 +182,6 @@
             </x-jet-responsive-nav-link>
             <x-jet-responsive-nav-link href="{{ route('newsletter') }}" :active="request()->routeIs('newsletter')">
                 {{ __('NEWSLETTER') }}
-            </x-jet-responsive-nav-link>
-            <x-jet-responsive-nav-link href="{{ route('training') }}" :active="request()->routeIs('training')">
-                {{ __('TRAINING') }}
             </x-jet-responsive-nav-link>
         </div>
 
