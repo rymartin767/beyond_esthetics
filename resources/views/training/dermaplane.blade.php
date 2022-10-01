@@ -4,7 +4,7 @@
             <div class="bg-black text-white text-xl p-7 py-3">
                 Welcome to Beyond Esthetics Dermaplane Training
             </div>
-            <div class="flex flex-col space-y-3 sm:space-y-0 bg-gray-500 text-white text-4xl text-center py-3 px-1">
+            <div class="flex flex-col space-y-3 sm:space-y-0 bg-gray-500 text-white text-2xl sm:text-4xl text-center p-3">
                 <div>Are You Looking For A Way to Achieve Any of These?</div>
                 <div>We Would Love To Help You On Your Journey.</div>
             </div>
@@ -22,7 +22,7 @@
             </div>
             <div class="flex flex-col bg-white py-6">
                 <div class="mb-4">
-                    <div class="text-xl text-center">What's It Like Training With Beyond Esthetics?</div>
+                    <div class="text-xl text-center mb-3 sm:mb-0">What's It Like Training With Beyond Esthetics?</div>
                     <div class="text-xl text-center">Here's What You Get When You Choose To Become Certified:</div>
                 </div>
                 <div class="grid grid-cols-3 gap-3 pb-4 border-b-4 border-black">
@@ -187,7 +187,7 @@
                 </div>
                 <!-- eight -->
                 <div class="flex flex-col space-y-7">
-                    <div>
+                    <div class="flex flex-col space-y-4">
                         <div class="text-center text-lg text-spa-200">IMPORTANT:</div>
                         <div class="">
                             Please ensure that you are able to attend class prior to booking; as all trainging payments are non-refundable and non-transferable.
