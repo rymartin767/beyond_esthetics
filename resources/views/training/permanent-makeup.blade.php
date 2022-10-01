@@ -4,7 +4,7 @@
             <div class="bg-black text-white text-xl p-7 py-3">
                 Welcome to Beyond Esthetics Permanent Makeup Training
             </div>
-            <div class="flex flex-col space-y-3 sm:space-y-0 bg-gray-500 text-white text-4xl text-center py-3 px-1">
+            <div class="flex flex-col space-y-3 sm:space-y-0 bg-gray-500 text-white text-2xl sm:text-4xl text-center p-3">
                 <div>Are You Looking For A Way to Achieve Any of These?</div>
                 <div>We Would Love To Help You On Your Journey.</div>
             </div>
@@ -22,7 +22,7 @@
             </div>
             <div class="flex flex-col bg-white py-6">
                 <div class="mb-4">
-                    <div class="text-xl text-center">What's It Like Training With Beyond Esthetics?</div>
+                    <div class="text-xl text-center mb-3 sm:mb-0">What's It Like Training With Beyond Esthetics?</div>
                     <div class="text-xl text-center">Here's What You Get When You Choose To Become Certified:</div>
                 </div>
                 <div class="grid grid-cols-3 gap-3 pb-4 border-b-4 border-black">
@@ -86,15 +86,12 @@
                 <div>
                     <div class="flex flex-col space-y-10">
 
-
-
                         <div class="">
                             <div class="text-spa-200 text-xl">What You Can Expect During Training:</div>
                             <div>
                                 Beyond Esthetics will be with you every step of the way in your career as a Permanent Cosmetics professional in Ohio and surrounding areas. We offer beginning and continuing education programs for technicians of all skill levels in Permanent Makeup classes. We also offer technical support for practicing technicians for procedures as well as pigment and product choices
                             </div>
                         </div>
-
 
                         <div class="">
                             <div class="text-spa-200 text-xl">Permanent Cosmetics Class (Basic Training):</div>
@@ -123,7 +120,6 @@
                             </ul>
                         </div>
 
-
                         <div class="">
                             <div class="text-spa-200 text-xl">Permanent Cosmetics Classes (Intermediate Hands-On Training):</div>
                             <div>
@@ -135,7 +131,6 @@
                                 <li>$500 each additional day</li>
                             </ul>
                         </div>
-
 
                         <div class="">
                             <div class="text-spa-200 text-xl">Permanent Cosmetics Classes (Advanced Specialty Training):</div>
@@ -171,7 +166,6 @@
 
                         </div>
 
-
                         <div>
                             <div class="text-center text-lg text-spa-200">IMPORTANT:</div>
                             <div class="">Please ensure that you are able to attend class prior to booking; as all trainging payments are non-refundable and non-transferable. In addition, please consult with your local Board of Health in regard to tattoo licensure requirements in your local jurisdiction. Please note, we do not offer Permanent Makeup training to any artist wishing to work within a 30 mile radius of Ontario, Ohio.
@@ -185,10 +179,6 @@
                                 </a>
                             </div>
                         </div>
-
-
-
-
                     </div>
                 </div>
             </div>
