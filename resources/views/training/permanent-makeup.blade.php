@@ -4,19 +4,19 @@
             <div class="bg-black text-white text-xl p-7 py-3">
                 Welcome to Beyond Esthetics Permanent Makeup Training
             </div>
-            <div class="flex flex-col space-y-3 sm:space-y-0 bg-gray-400 text-black text-4xl text-center py-3 px-1">
+            <div class="flex flex-col space-y-3 sm:space-y-0 bg-gray-500 text-white text-4xl text-center py-3 px-1">
                 <div>Are You Looking For A Way to Achieve Any of These?</div>
                 <div>We Would Love To Help You On Your Journey.</div>
             </div>
-            <div class="grid grid-cols-3 gap-3 bg-gray-300 p-3">
-                <div class="flex flex-wrap content-center col-span-2 sm:col-span-2 bg-spa-200 text-white rounded-md p-7">
-                    <ul class="list-disc list-inside text-3xl">
+            <div class="grid grid-cols-5 gap-3 bg-gray-300 p-3">
+                <div class="flex flex-wrap content-center col-span-5 lg:col-span-3 bg-spa-200 text-white rounded-md p-7">
+                    <ul class="list-disc list-inside text-xl lg:text-3xl">
                         <li>Be Your Own Boss</li>
                         <li>Rewarding Career</li>
                         <li>Financial Security</li>
                     </ul>
                 </div>
-                <div class="col-span-3 sm:col-span-1">
+                <div class="col-span-5 lg:col-span-2">
                     <img src="/images/training/top-perm-makeup.jpg" class="rounded-md" alt="">
                 </div>
             </div>
@@ -45,7 +45,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="text-center text-xl py-8 px-24">
+                <div class="text-center text-xl py-8 px-12 sm:px-24">
                     Beyond Esthetics is invested in your success, and we take our responsibility as an educator very seriously. Our training goes far beyond the exchanging of information, it's backed by the sole mission of impacting people's lives in the most positive way.​
                 </div>
             </div>
@@ -175,6 +175,14 @@
                         <div>
                             <div class="text-center text-lg text-spa-200">IMPORTANT:</div>
                             <div class="">Please ensure that you are able to attend class prior to booking; as all trainging payments are non-refundable and non-transferable. In addition, please consult with your local Board of Health in regard to tattoo licensure requirements in your local jurisdiction. Please note, we do not offer Permanent Makeup training to any artist wishing to work within a 30 mile radius of Ontario, Ohio.
+                            </div>
+                        </div>
+
+                        <div class="flex justify-center">
+                            <div class="">
+                                <a href="mailto:beyondestheticsspa@gmail.com">
+                                    <button class="bg-spa-200 text-white font-bold p-6 rounded-full text-lg ring-2 ring-black">EMAIL TO REGISTER NOW</button>
+                                </a>
                             </div>
                         </div>
 
