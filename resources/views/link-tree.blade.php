@@ -25,6 +25,9 @@
                 <a href="/">
                     <div class="cursor-pointer bg-black border-2 border-white text-white rounded-full px-2 py-6 text-center">WEBSITE</div>
                 </a>
+                <a href="{{ route('specials') }}">
+                    <div class="cursor-pointer bg-black border-2 border-white text-white rounded-full px-2 py-6 text-center">MONTHLY SPECIALS</div>
+                </a>
                 <a href="{{ route('ppt') }}">
                     <div class="cursor-pointer bg-black border-2 border-white text-white rounded-full px-2 py-6 text-center">PRE/POST CARE TREATMENTS</div>
                 </a>
@@ -69,6 +72,9 @@
                         </div>
                         <a href="/">
                             <div class="flex flex-wrap content-center justify-center cursor-pointer bg-white dark:bg-black border-2 border-white text-black dark:text-white h-full px-2 py-6 text-center">WEBSITE</div>
+                        </a>
+                        <a href="{{ route('specials') }}">
+                            <div class="cursor-pointer bg-black border-2 border-white text-white rounded-full px-2 py-6 text-center">MONTHLY SPECIALS</div>
                         </a>
                         <a href="{{ route('ppt') }}">
                             <div class="flex flex-wrap content-center justify-center cursor-pointer bg-white dark:bg-black border-2 border-white text-black dark:text-white h-full px-2 py-6 text-center">PRE/POST CARE TREATMENTS</div>

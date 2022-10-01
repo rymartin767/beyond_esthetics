@@ -20,9 +20,6 @@
             <a href="{{ route('payment-plans') }}" class="col-span-8 sm:col-span-4 lg:col-span-2 xl:col-span-1 mb-3">
                 <div class="text-center uppercase font-semibold text-spa-200">payment plans</div>
             </a>
-            <a href="{{ route('training') }}" class="col-span-8 sm:col-span-4 lg:col-span-2 xl:col-span-1 mb-3">
-                <div class="text-center uppercase font-semibold text-spa-200">training</div>
-            </a>
         </div>
 
         <!-- SOCIAL MEDIA -->
