@@ -46,9 +46,9 @@
 
         <!-- LOCATION + HOURS -->
         <div class="grid grid-cols-2">
-            <div class="col-span-2 lg:col-span-1 text-center py-6">
+            <div class="col-span-2 text-center py-6">
                 <div class="flex flex-col space-y-3">
-                    <div class="text-2xl font-bold text-spa-200">ONTARIO</div>
+                    <div class="text-2xl font-bold text-spa-200">VISIT US</div>
                     <div class="text-xl">
                         <div>2021 Park Ave West</div>
                         <div>Ontario, OH 44906</div>
@@ -56,22 +56,6 @@
                     <div>
                         <ul>
                             @foreach (config('general.hours.ontario') as $day => $hours)
-                                <li>{{ $day }}: {{ $hours }}</li>
-                            @endforeach
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <div class="col-span-2 lg:col-span-1 text-center py-6">
-                <div class="flex flex-col space-y-3">
-                    <div class="text-2xl font-bold text-spa-200">ASHLAND</div>
-                    <div class="text-xl">
-                        <div>27 W. Main St.</div>
-                        <div>Ashland, OH 44805</div>
-                    </div>
-                    <div>
-                        <ul>
-                            @foreach (config('general.hours.ashland') as $day => $hours)
                                 <li>{{ $day }}: {{ $hours }}</li>
                             @endforeach
                         </ul>

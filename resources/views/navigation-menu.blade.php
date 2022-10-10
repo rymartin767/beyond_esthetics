@@ -183,6 +183,18 @@
             <x-jet-responsive-nav-link href="{{ route('newsletter') }}" :active="request()->routeIs('newsletter')">
                 {{ __('NEWSLETTER') }}
             </x-jet-responsive-nav-link>
+            <x-jet-responsive-nav-link href="{{ route('terms-of-service') }}" :active="request()->routeIs('terms-of-service')">
+                {{ __('TERMS OF SERVICE') }}
+            </x-jet-responsive-nav-link>
+            <x-jet-responsive-nav-link href="{{ route('payment-plans') }}" :active="request()->routeIs('payment-plans')">
+                {{ __('PAYMENT PLANS') }}
+            </x-jet-responsive-nav-link>
+            <x-jet-responsive-nav-link href="{{ route('training.dermaplane') }}" :active="request()->routeIs('training.dermaplane')">
+                {{ __('DERMAPLANE TRAINING') }}
+            </x-jet-responsive-nav-link>
+            <x-jet-responsive-nav-link href="{{ route('training.permanent-makeup') }}" :active="request()->routeIs('training.permanent-makeup')">
+                {{ __('PERMANENT MAKEUP TRAINING') }}
+            </x-jet-responsive-nav-link>
         </div>
 
         @auth
