@@ -1,12 +1,18 @@
 <div class="bg-white">
     <x-section>
+
+        <!-- Banner -->
+        <div class="grid grid-col2 mb-4">
+            <div class="bg-spa-200 text-white text-center py-4">Next Event: BellaFill Education Night. Join us on Wednesday, Jan 25th at 5:30pm. Exclusive event pricing and giveaways. Call for details and to register.</div>
+        </div>
+
         <div class="grid grid-cols-2">
             <div class="col-span-2 md:col-span-1 h-96 md:h-auto bg-cover" style="background-image: url('/images/cover.jpg');">
                 <!-- bg image -->
             </div>
             <div class="col-span-2 md:col-span-1 flex flex-col bg-black p-6 lg:p-20">
                 <div class="flex flex-col border-l-4 border-spa-200 text-white text-3xl lg:text-4xl">
-                    <div class="pl-4">Helping People Feel</div class="pl-4">
+                    <div class="pl-4">Helping People Feelz</div class="pl-4">
                     <div class="pl-4">Beautiful And Confident</div>
                 </div>
 

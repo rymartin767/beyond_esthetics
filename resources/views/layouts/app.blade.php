@@ -6,7 +6,7 @@
         <meta name="csrf-token" content="{{ csrf_token() }}">
 
             <title>
-                @yield('title', 'Full Service Med Spa in Ontario & Ashland | Beyond Esthetics Med Spa')
+                @yield('title', 'Full Service Med Spa in Ontario | Beyond Esthetics Med Spa')
             </title>
 
         @include('layouts.favicons')
