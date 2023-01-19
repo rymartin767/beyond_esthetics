@@ -20,21 +20,22 @@
                         </div>
                         <div class="py-6 text-xl font-black">Available To Purchase Services:</div>
                         <ul class="space-y-2 list-disc list-inside">
-                            <li>10% off Laser Hair Removal</li>
-                            <li>15% Off Morpheus8</li>
-                            <li>15% off Any Brand Filler {full syringe}</li>
-                            <li>20% Off Skincare Products</li>
-                            <li>25% Off IPL + Opus</li>
-                            <li>50% Off Microneedling</li>
-                            <li>50% Off Microneedling w/ PRP</li>
-                            <li>50% Off Chemical Peels</li>
-                            <li>50% Off Cryo Chamber</li>
+                            <li>25% Off Laser Hair Removal</li>
+                            <li>25% Off Morpheus8</li>
+                            <li>25% Off Any Brand Filler {full syringe}</li>
+                            <li>25% Off Skincare Products</li>
+                            <li>25% Off IPL Photofacial</li>
+                            <li>25% Off Microneedling</li>
+                            <li>25% Off Threads</li>
+                            <li>25% Off Chemical Peels</li>
+                            <li>50% Off Opus Plasma</li>
                             <li>50% Off Inbody Scans</li>
-                            <li>50% Off Injectable Supplements</li>
-                            <li>65% off Emsculpt</li>
-                            <li>65% Off Cryo Body Treatments</li>
-                            <li>$9 Per Unit Botox/Jeuveau</li>
-                            <li>$3 Per Unit Dysport</li>
+                            <li>50% Off AquaFirme Facial</li>
+                            <li>50% off Emsculpt</li>
+                            <li>50% Off Cryo Body Treatments</li>
+                            <li>50% Off Hollywood Spectra</li>
+                            <li>50% Off Sculpt</li>
+                            <li>50% Off Plasma IQ Pen</li>
                         </ul>
                         <div class="flex justify-between items-center border-t-2 border-spa-100 mt-3 py-3 text-lg lg:text-xl text-spa-200 font-bold">
                             <div>$125/Monthly</div>
@@ -59,15 +60,13 @@
                         </div>
                         <div class="py-6 text-lg lg:text-xl font-black">Available To Purchase Services:</div>
                         <ul class="space-y-2 list-disc list-inside">
-                            <li>$15 Injectable Supplements</li>
-                            <li>$35 Cryo Chamber</li>
-                            <li>$35 Inbody Scan</li>
-                            <li>$50 Cryo Facial</li>
-                            <li>$150 Chemical Peels</li>
-                            <li>$150 Microneedling</li>
-                            <li>$10 Per Unit Botox/Jeuveau</li>
-                            <li>$3.33 Per Unit Dysport</li>
-                            <li>10% Off Any Brand Filler {full syringe}</li>
+                            <li>20% Off Hollywood Spectra Facial</li>
+                            <li>20% Off Microneedling</li>
+                            <li>20% Off Inbody Scan</li>
+                            <li>20% Off Cryo Facial</li>
+                            <li>20% Off Chemical Peels</li>
+                            <li>20% Off AquaFirme Facial</li>
+                            <li>20% Off Any Brand Filler {full syringe}</li>
                             <li>20% Off Skincare Products</li>
                         </ul>
                         <div class="flex justify-between items-center border-t-2 border-spa-100 mt-3 py-3 text-xl text-spa-200 font-bold">
