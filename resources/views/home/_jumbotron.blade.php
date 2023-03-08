@@ -2,9 +2,9 @@
     <x-section>
 
         <!-- Banner -->
-        <div class="grid grid-col2 mb-4">
+        <!-- <div class="grid grid-col2 mb-4">
             <div class="bg-spa-200 text-white text-center p-4">Next Event: BellaFill Education Night. Join us on Wednesday, Jan 25th at 5:30pm. Exclusive event pricing and giveaways. Call for details and to register.</div>
-        </div>
+        </div> -->
 
         <div class="grid grid-cols-2">
             <div class="col-span-2 md:col-span-1 h-96 md:h-auto bg-cover" style="background-image: url('/images/cover.jpg');">
