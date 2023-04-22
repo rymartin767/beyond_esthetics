@@ -79,9 +79,6 @@
                             </x-slot>
 
                             <x-slot name="content">
-                                <x-jet-dropdown-link href="{{ route('training.dermaplane') }}">
-                                    {{ __('Dermaplane') }}
-                                </x-jet-dropdown-link>
                                 <x-jet-dropdown-link href="{{ route('training.permanent-makeup') }}">
                                     {{ __('Permanent Makeup') }}
                                 </x-jet-dropdown-link>
@@ -165,33 +162,39 @@
             <x-jet-responsive-nav-link href="{{ route('home') }}" :active="request()->routeIs('home')">
                 {{ __('HOME') }}
             </x-jet-responsive-nav-link>
+
             <x-jet-responsive-nav-link href="{{ route('services') }}" :active="request()->routeIs('services')">
                 {{ __('SERVICES') }}
             </x-jet-responsive-nav-link>
+
             <x-jet-responsive-nav-link href="{{ route('specials') }}" :active="request()->routeIs('specials')">
                 {{ __('SPECIALS') }}
             </x-jet-responsive-nav-link>
+
             <x-jet-responsive-nav-link href="{{ route('about') }}" :active="request()->routeIs('about')">
                 {{ __('ABOUT US') }}
             </x-jet-responsive-nav-link>
+
             <x-jet-responsive-nav-link href="{{ route('ppt') }}" :active="request()->routeIs('ppt')">
                 {{ __('PRE/POST CARE') }}
             </x-jet-responsive-nav-link>
+
             <x-jet-responsive-nav-link href="https://alastin.com/BeyondEsthetics" target="_blank">
                 {{ __('SHOP') }}
             </x-jet-responsive-nav-link>
+
             <x-jet-responsive-nav-link href="{{ route('newsletter') }}" :active="request()->routeIs('newsletter')">
                 {{ __('NEWSLETTER') }}
             </x-jet-responsive-nav-link>
+
             <x-jet-responsive-nav-link href="{{ route('terms-of-service') }}" :active="request()->routeIs('terms-of-service')">
                 {{ __('TERMS OF SERVICE') }}
             </x-jet-responsive-nav-link>
+
             <x-jet-responsive-nav-link href="{{ route('payment-plans') }}" :active="request()->routeIs('payment-plans')">
                 {{ __('PAYMENT PLANS') }}
             </x-jet-responsive-nav-link>
-            <x-jet-responsive-nav-link href="{{ route('training.dermaplane') }}" :active="request()->routeIs('training.dermaplane')">
-                {{ __('DERMAPLANE TRAINING') }}
-            </x-jet-responsive-nav-link>
+            
             <x-jet-responsive-nav-link href="{{ route('training.permanent-makeup') }}" :active="request()->routeIs('training.permanent-makeup')">
                 {{ __('PERMANENT MAKEUP TRAINING') }}
             </x-jet-responsive-nav-link>

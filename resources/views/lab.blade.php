@@ -1,6 +1,6 @@
 <x-app-layout>
     <x-section title="Macbook">
-        <div>Hello from my macbook</div>
+        <div>Hello from Jo's smacbook</div>
         <div>PHP Version: {{ phpversion() }}</div>
         <div>Laravel Version: {{ app()->version() }}</div>
     </x-section>
