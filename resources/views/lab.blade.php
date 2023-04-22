@@ -96,4 +96,7 @@
             </div>
         </div>
     </x-section>
+    <x-section title="JSON">
+        {{ \App\Models\Service::all()->toJson() }}
+    </x-section>
 </x-app-layout>

@@ -35,6 +35,7 @@ Route::middleware('web')->group(function () {
     ])->name('ppt');
     Route::view('/before-after-photos', 'before-after-photos')->name('before-after-photos');
     Route::view('/terms-of-service', 'terms-of-service')->name('terms-of-service');
+    Route::view('/shop', 'shop')->name('shop');
     Route::get('/newsletter', Newsletter::class)->name('newsletter');
     Route::view('/training/permanent-makeup', 'training.permanent-makeup')->name('training.permanent-makeup');
     Route::view('/link-tree', 'link-tree')->name('link-tree');
