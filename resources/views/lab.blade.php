@@ -1,4 +1,9 @@
 <x-app-layout>
+    <x-section title="Macbook">
+        <div>Hello from Jo's smacbook</div>
+        <div>PHP Version: {{ phpversion() }}</div>
+        <div>Laravel Version: {{ app()->version() }}</div>
+    </x-section>
     <x-section title="Fonts">
         <div class="max-w-5xl mx-auto flex flex-col space-y-8">
             <div class="font-mont">
@@ -90,5 +95,8 @@
                 </div>
             </div>
         </div>
+    </x-section>
+    <x-section title="JSON">
+        {{ \App\Models\Service::all()->toJson() }}
     </x-section>
 </x-app-layout>
