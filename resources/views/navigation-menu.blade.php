@@ -63,7 +63,7 @@
                             </x-slot>
                         </x-jet-dropdown>
 
-                        <x-jet-nav-link href="https://alastin.com/BeyondEsthetics" target="_blank">
+                        <x-jet-nav-link href="{{ route('shop') }}" :active="request()->routeIs('ppt')">
                             {{ __('SHOP') }}
                         </x-jet-nav-link>
 
@@ -179,7 +179,7 @@
                 {{ __('PRE/POST CARE') }}
             </x-jet-responsive-nav-link>
 
-            <x-jet-responsive-nav-link href="https://alastin.com/BeyondEsthetics" target="_blank">
+            <x-jet-responsive-nav-link href="{{ route('shop') }}" :active="request()->routeIs('ppt')">
                 {{ __('SHOP') }}
             </x-jet-responsive-nav-link>
 
