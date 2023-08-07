@@ -18,6 +18,9 @@
         @stack('alpine-intersect-plugin')
         @vite(['resources/css/app.css', 'resources/js/app.js'])
         @stack('scripts')
+
+        <!-- Custom Widget -->
+        <script type="text/javascript" src="https://firebasestorage.googleapis.com/v0/b/deardoc-embed-codes.appspot.com/o/Beyond%20Esthetics%2FBeyond%20Esthetics%20-%20Tonya%20Goulding%2Fcode.js?alt=media&token=1ef74658-8a90-4731-be6d-a202f5610141 (https://firebasestorage.googleapis.com/v0/b/deardoc-embed-codes.appspot.com/o/Beyond%20Esthetics%2FBeyond%20Esthetics%20-%20Tonya%20Goulding%2Fcode.js?alt=media&token=1ef74658-8a90-4731-be6d-a202f5610141)"></script>
     </head>
     <body>
         <div class="min-h-screen flex flex-col font-mont overflow-x-hidden">
