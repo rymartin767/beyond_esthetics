@@ -47,7 +47,7 @@ class FaqResource extends Resource
             ->columns([
                 TextColumn::make('service_id')
                     ->formatStateUsing(function ($state) {
-                        return \App\Models\Service::find($state)->name;
+                        return \App\Models\Service::find($state)?->name ?? $state;
                     })
                     ->sortable()
                     ->label('FAQ Service'),
