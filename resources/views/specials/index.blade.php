@@ -77,35 +77,7 @@
                 </div>
             </div>
             <!-- Injects -->
-            <div class="col-span-3 lg:col-span-1">
-                <div class="flex flex-col">
-                    <div class="overflow-hidden">
-                        <img src="/images/specials/tox_membership.jpg" alt="Injectables Membership" class="transition duration-700 ease-in-out hover:scale-110" loading="lazy">
-                    </div>
-                    <div class="shadow-md px-6">
-                        <div class="py-6 text-xl font-black">Included Free Every Month:</div>
-                        <div class="">
-                            <ul class="space-y-2 list-disc list-inside">
-                                <li>10 Units of Jeuveau</li>
-                            </ul>
-                        </div>
-                        <div class="py-6 text-xl font-black">Available To Purchase Services:</div>
-                        <ul class="space-y-2 list-disc list-inside">
-                            <li>Allows You To Make Monthly Payments</li>
-                            <li>Spreads Payments Out</li>
-                            <li>Receive Member Pricing On Tox All Year Long</li>
-                            <li>You Get A 10 Unit Credit Of Tox Monthy</li>
-                            <li>Units Accumulate Until You Use Them</li>
-                            <li>Units Never Expire</li>
-                            <li>$10 Per Unit Pricing On Additional Units Needed</li>
-                        </ul>
-                        <div class="flex justify-between items-center border-t-2 border-spa-100 mt-3 py-3 text-xl text-spa-200 font-bold">
-                            <div>$100/Monthly</div>
-                            <div class=""><a href="https://www.vagaro.com/beyondestheticsspa/memberships" target="_blank" class="hover:text-black">Get Enrolled!</a></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            <!-- Tox Club Removed -->
         </div>
     </x-section>
 
